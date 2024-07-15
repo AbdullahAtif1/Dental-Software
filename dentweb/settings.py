@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 		'main.apps.MainConfig',
-		'blog.apps.BlogConfig'
+		'blog.apps.BlogConfig',
+		'dentadmin.apps.DentadminConfig'
 ]
 
 MIDDLEWARE = [
