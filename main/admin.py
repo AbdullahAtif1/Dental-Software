@@ -6,7 +6,7 @@ class AppointmentAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'subject', 'status', 'date', 'time')
     list_filter = ('status', 'date')
     search_fields = ('name', 'email', 'subject')
-    list_editable = ('status', 'date', 'time')
+    # list_editable = ('status', 'date', 'time')
 
 
 @admin.register(Feedback)

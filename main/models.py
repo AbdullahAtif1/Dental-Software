@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.mail import EmailMessage, send_mail
 from django.contrib.auth import get_user_model
-from email_templates import *
+from . import email_templates
 
 
 # email list for the users to fill their email in for subscribing to newsletters or other promotional stuff
@@ -65,7 +65,7 @@ class Appointment(models.Model):
 					
 	def send_confirmation_email(self):
 		if self.status == 'approved':
-				message = APPOINTMENT_APPROVAL_TEMPLATE.format(
+				message = email_templates.APPOINTMENT_APPROVAL_TEMPLATE.format(
 					client_name = self.name,
 					appointment_date = self.date,
 					appointment_time = self.time,
@@ -74,7 +74,7 @@ class Appointment(models.Model):
 					contact_info = "manager@socialcodepk.com" # Replace with client's official email adress
 				)
 		else:
-				message = APPOINTMENT_NOT_APPROVED_TEMPLATE.format(
+				message = email_templates.APPOINTMENT_NOT_APPROVED_TEMPLATE.format(
 					client_name = self.name,
 					company_name = "Amazing Dentals", # Change it afterwards
 					your_name = "My Name",
