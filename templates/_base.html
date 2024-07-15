@@ -1,0 +1,48 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	{% block 'meta' %}{% endblock %}
+
+	<title>{% block 'title' %}{% endblock %}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	{% comment %}
+
+	<meta property="og:title" content="Socialcode - Digital Growth Home page">
+	<meta property="og:site_name" content="SocialCode">
+	<meta property="og:url" content="https://socialcodepk.com">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content='{% static "imgs/SocialCodeLogo.png" %}'>
+	<link rel="icon" href="{% static 'imgs/SocialCodeLogo.png' %}" type="image/png">
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@SocialCode">
+	<meta name="twitter:title" content="Socialcode - Digital Growth">
+	<meta name="twitter:image" content='{% static "imgs/SocialCodeLogo.png" %}'>
+
+
+	<link rel="canonical" href="{% block 'canonical_url' %}{% endblock %}">
+
+	{% endcomment %}
+
+	<script src="https://cdn.tailwindcss.com"></script>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+
+	<style>
+		html, body {
+			overflow-x: hidden;
+		}
+	</style>
+
+</head>
+
+<body>
+
+</body>
+
+</html>
