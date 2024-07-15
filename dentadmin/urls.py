@@ -6,4 +6,3 @@ app_name='dentadmin'
 urlpatterns = [
 	path('', views.index, name="index"),
 ]
-

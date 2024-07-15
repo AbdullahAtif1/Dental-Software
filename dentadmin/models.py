@@ -1,17 +1,18 @@
 from django.db import models
 
 class Prospect(models.Model):
-	STATUS_CHOICES = [
-			('new_buyer', 'New Buyer'),
-			('repeat_customer', 'Repeat Customer'),
-	]
-	name = models.CharField(max_length=255)
-	picture = models.ImageField(upload_to='imgs/', blank=True, null=True)
-	bio = models.TextField()
-	status = models.CharField(max_length=20, choices=STATUS_CHOICES)
+    STATUS_CHOICES = [
+        ('new_buyer', 'New Buyer'),
+        ('repeat_customer', 'Repeat Customer'),
+    ]
 
-	def __str__(self):
-			return self.name
+    name = models.CharField(max_length=255)
+    picture = models.ImageField(upload_to='imgs/', blank=True, null=True)
+    bio = models.TextField()
+    status = models.CharField(max_length=20, choices=STATUS_CHOICES)
+
+    def __str__(self):
+        return self.name
 
 
 class ProspectFile(models.Model):
