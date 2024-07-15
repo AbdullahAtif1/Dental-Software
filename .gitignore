@@ -1,5 +1,4 @@
 dental/
 migrations/
 changes to be made before handing over.txt
-main/__pycache__
-dentweb/__pycache__
+__pycache__/
