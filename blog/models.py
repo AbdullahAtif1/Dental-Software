@@ -1,5 +1,9 @@
 from django.db import models
 from django.utils.text import slugify
+from django.urls import reverse
+from django.core.mail import send_mail
+from main.models import Subscriber
+from . import email_templates
 
 class Article(models.Model):
 
@@ -22,5 +26,31 @@ class Article(models.Model):
 
 	def save(self, *args, **kwargs):
 			self.slug = slugify(self.title)
+			# self.notify_sbscrbrs()
+
 			super(Article, self).save(*args, **kwargs)
+
+	def get_absolute_url(self):
+			return reverse('blog:detail', kwargs={'article_id': self.id, 'slug': self.slug})
+
+	def notify_sbscrbrs(self):
+
+		ppl = Subscriber.objects.all()
+		for x in ppl:
+			message = email_templates.NEW_ARTICLE_TEMPLATE.format(
+					client_name = x.name,
+					article_url = self.get_absolute_url(),
+					article_title = self.title,
+					company_name = "Amazing Dentals", # Change it afterwards
+					your_name = "My Name",
+					contact_info = "manager@socialcodepk.com" # Replace with client's official email adress
+				)
+			send_mail(
+            'Appointment Status Update',
+            message,
+            "socialcodepk@gmail.com" # From Email. Replace with client's gmail account
+            [x.email],
+            fail_silently=False,
+        )
+
 

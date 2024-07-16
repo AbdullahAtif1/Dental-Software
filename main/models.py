@@ -31,6 +31,8 @@ class Appointment(models.Model):
 	date = models.DateField(auto_now_add=True)
 	time = models.TimeField(auto_now_add=True)
 
+	# Have to add phone number field for SMS
+
 	def __str__(self):
 			return self.subject
 
