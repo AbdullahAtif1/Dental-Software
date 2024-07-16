@@ -42,7 +42,13 @@
 </head>
 
 <body>
-	{% block 'content' %}{% endblock %}
+
+	{% include 'nav.html' %}
+
+	<div class="mt-20">
+		{% block 'content' %}{% endblock %}
+	</div>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 
 	{% block 'script' %}{% endblock %}
