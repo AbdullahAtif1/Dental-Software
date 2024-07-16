@@ -4,7 +4,22 @@
 
 {% block 'content' %}
 
+	<section class="max-w-6xl my-5 m-auto border-double border-4 border-sky-500">
 
+		{% for article in articles %}
+
+			<div class="my-5 px-5">
+				<a href="{% url 'blog:detail' article_id=article.id slug=article.slug %}" class="text-2xl mb-6 text-sky-500 underline">{{ article.title }}</a>
+				<p class="text-sm text-gray-800">{{ article.description }}</p><br>
+				{% autoescape on %}
+					<p class="text-base">{{ article.body|truncatewords:80 }}</p>
+				{% endautoescape %}
+				
+			</div>
+
+		{% endfor %}
+
+	</section>
 
 
 {% endblock %}
