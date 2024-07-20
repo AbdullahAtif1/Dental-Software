@@ -31,12 +31,74 @@
 	{% endcomment %}
 
 	<script src="https://cdn.tailwindcss.com"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
 
 	<style>
 		html, body {
 			overflow-x: hidden;
 		}
+		body {
+			background-image: url("{% static 'imgs/bg.png' %}");
+		}
+		@keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {
+				transform: translateY(0);
+			}
+			40% {
+				transform: translateY(-20px);
+			}
+			60% {
+				transform: translateY(-10px);
+			}
+		}
+
+		.animate-bounce-slow {
+			animation: bounce 2s infinite;
+		}
+
+		figure.group:hover .animate-bounce-slow {
+			animation: none;
+		}
+
+		figure.group:focus .animate-bounce-slow {
+			animation: none;
+		}
+
+		figcaption {
+			background: linear-gradient(
+				hsla(174, 86%, 35%, 0), /* Transparent start */
+				hsla(174, 86%, 35%, 0.8) 10%, /* Darker semi-transparent from-teal-500 */
+				hsla(138, 72%, 55%, 0.9) /* Darker semi-transparent to-green-300 */
+			);
+		}
+
+		.fxd-img-sec {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: url("{% static 'imgs/d.jpg' %}");
+			min-height: 50vh;
+			background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			width: 100%;
+			position: relative;
+			box-sizing: border-box;
+			/* z-index: -1; */
+		}
+
+		.fxd-img-sec::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: hsla(174, 26%, 31%, 0.8);
+		}
+
 	</style>
 
 </head>
@@ -45,9 +107,7 @@
 
 	{% include 'nav.html' %}
 
-	<div class="mt-20">
-		{% block 'content' %}{% endblock %}
-	</div>
+	{% block 'content' %}{% endblock %}
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 

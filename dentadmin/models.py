@@ -15,6 +15,8 @@ class Prospect(models.Model):
         return self.name
 
 
+# Replace the prospect model with "Patient" user model
+
 class ProspectFile(models.Model):
     prospect = models.ForeignKey(Prospect, on_delete=models.CASCADE, related_name='files')
     file = models.FileField(upload_to='files/')

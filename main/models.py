@@ -31,6 +31,8 @@ class Appointment(models.Model):
 	date = models.DateField(auto_now_add=True)
 	time = models.TimeField(auto_now_add=True)
 
+
+	# When you integrate the CRM, apply FK to the Patient model
 	# Have to add phone number field for SMS
 
 	def __str__(self):

@@ -3,7 +3,7 @@ from django.utils.text import slugify
 from django.urls import reverse
 from django.core.mail import send_mail
 from main.models import Subscriber
-from . import email_templates
+from main import email_templates
 
 class Article(models.Model):
 
