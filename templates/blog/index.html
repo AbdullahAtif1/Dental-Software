@@ -5,7 +5,7 @@
 {% block 'content' %}
 
 
-<div class="min-h-60 bg-gradient-to-r from-teal-500 to-green-300 rounded-br-full py-8">
+<div class="min-h-60 bg-gradient-to-r from-teal-500 to-green-300 rounded-br-full py-8 shadow-2xl">
 	<div class="max-w-xl m-auto py-10">
 		<h1 class="text-white font-bold text-center text-5xl my-5">
 			This Could be Yours
@@ -31,7 +31,7 @@
 	</div>
 </div>
 
-{% if not search %}
+{% if not word %}
 
 {% if page_obj.number == 1 %}
 
@@ -70,7 +70,7 @@
 	<div class="text-center text-gray-100 max-w-5xl m-auto py-20 px-10 z-10">
 		<h3 class="text-gray-100 text-3xl md:text-5xl font-bold my-5">Smile Brighter with Our Updates!</h3>
 		<p class="md:text-xl">
-			Subscribe to our newsletter for the latest tips, tricks, and trends in dental care — delivered right to your
+			Subscribe to our newsletter for the latest tips, tricks, and trends — delivered right to your
 			inbox.
 		</p>
 		<div id="form-container">
@@ -121,19 +121,26 @@
 	{% endfor %}
 </div>
 
-<div class="flex items-center justify-center space-x-4 my-4">
+<div class="flex items-center justify-center space-x-4 mt-4 bg-gradient-to-r from-teal-500 to-green-300  p-4 rounded-t-lg shadow-md">
 	{% if page_obj.has_previous %}
-			<a href="?page={{page_obj.previous_page_number}}" class="px-4 py-2 text-teal-600 bg-teal-100 hover:bg-teal-200 rounded-lg">
-					&lt;
+			<a href="?page={{page_obj.previous_page_number}}" class="px-4 py-2 text-teal-700 bg-white border border-teal-300 hover:bg-teal-100 rounded-lg shadow-sm">
+				&lt; Previous
 			</a>
 	{% endif %}
-	<span class="px-4 py-2 text-teal-600 bg-teal-100 rounded-lg">{{ page_obj.number }}</span>
+	
+	{% if page_obj.number == 1 %}
+			<span class="px-4 py-2 text-teal-700 bg-white border border-teal-300 rounded-lg shadow-sm">1</span>
+	{% else %}
+			<span class="px-4 py-2 text-teal-700 bg-white border border-teal-300 rounded-lg shadow-sm">{{ page_obj.number }}</span>
+	{% endif %}
+	
 	{% if page_obj.has_next %}
-			<a href="?page={{page_obj.next_page_number}}" class="px-4 py-2 text-teal-600 bg-teal-100 hover:bg-teal-200 rounded-lg">
-					&gt;
+			<a href="?page={{page_obj.next_page_number}}" class="px-4 py-2 text-teal-700 bg-white border border-teal-300 hover:bg-teal-100 rounded-lg shadow-sm">
+					Next &gt;
 			</a>
 	{% endif %}
 </div>
+
 
 
 

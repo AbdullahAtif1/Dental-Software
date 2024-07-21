@@ -3,9 +3,10 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.http import JsonResponse
 from .models import Article
 from main import forms
-from django.db.models import Q
+from django.db.models import F, Value, Func
+from django.db.models.functions import Lower
 import random
-
+from django.contrib.postgres.search import TrigramSimilarity
 
 def index(request):
 
@@ -25,10 +26,15 @@ def index(request):
 	except EmptyPage:
 		page_obj = p.page(p.num_pages)
 
-	search = request.GET.get('q')
-	if search:
-		print(search)
-		next_artcls = Article.objects.filter(Q(title__icontains=search) | Q(description__icontains=search))
+	word = request.GET.get('q')
+	if word:
+
+		word_lower = word.lower()
+		next_artcls = Article.objects.annotate(
+				similarity=TrigramSimilarity(Lower(F('title')), word_lower) + TrigramSimilarity(Lower(F('description')), word_lower)
+		).filter(similarity__gt=0.3).order_by('-similarity', '-updated')
+
+		print(next_artcls)
 
 		p = Paginator(next_artcls, 6)
 		page_number = request.GET.get("page")
@@ -41,7 +47,7 @@ def index(request):
 			page_obj = p.page(p.num_pages)
 
 		context = {
-			'next_artcls': next_artcls, 'search': search, 'page_obj': page_obj
+			'next_artcls': next_artcls, 'word': word, 'page_obj': page_obj
 		}
 		return render(request, 'blog/index.html', context)
 
@@ -62,7 +68,7 @@ def index(request):
 			'frst_3': frst_3,
 			'next_artcls': next_artcls,
 			'form': form,
-			'search': search,
+			'word': word,
 			'page_obj': page_obj
 	}
 	return render(request, 'blog/index.html', context)
