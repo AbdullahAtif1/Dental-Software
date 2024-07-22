@@ -1,4 +1,5 @@
 from django.db import models
+from tinymce.models import HTMLField
 from django.utils.text import slugify
 from django.urls import reverse
 from django.core.mail import send_mail
@@ -13,7 +14,7 @@ class Article(models.Model):
 	]
 	title = models.CharField(max_length=1000)
 	description = models.CharField(max_length=1000)
-	body = models.TextField()
+	body = HTMLField()
 	slug = models.SlugField(blank=True)
 	header_image = models.ImageField(upload_to='imgs/', blank=True, null=True)
 	pub_date = models.DateField(auto_now_add=True)

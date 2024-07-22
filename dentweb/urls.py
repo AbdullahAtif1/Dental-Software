@@ -13,9 +13,13 @@ urlpatterns = [
 		path('blog/', include('blog.urls')),
 		path('cstm-admin-panel/', include('dentadmin.urls')),
 
+		path('tinymce/', include('tinymce.urls')),
+
 		# path('sitemap.xml', sitemap, {'sitemaps': sitemaps}),
 		# path('robots.txt', TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
 ]
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+if settings.DEBUG:
+    urlpatterns+=static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

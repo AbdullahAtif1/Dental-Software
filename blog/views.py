@@ -10,13 +10,13 @@ from django.contrib.postgres.search import TrigramSimilarity
 
 def index(request):
 
-	frst_3 = list(Article.objects.all())
-	random.shuffle(frst_3)
+	ran_4 = list(Article.objects.all())
+	random.shuffle(ran_4)
 
-	frst_3 = frst_3[:3]
+	ran_4 = ran_4[:4]
 	next_artcls = Article.objects.all().order_by("-updated")
 
-	p = Paginator(next_artcls, 6)
+	p = Paginator(next_artcls, 8)
 	page_number = request.GET.get("page")
 
 	try:
@@ -36,7 +36,7 @@ def index(request):
 
 		print(next_artcls)
 
-		p = Paginator(next_artcls, 6)
+		p = Paginator(next_artcls, 8)
 		page_number = request.GET.get("page")
 
 		try:
@@ -65,7 +65,7 @@ def index(request):
 			form = forms.SubscriberForm()
 
 	context = {
-			'frst_3': frst_3,
+			'ran_4': ran_4,
 			'next_artcls': next_artcls,
 			'form': form,
 			'word': word,
@@ -77,7 +77,14 @@ def index(request):
 def detail(request, article_id, slug):
 
 	article = Article.objects.get(id=article_id, slug=slug)
+
+	ran_4 = list(Article.objects.exclude(id=article_id))
+	random.shuffle(ran_4)
+
+	ran_4 = ran_4[:4]
+
 	context = {
 			'article': article,
+			'others': ran_4
 	}
 	return render(request, 'blog/detail.html', context)
