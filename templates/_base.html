@@ -136,8 +136,43 @@
 				}
 		}
 
+		.sg-itm.itm-0 {
+			background-image: url('{% static "imgs/s0.jpeg" %}');
+		}
 
+		.sg-itm.itm-1 {
+			background-image: url('{% static "imgs/s1.jpeg" %}');
+		}
 
+		.sg-itm.itm-2 {
+			background-image: url('{% static "imgs/s2.jpeg" %}');
+		}
+
+		.sg-itm.itm-3 {
+			background-image: url('{% static "imgs/s3.jpeg" %}');
+		}
+
+		.sg-itm.itm-4 {
+			background-image: url('{% static "imgs/s4.jpeg" %}');
+		}
+
+		.sg-itm.itm-5 {
+			background-image: url('{% static "imgs/s5.jpeg" %}');
+		}
+
+		.sg-itm.itm-6 {
+			background-image: url('{% static "imgs/s6.jpeg" %}');
+		}
+
+		.sg-itm.itm-7 {
+			background-image: url('{% static "imgs/s7.jpg" %}');
+		}
+
+		.sg-itm {
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
 
 	</style>
 
@@ -152,6 +187,8 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 
 	{% block 'script' %}{% endblock %}
+
+	{% include 'footer.html' %}
 
 </body>
 
