@@ -38,8 +38,28 @@
 		html, body {
 			overflow-x: hidden;
 		}
+
+		/* Define Raleway font for headings */
+		@font-face {
+				font-family: 'Raleway';
+				src: url('{% static "fonts/Raleway-SemiBold.ttf" %}') format('truetype');
+		}
+
+		/* Define Roboto font for body text */
+		@font-face {
+				font-family: 'Roboto';
+				src: url('{% static "fonts/RobotoCondensed-Regular.ttf" %}') format('truetype');
+		}
+
+		/* Apply Raleway to headings */
+		h1, h2, h3, h4, h5, h6 {
+				font-family: 'Raleway', sans-serif;
+				font-weight: bolder;
+		}
+
 		body {
 			background-image: url("{% static 'imgs/bg.png' %}");
+			font-family: 'Roboto', sans-serif;
 		}
 
 		.fxd-img-sec {
@@ -125,14 +145,14 @@
 		/* Styles for screens between 768px and 1023px */
 		@media (min-width: 768px) and (max-width: 1023px) {
 				#wlcm-sec {
-						min-height: 150vh;
+						min-height: 160vh;
 				}
 		}
 
 		/* Styles for screens smaller than 768px */
 		@media screen and (max-width: 767px) {
 				#wlcm-sec {
-						min-height: 235vh;
+						min-height: 305vh;
 				}
 		}
 

@@ -19,7 +19,7 @@
 
 		<img src="{{ article.header_image.url }}" class="rounded-xl max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl h-auto mx-auto">
 		
-		<p class="text-lg m-5">{{ article.body|safe|linebreaks }}</p>
+		<p class="text-xl m-5">{{ article.body|safe|linebreaks }}</p>
 		
 	</div><hr class="max-w-4xl h-1 mx-auto my-4 bg-teal-800 border-0 rounded md:my-5">
 
@@ -31,8 +31,8 @@
     <div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-md">
         <img class="w-full h-52 object-cover rounded-t-lg" src="{{ article.header_image.url }}" alt="Article image" />
         <div class="p-4 bg-teal-600 rounded-b-lg">
-            <h3 class="mb-1 text-xl font-semibold tracking-tight text-gray-100">{{ article.title }}</h3>
-            <p class="mb-2 text-sm font-normal text-gray-200">
+            <h3 class="mb-1 text-2xl font-semibold tracking-tight text-gray-100">{{ article.title }}</h3>
+            <p class="mb-2 text-lg font-normal text-gray-200">
                 {{ article.description }}
             </p>
             <a href="{% url 'blog:detail' article_id=article.id slug=article.slug %}"

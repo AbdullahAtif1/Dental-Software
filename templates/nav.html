@@ -15,17 +15,17 @@
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
         <li class="py-2 rounded-2xl">
-          <a href="{% url 'blog:index' %}" class="block py-2 px-3 rounded hover:text-green-400 md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0  md:p-0 md:hover:text-white text-white">Blog</a>
+          <a href="{% url 'blog:index' %}" class="text-xl block py-2 px-3 rounded hover:text-green-400 md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0  md:p-0 md:hover:text-white text-white">Blog</a>
         </li>
         <li class="py-2 rounded-2xl">
-          <a href="{% url 'main:index' %}#services" class="block py-2 px-3 rounded hover:text-green-400 md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0  md:p-0 md:hover:text-white text-white">Services</a>
+          <a href="{% url 'main:index' %}#services" class="text-xl block py-2 px-3 rounded hover:text-green-400 md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0  md:p-0 md:hover:text-white text-white">Services</a>
         </li>
         <li class="py-2 rounded-2xl">
-          <a href="#" class="block py-2 px-3 rounded hover:text-green-400 md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0  md:p-0 md:hover:text-white text-white">Contact</a>
+          <a href="#" class="text-xl block py-2 px-3 rounded hover:text-green-400 md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0  md:p-0 md:hover:text-white text-white">Contact</a>
         </li>
 				{% if request.user.is_authenticated and request.user.is_superuser %}
         <li class="py-2 rounded-2xl">
-          <a href="{% url 'dentadmin:index' %}" class="block py-2 px-3 rounded hover:text-green-400 md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0  md:p-0 md:hover:text-white text-white">Admin Panel</a>
+          <a href="{% url 'dentadmin:index' %}" class="text-xl block py-2 px-3 rounded hover:text-green-400 md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0  md:p-0 md:hover:text-white text-white">Admin Panel</a>
         </li>
 				{% endif %}
       </ul>
