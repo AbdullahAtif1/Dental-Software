@@ -1,0 +1,50 @@
+{% load static %}
+
+
+<footer class="bg-gradient-to-r from-teal-500 to-green-300">
+	<div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+		<div class="flex justify-center gap-7 flex-col md:flex-row md:gap-0 md:justify-between">
+			<div class="mb-6 md:mb-0">
+				<a href="{% url 'main:index' %}" class="flex items-center">
+					<img src="{% static 'imgs/fav.jpeg' %}" class="max-h-32 max-w-sm shadow-2xl" alt="Logo" />
+				</a>
+			</div>
+			<div>
+				<h2 class="mb-6 md:text-2xl underline font-bold uppercase text-white">Contact Information</h2>
+				<ul class="text-gray-100 text-xl font-medium">
+					<li class="mb-4">
+						<a href="" class="hover:underline">+1800 456 789</a>
+					</li>
+					<li>
+						<a href="" class="hover:underline">+1800 456 780</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h2 class="mb-6 md:text-2xl underline font-bold uppercase text-white">Open Hours</h2>
+				<ul class="text-gray-100 text-xl font-medium">
+					<li class="mb-4">
+						<a href="#" class="hover:underline">Mon-Fri 09:00 - 19:00</a>
+					</li>
+					<li>
+						<a href="#" class="hover:underline">Sat-Sun 10:00 - 14:00</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h2 class="mb-6 md:text-2xl underline font-bold uppercase text-white">Reach Us</h2>
+				<ul class="text-gray-100 text-xl font-medium">
+					<li class="mb-4">
+						<a href="" class="hover:underline ">456 Smile Avenue, Dental City, CA 90210</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr class="my-6 border-gray-100 sm:mx-auto lg:my-8" />
+		<div class="sm:flex sm:items-center sm:justify-between">
+			<span class="text-sm text-gray-100 sm:text-center ">© 2024 <a href="https://socialcodepk.com/" target="_blank"
+					class="hover:underline">SocialCodePk</a>. All Rights Reserved.
+			</span>
+		</div>
+	</div>
+</footer>
