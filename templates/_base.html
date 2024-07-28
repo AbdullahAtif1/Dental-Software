@@ -1,5 +1,4 @@
 {% load static %}
-{% load compress %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +12,6 @@
 	<title>{% block 'title' %}{% endblock %}</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="{% static 'imgs/fav.jpeg' %}">
-
-	{% compress css %}
-    <link rel="stylesheet" href="{% static 'src/output.css' %}">
-	{% endcompress %}
 
 	{% comment %}
 
@@ -36,6 +31,7 @@
 
 	{% endcomment %}
 
+	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
 
