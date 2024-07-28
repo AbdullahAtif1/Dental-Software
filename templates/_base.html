@@ -229,7 +229,25 @@
 				width: 100%;
 				height: 100%;
 				background-color: hsla(173, 36%, 51%, 0.8); /* Adds an overlay with a semi-transparent background color */
-				pointer-events: none;
+			}
+
+
+			#book-an-appointment {
+				background-image: url('{% static "imgs/d11.jpg" %}');
+				background-size: cover;
+				background-repeat: no-repeat;
+				z-index: 1;
+				background-position: center;
+				position: relative; /* Ensure the element is positioned to allow absolute positioning of the overlay */
+				color: rgb(243,244,246); 
+			} #book-an-appointment::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				background-image: linear-gradient(-90deg, hsla(173, 57%, 48%, 0.8) 30%, rgba(62, 62, 67, 0.8) -70%);
 			}
 
 
