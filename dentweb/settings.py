@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 		'widget_tweaks',
 		'django_htmx',
 		'tinymce',
+		'compressor'
 ]
 
 CKEDITOR_UPLOAD_PATH = 'files/'
@@ -153,6 +154,10 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
+COMPRESS_ROOT = BASE_DIR / 'static'
+COMPRESS_ENABLED = True
+STATICFILES_FINDERS = ('compressor.finders.CompressorFinder',)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
