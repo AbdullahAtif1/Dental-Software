@@ -36,30 +36,197 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
 
 	<style>
-		html, body {
+		html,
+		body {
 			overflow-x: hidden;
 		}
 
-		/* Define Raleway font for headings */
+		/* Default Theme: Teal & Green */
+		:root {
+			/* Gradient */
+			--main-gradient-start: #38b2ac;
+			--main-gradient-end: #68d391;
+
+			/* Overlay color */
+			--overlay-color: hsla(173, 53%, 34%, 0.8);
+
+			/* Container bg */
+			--cntnr-bg: rgb(240, 253, 250);
+
+			/* Nav text */
+			--nav-txt: rgb(13, 148, 136);
+
+			/* Text colors */
+			--heading-color: rgb(13, 148, 136);
+			--paragraph-text-color: rgb(55, 65, 81);
+
+			/* Blog page button */
+			--blog-page-art-btn-color: rgb(13, 148, 136);
+			--blog-page-art-btn-hover: rgb(28, 132, 124);
+
+			/* Blog page description background */
+			--blog-page-desc-bg: rgb(240, 253, 250);
+
+			/* Pagination */
+			--pagination-text-color: rgb(19, 128, 115);
+			--pagination-border-color: rgb(112, 191, 179);
+			--pagination-btn-hover-bg: rgb(204, 251, 243);
+
+			/* Appointment booking grad */
+			--book-apntmnt-overlay-gradient-start: hsla(173, 57%, 48%, 0.8);
+			--book-apntmnt-overlay-gradient-end: rgba(62, 62, 67, 0.8);
+
+			/* Background image */
+			--body-background-image: url("{% static 'imgs/bg_t.png' %}");
+		}
+
+		/* Theme: Indigo & Purple */
+		body.indigo-purple {
+			/* Gradient */
+			--main-gradient-start: rgb(99, 102, 241);
+			--main-gradient-end: rgb(216, 180, 254);
+
+			/* Nav text */
+			--nav-txt: rgb(67, 56, 202);
+
+			/* Container bg */
+			--cntnr-bg: rgb(250, 245, 255);
+
+			/* Overlay color */
+			--overlay-color: hsla(257, 42%, 59%, 0.8);
+
+			/* Text colors */
+			--heading-color: rgb(67, 56, 202);
+			--paragraph-text-color: rgb(55, 65, 81);
+
+			/* Blog page button */
+			--blog-page-art-btn-color: rgb(79, 70, 229);
+			--blog-page-art-btn-hover: rgb(71, 61, 181);
+
+			/* Blog page description background */
+			--blog-page-desc-bg: rgb(250, 245, 255);
+
+			/* Pagination */
+			--pagination-text-color: rgb(76, 29, 149);
+			--pagination-border-color: rgb(107, 33, 168);
+			--pagination-btn-hover-bg: rgb(243, 232, 255);
+
+			/* Appointment booking grad */
+			--book-apntmnt-overlay-gradient-start: hsla(238.73, 83.53%, 66.67%, 0.8);
+			--book-apntmnt-overlay-gradient-end: rgba(62, 62, 67, 0.8);
+
+			/* Background image */
+			--body-background-image: url("{% static 'imgs/bg_b.png' %}");
+		}
+
+		/* Theme: Red & Amber */
+		body.red-amber {
+			/* Gradient */
+			--main-gradient-start: #c53030;
+			--main-gradient-end: #f6e05e;
+
+			/* Nav text */
+			--nav-txt: rgb(217, 119, 6);
+
+			/* Container bg */
+			--cntnr-bg: rgb(255, 251, 235);
+
+			/* Overlay color */
+			--overlay-color: hsla(29, 40%, 50%, 0.8);
+
+			/* Text colors */
+			--heading-color: rgb(217, 119, 6);
+			--paragraph-text-color: rgb(55, 65, 81);
+
+			/* Blog page button */
+			--blog-page-art-btn-color: rgb(217, 119, 6);
+			--blog-page-art-btn-hover: rgb(198, 110, 9);
+
+			/* Blog page description background */
+			--blog-page-desc-bg: rgb(255, 251, 235);
+
+			/* Pagination */
+			--pagination-text-color: rgb(19, 128, 115);
+			--pagination-border-color: rgb(112, 191, 179);
+			--pagination-btn-hover-bg: rgb(204, 251, 243);
+
+			/* Appointment booking grad */
+			--book-apntmnt-overlay-gradient-start: hsla(28, 76%, 36%, 0.8);
+			--book-apntmnt-overlay-gradient-end: rgba(62, 62, 67, 0.8);
+
+			/* Background image */
+			--body-background-image: url("{% static 'imgs/bg_r.png' %}");
+		}
+
+		.heading {
+			color: var(--heading-color);
+		}
+
+		.nav-txt:hover {
+			color: var(--nav-txt)
+		}
+
+		.cntnr {
+			background-color: var(--cntnr-bg);
+		}
+
+
+		.paragraph {
+			color: var(--paragraph-text-color);
+		}
+
+		.blog-page-art-btn {
+			background-color: var(--blog-page-art-btn-color);
+		}
+
+		.blog-page-art-btn:hover {
+			background-color: var(--blog-page-art-btn-hover);
+		}
+
+		.blog-page-desc {
+			background-color: var(--blog-page-desc-bg);
+		}
+
+		.pgntn-text {
+			color: var(--pagination-text-color);
+		}
+
+		.pgntn-brdr {
+			border-color: var(--pagination-border-color);
+		}
+
+		.pgntn-btn-on-hover:hover {
+			background-color: var(--pagination-btn-hover-bg);
+		}
+
+		.bg-main-gradient {
+			background: linear-gradient(to right, var(--main-gradient-start), var(--main-gradient-end));
+		}
+
 		@font-face {
-				font-family: 'Raleway';
-				src: url('{% static "fonts/Raleway-SemiBold.ttf" %}') format('truetype');
+			font-family: 'Raleway';
+			src: url('{% static "fonts/Raleway-SemiBold.ttf" %}') format('truetype');
 		}
 
 		/* Define Roboto font for body text */
 		@font-face {
-				font-family: 'Roboto';
-				src: url('{% static "fonts/RobotoCondensed-Regular.ttf" %}') format('truetype');
+			font-family: 'Roboto';
+			src: url('{% static "fonts/RobotoCondensed-Regular.ttf" %}') format('truetype');
 		}
 
 		/* Apply Raleway to headings */
-		h1, h2, h3, h4, h5, h6 {
-				font-family: 'Raleway', sans-serif;
-				font-weight: bolder;
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: 'Raleway', sans-serif;
+			font-weight: bolder;
 		}
 
 		body {
-			background-image: url("{% static 'imgs/bg.png' %}");
+			background-image: var(--body-background-image);
 			font-family: 'Roboto', sans-serif;
 		}
 
@@ -76,7 +243,6 @@
 			width: 100%;
 			position: relative;
 			box-sizing: border-box;
-			/* z-index: -1; */
 		}
 
 		.fxd-img-sec::before {
@@ -86,77 +252,143 @@
 			top: 0;
 			width: 100%;
 			height: 100%;
-			background-color: hsla(174, 26%, 31%, 0.8);
+			background-color: var(--overlay-color);
 		}
-		/* 872 */
-		/* 726 */
 
 		#hmpg-hdr {
-				display: flex;
-				justify-content: center;
-				align-items: center;
-				background-image: url("{% static 'imgs/d1.jpg' %}");
-				background-size: cover; /* Ensures the background image covers the entire element */
-				background-repeat: no-repeat; /* Prevents the background image from repeating */
-				background-attachment: fixed; /* Keeps the background image fixed while scrolling */
-				width: 100%; /* Makes the element take up the full width */
-				position: relative; /* Positions the element relative to its normal position */
-				box-sizing: border-box; /* Includes padding and border in the element's total width and height */
-				color: aliceblue; /* Sets the text color */
-				z-index: -1; /* Places the element behind other elements */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-image: url("{% static 'imgs/d1.jpg' %}");
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-attachment: fixed;
+			width: 100%;
+			position: relative;
+			box-sizing: border-box;
+			color: aliceblue;
+			z-index: -1;
 		}
 
 		#hmpg-hdr::before {
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				background-color: hsla(173, 53%, 34%, 0.8); /* Adds an overlay with a semi-transparent background color */
-				color: aliceblue; /* Sets the color of the overlay text */
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--overlay-color);
+			color: aliceblue;
 		}
 
 		/* Default for screens below 768px */
 		@media screen and (max-width: 1023px) {
-				#hmpg-hdr {
-						min-height: 100vh; /* Ensures the element covers the full viewport height */
-						background-position: center; /* Centers the background image */
-				}
+			#hmpg-hdr {
+				min-height: 100vh;
+				background-position: center;
+			}
 		}
 
 		/* For screens 768px and above */
 		@media screen and (min-width: 1024px) {
-				#hmpg-hdr {
-					min-height: 60vh; /* Sets the element's minimum height to 60% of the viewport height */
-					background-position: bottom; /* Aligns the background image to the bottom */
-					border-bottom-right-radius: 9999px
-				} #hmpg-hdr::before {
-					border-bottom-right-radius: 9999px
-				}
+			#hmpg-hdr {
+				min-height: 60vh;
+				background-position: bottom;
+				border-bottom-right-radius: 9999px;
+			}
+
+			#hmpg-hdr::before {
+				border-bottom-right-radius: 9999px;
+			}
 		}
 
 		/* Styles for screens larger than 1024px */
 		@media screen and (min-width: 1024px) {
-				#wlcm-sec {
-						min-height: 60vh;
-				}
+			#wlcm-sec {
+				min-height: 60vh;
+			}
 		}
 
 		/* Styles for screens between 768px and 1023px */
 		@media (min-width: 768px) and (max-width: 1023px) {
-				#wlcm-sec {
-						min-height: 160vh;
-				}
+			#wlcm-sec {
+				min-height: 160vh;
+			}
 		}
 
 		/* Styles for screens smaller than 768px */
 		@media screen and (max-width: 767px) {
-				#wlcm-sec {
-						min-height: 305vh;
-				}
+			#wlcm-sec {
+				min-height: 305vh;
+			}
 		}
 
+		.sg-itm {
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: 1;
+			background-position: center;
+			position: relative;
+			color: rgb(243, 244, 246);
+		}
+
+		.sg-itm::before {
+			content: '';
+			position: absolute;
+			color: rgb(243, 244, 246);
+			left: 0;
+			z-index: -1;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--overlay-color);
+			pointer-events: none;
+		}
+
+		#meet-the-dctrs {
+			background-image: url('{% static "imgs/d10.jpeg" %}');
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: 1;
+			background-position: center;
+			position: relative;
+			color: rgb(243, 244, 246);
+		}
+
+		#meet-the-dctrs::before {
+			content: '';
+			position: absolute;
+			color: rgb(243, 244, 246);
+			left: 0;
+			z-index: -1;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: var(--overlay-color);
+		}
+
+		#book-an-appointment {
+			background-image: url('{% static "imgs/d11.jpg" %}');
+			background-size: cover;
+			background-repeat: no-repeat;
+			z-index: 1;
+			background-position: center;
+			position: relative;
+			color: rgb(243, 244, 246);
+		}
+
+		#book-an-appointment::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background-image: linear-gradient(-90deg, var(--book-apntmnt-overlay-gradient-start) 30%, var(--book-apntmnt-overlay-gradient-end) -70%);
+		}
+
+		/* Individual item images */
 		.sg-itm.itm-0 {
 			background-image: url('{% static "imgs/s0.jpeg" %}');
 		}
@@ -188,70 +420,6 @@
 		.sg-itm.itm-7 {
 			background-image: url('{% static "imgs/s7.jpg" %}');
 		}
-
-		.sg-itm {
-				background-size: cover;
-				background-repeat: no-repeat;
-				z-index: 1;
-				background-position: center;
-				position: relative; /* Ensure the element is positioned to allow absolute positioning of the overlay */
-				color: rgb(243,244,246); /* Sets the text color */
-			}
-
-			.sg-itm::before {
-				content: '';
-				position: absolute;
-				color: rgb(243,244,246);
-				left: 0;
-				z-index: -1;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				background-color: hsla(173, 34%, 41%, 0.8); /* Adds an overlay with a semi-transparent background color */
-				pointer-events: none; /* Ensures the overlay does not interfere with interactions */
-			}
-
-			#meet-the-dctrs {
-				background-image: url('{% static "imgs/d10.jpeg" %}');
-				background-size: cover;
-				background-repeat: no-repeat;
-				z-index: 1;
-				background-position: center;
-				position: relative; /* Ensure the element is positioned to allow absolute positioning of the overlay */
-				color: rgb(243,244,246); /* Sets the text color */
-			} #meet-the-dctrs::before {
-				content: '';
-				position: absolute;
-				color: rgb(243,244,246);
-				left: 0;
-				z-index: -1;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				background-color: hsla(173, 36%, 51%, 0.8); /* Adds an overlay with a semi-transparent background color */
-			}
-
-
-			#book-an-appointment {
-				background-image: url('{% static "imgs/d11.jpg" %}');
-				background-size: cover;
-				background-repeat: no-repeat;
-				z-index: 1;
-				background-position: center;
-				position: relative; /* Ensure the element is positioned to allow absolute positioning of the overlay */
-				color: rgb(243,244,246); 
-			} #book-an-appointment::before {
-				content: '';
-				position: absolute;
-				left: 0;
-				top: 0;
-				width: 100%;
-				height: 100%;
-				z-index: -1;
-				background-image: linear-gradient(-90deg, hsla(173, 57%, 48%, 0.8) 30%, rgba(62, 62, 67, 0.8) -70%);
-			}
-
-
 	</style>
 
 </head>
@@ -263,6 +431,11 @@
 	{% block 'content' %}{% endblock %}
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+	<script>
+		function switchTheme(theme) {
+      document.body.className = theme;
+    }
+	</script>
 
 	{% block 'script' %}{% endblock %}
 

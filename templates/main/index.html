@@ -19,13 +19,13 @@
 
 <!----------------------------------------------------------- Welcome Section ------------------------------------------------------------------------>
 
-<div id="wlcm-sec" class="bg-teal-50 rounded-lg max-w-7xl mx-auto my-16 px-5">
+<div id="wlcm-sec" class="cntnr rounded-lg max-w-7xl mx-auto my-16 px-5">
 	<div class="flex flex-wrap lg:flex-nowrap flex-row gap-5">
 
 		<div class="w-full lg:w-1/2 py-5">
-			<h2 class="text-3xl md:text-4xl text-teal-600 font-semibold px-5">Welcome to <span
+			<h2 class="text-3xl md:text-4xl heading font-semibold px-5">Welcome to <span
 					class="font-extrabold italic">Your Website</span></h2>
-			<p class="text-xl text-gray-800 p-5">At our clinic, we believe that every smile is unique and deserves the highest
+			<p class="text-xl paragraph p-5">At our clinic, we believe that every smile is unique and deserves the highest
 				quality of care.
 				Our dedicated team of professionals is here to provide you with a personalized and comfortable experience,
 				ensuring that each
@@ -36,14 +36,14 @@
 
 			<div class="flex items-center p-4 rounded-lg">
 				<div class="flex justify-center items-center w-1/4">
-					<svg class="w-12 h-12 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+					<svg class="w-12 h-12 heading" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 						stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 					</svg>
 				</div>
 				<div class="w-3/4">
 					<h2 class="text-lg font-bold">Comprehensive Services</h2>
-					<p class="text-lg">
+					<p class="text-lg paragraph">
 						We offer a full range of dental services to meet all your oral health needs.
 						From preventive care to cosmetic and restorative treatments, our team is equipped to handle it all.
 					</p>
@@ -53,14 +53,14 @@
 
 			<div class="flex items-center p-4 rounded-lg">
 				<div class="flex justify-center items-center w-1/4">
-					<svg class="w-12 h-12 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+					<svg class="w-12 h-12 heading" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 						stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 					</svg>
 				</div>
 				<div class="w-3/4">
 					<h2 class="text-lg font-bold">Patient-Focused Approach</h2>
-					<p class="text-lg">
+					<p class="text-lg paragraph">
 						Your comfort and satisfaction are our top priorities. We strive to create a welcoming environment where you
 						feel at
 						ease and confident in the care you receive.
@@ -97,9 +97,9 @@
 <div id="services"
 	class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1  max-w-7xl mx-auto my-24 py-10 scroll-mt-20">
 	<!-- Box 1: Spans 1 row and 2 columns in lg and above, spans full width in md and below -->
-	<div class="md:col-span-2 lg:col-span-2 lg:row-span-1 p-5 bg-teal-50 flex flex-col justify-center rounded-tl-lg">
-		<h2 class="text-3xl md:text-4xl text-teal-600 font-semibold px-2">Dentistry for Today's Lifestyle</h2>
-		<p class="text-gray-800 text-xl p-2 font-bold">We Have All Your Dental Needs Covered</p>
+	<div class="md:col-span-2 lg:col-span-2 lg:row-span-1 p-5 cntnr flex flex-col justify-center rounded-tl-lg">
+		<h2 class="text-3xl md:text-4xl heading font-semibold px-2">Dentistry for Today's Lifestyle</h2>
+		<p class="paragraph text-xl p-2 font-bold">We Have All Your Dental Needs Covered</p>
 	</div>
 
 	<!-- Box 2 to 8: Regular boxes -->
@@ -146,7 +146,7 @@
 
 	<!-- Box 10: Spans 1 row and 2 columns in lg and above, full width in md and below -->
 	<div
-		class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-gradient-to-r from-teal-500 to-green-300 rounded-br-full p-4 flex flex-col justify-center items-center shadow-xl">
+		class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-br-full p-4 flex flex-col justify-center items-center shadow-xl">
 		<a href="{% url 'main:index' %}#book-an-appointment"
 			class="text-2xl md:text-3xl text-gray-100 font-semibold px-2 hover:underline">Book an Appointment</a>
 	</div>
@@ -162,20 +162,20 @@
 					<h3 class="text-3xl md:text-5xl lg:text-4xl xl:text-5xl text-white p-5 leading-tight">Get Brighter Smile from Your City's Best Dentists</h3>
 			</div>
 			<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
-					<div class="bg-teal-50 rounded-2xl p-6">
+					<div class="cntnr rounded-2xl p-6">
 							<form class="w-full">
 									<div>
-										<h4 class="text-2xl text-center text-gray-800 p-5">Book An Appointment</h4>
+										<h4 class="text-2xl text-center paragraph p-5">Book An Appointment</h4>
 									</div>
 									<div class="mb-5">
-											<label for="subject" class="block mb-2 text-sm font-medium text-gray-900">Subject</label>
+											<label for="subject" class="block mb-2 text-sm font-medium paragraph">Subject</label>
 											<input type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Subject of your appointment" required />
 									</div>
 									<div class="mb-5">
-										<label for="message" class="block mb-2 text-sm font-medium text-gray-900">Your message</label>
+										<label for="message" class="block mb-2 text-sm font-medium paragraph">Your message</label>
 										<textarea rows="5" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Briefly describe why you are requesting this appointment"></textarea>
 									</div>
-									<button type="submit" class="text-white bg-teal-600 hover:bg-teal-700 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center">Request Appointment</button>
+									<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center">Request Appointment</button>
 							</form>
 					</div>
 			</div>
@@ -194,19 +194,19 @@
 			</div>
 		</div>
 
-		<div class="bg-teal-50 w-full lg:w-1/2 p-10 flex flex-col justify-center">
+		<div class="cntnr w-full lg:w-1/2 p-10 flex flex-col justify-center">
 
-			<p class="text-gray-800 text-xl py-2 font-bold">Meet the Doctor</p>
-			<h2 class="text-3xl md:text-4xl text-teal-600 font-semibold">Your Name could be here!</h2>
-			<p class="text-xl text-gray-800 pt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+			<p class="paragraph text-xl py-2 font-bold">Meet the Doctor</p>
+			<h2 class="text-3xl md:text-4xl heading font-semibold">Your Name could be here!</h2>
+			<p class="text-xl paragraph pt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
 				luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-			<p class="text-xl text-gray-800 pt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+			<p class="text-xl paragraph pt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
 				luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
 
 
 			<a href="{% url 'main:index' %}#book-an-appointment" class="flex justify-center py-3">
 				<button type="button"
-					class="text-gray-100 w-full bg-teal-400 hover:bg-teal-500 focus:ring-teal-500 focus:outline-none focus:ring-opacity-50 transform transition inline-flex items-center justify-center font-medium rounded-lg text-2xl p-1 mt-1 text-center me-2 mb-2">
+					class="text-gray-100 w-full bg-main-gradient focus:ring-0 focus:outline-none focus:ring-opacity-50 transform transition inline-flex items-center justify-center font-medium rounded-lg text-2xl p-1 mt-1 text-center me-2 mb-2">
 					Book an Appointment
 				</button>
 			</a>
@@ -229,9 +229,9 @@
 
 		<div class="max-w-xs bg-white rounded-lg shadow-xl">
 			<img class="w-full h-auto object-cover rounded-t-lg" src="{% static 'imgs/d8.jpeg' %}" alt="Article image" />
-			<div class="p-4 bg-teal-600 rounded-b-lg text-center">
-				<h3 class="mb-1 text-2xl font-semibold tracking-tight text-gray-100">Dr. Hala Karim</h3>
-				<p class="mb-2 text-xl font-normal text-gray-200">
+			<div class="p-4 blog-page-desc rounded-b-lg text-center">
+				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">Dr. Hala Karim</h3>
+				<p class="mb-2 text-xl font-normal text-gray-800">
 					Orthodontist
 				</p>
 			</div>
@@ -239,9 +239,9 @@
 
 		<div class="max-w-xs bg-white rounded-lg shadow-xl">
 			<img class="w-full h-auto object-cover rounded-t-lg" src="{% static 'imgs/d7.jpeg' %}" alt="Article image" />
-			<div class="p-4 bg-teal-600 rounded-b-lg text-center">
-				<h3 class="mb-1 text-2xl font-semibold tracking-tight text-gray-100">Dr. Youssef Hassan</h3>
-				<p class="mb-2 text-xl font-normal text-gray-200">
+			<div class="p-4 blog-page-desc rounded-b-lg text-center">
+				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">Dr. Youssef Hassan</h3>
+				<p class="mb-2 text-xl font-normal text-gray-800">
 					Prosthodontist
 				</p>
 			</div>
@@ -249,9 +249,9 @@
 
 		<div class="max-w-xs bg-white rounded-lg shadow-xl">
 			<img class="w-full h-auto object-cover rounded-t-lg" src="{% static 'imgs/d6.jpeg' %}" alt="Article image" />
-			<div class="p-4 bg-teal-600 rounded-b-lg text-center">
-				<h3 class="mb-1 text-2xl font-semibold tracking-tight text-gray-100">Dr. Nadia Ali</h3>
-				<p class="mb-2 text-xl font-normal text-gray-200">
+			<div class="p-4 blog-page-desc rounded-b-lg text-center">
+				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">Dr. Nadia Ali</h3>
+				<p class="mb-2 text-xl font-normal text-gray-800">
 					Cosmetic Dentist
 				</p>
 			</div>
@@ -259,9 +259,9 @@
 
 		<div class="max-w-xs bg-white rounded-lg shadow-xl">
 			<img class="w-full h-auto object-cover rounded-t-lg" src="{% static 'imgs/d9.jpeg' %}" alt="Article image" />
-			<div class="p-4 bg-teal-600 rounded-b-lg text-center">
-				<h3 class="mb-1 text-2xl font-semibold tracking-tight text-gray-100">Dr. Ahmed Al-Farsi</h3>
-				<p class="mb-2 text-xl font-normal text-gray-200">
+			<div class="p-4 blog-page-desc rounded-b-lg text-center">
+				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">Dr. Ahmed Al-Farsi</h3>
+				<p class="mb-2 text-xl font-normal text-gray-800">
 					General Dentist
 				</p>
 			</div>
@@ -275,7 +275,7 @@
 
 <!-- Abive 'lg' size to make images on the left -->
 
-<div id="wlcm-sec" class="bg-teal-50 rounded-lg max-w-7xl mx-auto my-24 py-10 hidden lg:block ">
+<div id="wlcm-sec" class="cntnr rounded-lg max-w-7xl mx-auto my-24 py-10 hidden lg:block ">
 	<div class="flex flex-wrap lg:flex-nowrap flex-row gap-5">
 
 		<div class="w-full lg:w-1/2 relative mr-5 hidden md:block pt-6 pl-6">
@@ -299,8 +299,8 @@
 
 
 		<div class="w-full lg:w-1/2 py-5">
-			<h2 class="text-2xl md:text-4xl text-teal-600 font-semibold px-5">Committed To Dental Excellence</h2>
-			<p class="text-xl text-gray-800 p-5">At our clinic, we blend state-of-the-art technology with unparalleled
+			<h2 class="text-2xl md:text-4xl heading font-semibold px-5">Committed To Dental Excellence</h2>
+			<p class="text-xl paragraph p-5">At our clinic, we blend state-of-the-art technology with unparalleled
 				expertise to deliver top-tier dental care.
 				Our team of dedicated professionals is committed to excellence, ensuring every visit is comfortable, effective,
 				and tailored to your unique needs.
@@ -309,14 +309,14 @@
 
 			<div class="flex items-center p-4 rounded-lg">
 				<div class="flex justify-center items-center w-1/4">
-					<svg class="w-12 h-12 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+					<svg class="w-12 h-12 heading" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 						stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 					</svg>
 				</div>
 				<div class="w-3/4">
 					<h2 class="text-lg font-bold">Personalized Care</h2>
-					<p class="text-lg">
+					<p class="text-lg paragraph">
 						Our approach to dental care is uniquely tailored to each patient, ensuring treatment plans that address your
 						specific needs and concerns.
 					</p>
@@ -326,14 +326,14 @@
 
 			<div class="flex items-center p-4 rounded-lg">
 				<div class="flex justify-center items-center w-1/4">
-					<svg class="w-12 h-12 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+					<svg class="w-12 h-12 heading" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 						stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 					</svg>
 				</div>
 				<div class="w-3/4">
 					<h2 class="text-lg font-bold">Advanced Treatments</h2>
-					<p class="text-lg">
+					<p class="text-lg paragraph">
 						We stay at the forefront of dental innovation, offering advanced treatments that utilize the latest
 						techniques and technologies for optimal results.
 					</p>
@@ -349,12 +349,12 @@
 
 <!-- Below lg size so the images appear on the bottom side -->
 
-<div id="wlcm-sec" class="bg-teal-50 rounded-lg max-w-7xl mx-auto my-24 py-10 block lg:hidden">
+<div id="wlcm-sec" class="cntnr rounded-lg max-w-7xl mx-auto my-24 py-10 block lg:hidden">
 	<div class="flex flex-wrap lg:flex-nowrap flex-row gap-5">
 
 		<div class="w-full lg:w-1/2 py-5">
-			<h2 class="text-2xl md:text-4xl text-teal-600 font-semibold px-5">Committed To Dental Excellence</h2>
-			<p class="text-xl text-gray-800 p-5">At our clinic, we blend state-of-the-art technology with unparalleled
+			<h2 class="text-2xl md:text-4xl heading font-semibold px-5">Committed To Dental Excellence</h2>
+			<p class="text-xl paragraph p-5">At our clinic, we blend state-of-the-art technology with unparalleled
 				expertise to deliver top-tier dental care.
 				Our team of dedicated professionals is committed to excellence, ensuring every visit is comfortable, effective,
 				and tailored to your unique needs.
@@ -364,14 +364,14 @@
 
 			<div class="flex items-center p-4 rounded-lg">
 				<div class="flex justify-center items-center w-1/4">
-					<svg class="w-12 h-12 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+					<svg class="w-12 h-12 heading" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 						stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 					</svg>
 				</div>
 				<div class="w-3/4">
 					<h2 class="text-lg font-bold">Personalized Care</h2>
-					<p class="text-lg">
+					<p class="text-lg paragraph">
 						Our approach to dental care is uniquely tailored to each patient, ensuring treatment plans that address your
 						specific needs and concerns.
 					</p>
@@ -381,14 +381,14 @@
 
 			<div class="flex items-center p-4 rounded-lg">
 				<div class="flex justify-center items-center w-1/4">
-					<svg class="w-12 h-12 text-teal-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+					<svg class="w-12 h-12 heading" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
 						stroke="currentColor">
 						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
 					</svg>
 				</div>
 				<div class="w-3/4">
 					<h2 class="text-lg font-bold">Advanced Treatments</h2>
-					<p class="text-lg">
+					<p class="text-lg paragraph">
 						We stay at the forefront of dental innovation, offering advanced treatments that utilize the latest
 						techniques and technologies for optimal results.
 					</p>

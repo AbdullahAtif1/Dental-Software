@@ -6,8 +6,10 @@
 
 {% block 'content' %}
 
+<!-- indigo 5 prpl 3 -->
+<!-- red 7 amber 3 -->
 
-<div class="min-h-60 bg-gradient-to-r from-teal-500 to-green-300 rounded-br-full py-8 shadow-2xl">
+<div class="min-h-60 bg-main-gradient rounded-br-full py-8 shadow-2xl">
 	<div class="max-w-xl m-auto py-10">
 		<h1 class="text-white font-bold text-center text-5xl my-5">
 			This Could be Yours
@@ -25,7 +27,7 @@
 					class="block w-full p-4 ps-10 text-sm text-gray-900 border-none bg-gray-50 focus:ring-teal-500 rounded-3xl"
 					placeholder="Looking for something?" required />
 				<button type="submit"
-					class="text-white absolute end-2.5 bottom-2 mx-1 bg-teal-400 hover:bg-teal-500 focus:ring-2 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-4 py-2">
+					class="text-white absolute end-2.5 bottom-2 mx-1 blog-page-art-btn focus:ring-2 font-medium rounded-lg text-sm px-4 py-2">
 					Search
 				</button>
 			</form>
@@ -40,16 +42,16 @@
 
 <div class="flex flex-wrap gap-10 justify-center my-10 px-3">
 	{% for article in ran_4 %}
-	<div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-md">
+	<div class="max-w-xs bg-white border border-gray-200 rounded-3xl shadow-md">
 		<img class="w-full h-52 object-cover rounded-t-lg" src="{{ article.header_image.url }}" alt="Article image" />
-		<div class="p-4 bg-teal-600 rounded-b-lg">
-			<h3 class="mb-1 text-2xl font-semibold tracking-tight text-gray-100">{{ article.title }}</h3>
-			<p class="mb-2 text-lg font-normal text-gray-200">
-				{{ article.description }}
+		<div class="p-4 blog-page-desc rounded-b-lg">
+			<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">{{ article.title }}</h3>
+			<p class="mb-2 text-lg font-normal text-gray-900">
+				{{ article.description|truncatewords:10 }}
 			</p>
 			<a href="{% url 'blog:detail' article_id=article.id slug=article.slug %}" class="flex justify-center">
 				<button type="button"
-					class="hover:-translate-y-0.5 w-full text-gray-100 bg-teal-400 hover:bg-teal-500 focus:ring-teal-500 focus:outline-nonefocus:ring-opacity-50 transform transition  inline-flex items-center justify-center font-medium rounded-2xl text-lg p-2 mt-1 text-center me-2 mb-2">
+					class="hover:-translate-y-0.5 w-full text-gray-100 blog-page-art-btn focus:ring-opacity-50 transform transition  inline-flex items-center justify-center font-medium rounded-2xl text-lg p-2 mt-1 text-center me-2 mb-2">
 					Read More
 					<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2 mt-1 font-bold" aria-hidden="true"
 						xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -77,7 +79,7 @@
 				<div class="relative mt-5">
 					{% render_field form.email type="email" class="block md:w-full p-4 ps-10 text-sm text-gray-900 border-none bg-gray-50 focus:ring-teal-500 rounded-3xl" placeholder="Your Email please..." %}
 					<button type="submit"
-						class="text-white absolute end-2.5 bottom-2 mx-1 bg-teal-500 hover:bg-teal-600 focus:ring-2 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-4 py-2">
+						class="text-white absolute end-2.5 bottom-2 mx-1 blog-page-art-btn focus:ring-2 font-medium rounded-lg text-sm px-4 py-2">
 						Signup
 					</button>
 				</div>
@@ -91,16 +93,16 @@
 <!-- rest of the articles -->
 <div class="flex flex-wrap gap-6 justify-center my-8 px-2">
 	{% for article in page_obj.object_list %}
-	<div class="max-w-xs bg-white border border-gray-200 rounded-lg shadow-md">
+	<div class="max-w-xs bg-white border border-gray-200 rounded-3xl shadow-md">
 		<img class="w-full h-52 object-cover rounded-t-lg" src="{{ article.header_image.url }}" alt="Article image" />
-		<div class="p-4 bg-teal-600 rounded-b-lg">
-			<h3 class="mb-1 text-2xl font-semibold tracking-tight text-gray-100">{{ article.title }}</h3>
-			<p class="mb-2 text-lg font-normal text-gray-200">
-				{{ article.description }}
+		<div class="p-4 blog-page-desc rounded-b-lg">
+			<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">{{ article.title }}</h3>
+			<p class="mb-2 text-lg font-normal text-gray-900">
+				{{ article.description|truncatewords:10 }}
 			</p>
 			<a href="{% url 'blog:detail' article_id=article.id slug=article.slug %}" class="flex justify-center">
 				<button type="button"
-					class="hover:-translate-y-0.5 w-full text-gray-100 bg-teal-400 hover:bg-teal-500 focus:ring-teal-500 focus:outline-nonefocus:ring-opacity-50 transform transition  inline-flex items-center justify-center font-medium rounded-2xl text-lg p-2 mt-1 text-center me-2 mb-2">
+					class="hover:-translate-y-0.5 w-full text-gray-100 blog-page-art-btn focus:ring-opacity-50 transform transition  inline-flex items-center justify-center font-medium rounded-2xl text-lg p-2 mt-1 text-center me-2 mb-2">
 					Read More
 					<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2 mt-1 font-bold" aria-hidden="true"
 						xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
@@ -117,21 +119,21 @@
 
 <!-- Pagination buttons -->
 <div
-	class="flex items-center justify-center bottom-0 space-x-4 mt-4 bg-gradient-to-r from-teal-500 to-green-300 p-4 rounded-tl-full shadow-md">
+	class="flex items-center justify-center bottom-0 space-x-4 mt-4 bg-main-gradient p-4 rounded-tl-full shadow-md">
 	{% if page_obj.has_previous %}
-			<a href="?page={{page_obj.previous_page_number}}" class="px-4 py-2 text-teal-700 bg-white border border-teal-300 hover:bg-teal-100 rounded-lg shadow-sm">
+			<a href="?page={{page_obj.previous_page_number}}" class="px-4 py-2 pgntn-text bg-white border pgntn-brdr pgntn-btn-on-hover rounded-lg shadow-sm">
 				&lt; Previous
 			</a>
 	{% endif %}
 	
 	{% if page_obj.number == 1 %}
-			<span class="px-4 py-2 text-teal-700 bg-white border border-teal-300 rounded-lg shadow-sm">1</span>
+			<span class="px-4 py-2 pgntn-text bg-white border pgntn-brdr rounded-lg shadow-sm">1</span>
 	{% else %}
-			<span class="px-4 py-2 text-teal-700 bg-white border border-teal-300 rounded-lg shadow-sm">{{ page_obj.number }}</span>
+			<span class="px-4 py-2 pgntn-text bg-white border pgntn-brdr rounded-lg shadow-sm">{{ page_obj.number }}</span>
 	{% endif %}
 	
 	{% if page_obj.has_next %}
-			<a href="?page={{page_obj.next_page_number}}" class="px-4 py-2 text-teal-700 bg-white border border-teal-300 hover:bg-teal-100 rounded-lg shadow-sm">
+			<a href="?page={{page_obj.next_page_number}}" class="px-4 py-2 pgntn-text bg-white border pgntn-brdr pgntn-btn-on-hover rounded-lg shadow-sm">
 					Next &gt;
 			</a>
 	{% endif %}
