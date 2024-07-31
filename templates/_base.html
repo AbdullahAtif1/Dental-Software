@@ -431,12 +431,23 @@
 	{% block 'content' %}{% endblock %}
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
+	
 	<script>
+		// Function to switch theme
 		function switchTheme(theme) {
-      document.body.className = theme;
-    }
+			document.body.className = theme;  // Set the body class to the selected theme
+			localStorage.setItem('selectedTheme', theme);  // Store the selected theme in local storage
+		}
+	
+		// Apply the stored theme on page load
+		document.addEventListener('DOMContentLoaded', () => {
+			const storedTheme = localStorage.getItem('selectedTheme');
+			if (storedTheme) {
+				document.body.className = storedTheme;  // Apply the stored theme
+			}
+		});
 	</script>
-
+	
 	{% block 'script' %}{% endblock %}
 
 	{% include 'footer.html' %}
