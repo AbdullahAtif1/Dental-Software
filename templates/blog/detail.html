@@ -6,7 +6,7 @@
 
 {% block 'content' %}
 
-	<div class="min-h-60 bg-main-gradient rounded-br-full py-8 shadow-2xl">
+	<div class="min-h-60 bg-main-gradient rounded-br-full py-8 shadow-2xl px-2 sm:px-0">
 		<div class="max-w-xl m-auto py-10">
 			<h1 class="text-white font-bold text-center text-4xl md:text-5xl my-5">
 				{{ article.title }}
@@ -17,7 +17,7 @@
 
 	<div class="my-10 mx-auto max-w-6xl cntnr rounded-lg p-10">
 
-		<img src="{{ article.header_image.url }}" class="rounded-xl max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-2xl h-auto mx-auto">
+		<img src="{{ article.header_image.url }}" class="rounded-xl max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-full h-auto mx-auto">
 		
 		<p class="text-xl m-5">{{ article.body|safe|linebreaks }}</p>
 		

@@ -30,7 +30,7 @@ class Article(models.Model):
         self.slug = slugify(self.title)
         super(Article, self).save(*args, **kwargs)
         # Send emails in a separate thread
-        threading.Thread(target=self.notify_sbscrbrs).start()
+        # threading.Thread(target=self.notify_sbscrbrs).start()
 
     def get_absolute_url(self):
         return reverse('blog:detail', kwargs={'article_id': self.id, 'slug': self.slug})
