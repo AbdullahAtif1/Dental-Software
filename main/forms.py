@@ -1,20 +1,29 @@
 from django import forms
-from .models import *
+from django.utils.translation import gettext_lazy as _
+from .models import Subscriber, Appointment, Feedback
 
 class SubscriberForm(forms.ModelForm):
     class Meta:
         model = Subscriber
         fields = ['email']
-        
+        labels = {
+            'email': _("Email Address"),
+        }
 
 class AppointmentForm(forms.ModelForm):
     class Meta:
         model = Appointment
         fields = ['subject', 'description']
-
+        labels = {
+            'subject': _("Subject"),
+            'description': _("Description"),
+        }
 
 class FeedbackForm(forms.ModelForm):
     class Meta:
         model = Feedback
         fields = ['body', 'stars']
-
+        labels = {
+            'body': _("Feedback"),
+            'stars': _("Rating"),
+        }

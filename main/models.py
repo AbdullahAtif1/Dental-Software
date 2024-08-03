@@ -4,12 +4,13 @@ from django.contrib.auth import get_user_model
 from concurrent.futures import ThreadPoolExecutor
 from . import email_templates
 from dentadmin.models import Patient
+from django.utils.translation import gettext_lazy as _
 
 # email list for the users to fill their email in for subscribing to newsletters or other promotional stuff
 class Subscriber(models.Model):
 
-	email = models.EmailField(unique=True)
-	subscribed_at = models.DateTimeField(auto_now_add=True)
+	email = models.EmailField(_('email address'), unique=True)
+	subscribed_at = models.DateTimeField(_('subscribed at'), auto_now_add=True)
 
 	def __str__(self):
 			return self.email
@@ -24,12 +25,12 @@ class Appointment(models.Model):
 			('not_approved', 'Not Approved'),
 	]
 
-	patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='appointments')
-	subject = models.CharField(max_length=300)
-	description = models.TextField()
-	status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='under_review')
-	date = models.DateField(null=True, blank=True)
-	time = models.TimeField(null=True, blank=True)
+	patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='appointments', verbose_name=_('patient'))
+	subject = models.CharField(_('subject'), max_length=300)
+	description = models.TextField(_('description'))
+	status = models.CharField(_('status'), max_length=20, choices=STATUS_CHOICES, default='under_review')
+	date = models.DateField(_('date'), null=True, blank=True)
+	time = models.TimeField(_('time'), null=True, blank=True)
 
 	# Have to add phone number field for SMS
 
@@ -115,10 +116,10 @@ class Feedback(models.Model):
 			(5, '5 Stars'),
 	]
 
-	name = models.CharField(max_length=255)
-	email = models.EmailField()
-	body = models.TextField()
-	stars = models.IntegerField(choices=STARS_CHOICES)
+	name = models.CharField(_('name'), max_length=255)
+	email = models.EmailField(_('email address'))
+	body = models.TextField(_('body'))
+	stars = models.IntegerField(_('stars'), choices=STARS_CHOICES)
 
 	def save(self, *args, **kwargs):
 

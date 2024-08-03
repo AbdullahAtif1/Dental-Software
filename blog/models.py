@@ -5,7 +5,7 @@ from django.urls import reverse
 from django.core.mail import send_mail
 from main.models import Subscriber
 from main import email_templates
-import threading
+from django.utils.translation import gettext_lazy as _
 from concurrent.futures import ThreadPoolExecutor
 
 class Article(models.Model):
@@ -14,14 +14,14 @@ class Article(models.Model):
         ('Draft', 'Draft'),
         ('Published', 'Published'),
     ]
-    title = models.CharField(max_length=1000)
-    description = models.CharField(max_length=1000)
-    body = HTMLField()
-    slug = models.SlugField(blank=True)
-    header_image = models.ImageField(upload_to='imgs/', blank=True, null=True)
-    pub_date = models.DateField(auto_now_add=True)
-    updated = models.DateField(auto_now=True)
-    status = models.CharField(max_length=12, choices=STATUS_CHOICES, default='Draft')
+    title = models.CharField(_('title'), max_length=100)
+    description = models.CharField(_('description'), max_length=1000)
+    body = HTMLField(_('body'))
+    slug = models.SlugField(_('slug'), blank=True)
+    header_image = models.ImageField(_('header image'), upload_to='imgs/', blank=True, null=True)
+    pub_date = models.DateField(_('publication date'), auto_now_add=True)
+    updated = models.DateField(_('last updated'), auto_now=True)
+    status = models.CharField(_('status'), max_length=12, choices=STATUS_CHOICES, default='Draft')
 
     def __str__(self):
         return self.title
