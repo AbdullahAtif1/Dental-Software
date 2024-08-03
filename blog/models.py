@@ -7,65 +7,70 @@ from main.models import Subscriber
 from main import email_templates
 from django.utils.translation import gettext_lazy as _
 from concurrent.futures import ThreadPoolExecutor
+from parler.models import TranslatableModel, TranslatedFields
 
-class Article(models.Model):
+class Article(TranslatableModel):
+	STATUS_CHOICES = [
+			('Draft', 'Draft'),
+			('Published', 'Published'),
+	]
+	
+	header_image = models.ImageField(_('header image'), upload_to='imgs/', blank=True, null=True)
 
-    STATUS_CHOICES = [
-        ('Draft', 'Draft'),
-        ('Published', 'Published'),
-    ]
-    title = models.CharField(_('title'), max_length=100)
-    description = models.CharField(_('description'), max_length=1000)
-    body = HTMLField(_('body'))
-    slug = models.SlugField(_('slug'), blank=True)
-    header_image = models.ImageField(_('header image'), upload_to='imgs/', blank=True, null=True)
-    pub_date = models.DateField(_('publication date'), auto_now_add=True)
-    updated = models.DateField(_('last updated'), auto_now=True)
-    status = models.CharField(_('status'), max_length=12, choices=STATUS_CHOICES, default='Draft')
+	translations = TranslatedFields(
+			title=models.CharField(max_length=100),
+			description=models.TextField(),
+			body=HTMLField(),
+			slug=models.SlugField(blank=True),
+			pub_date=models.DateField(auto_now_add=True),
+			updated=models.DateField(auto_now=True),
+	)
 
-    def __str__(self):
-        return self.title
+	status = models.CharField(_('status'), max_length=12, choices=STATUS_CHOICES, default='Draft')
 
-    def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
-        super(Article, self).save(*args, **kwargs)
-        # Send emails in a separate thread
-        # threading.Thread(target=self.notify_sbscrbrs).start()
+	def __str__(self):
+			return self.title
 
-    def get_absolute_url(self):
-        return reverse('blog:detail', kwargs={'article_id': self.id, 'slug': self.slug})
+	def save(self, *args, **kwargs):
+			self.slug = slugify(self.title)
+			super(Article, self).save(*args, **kwargs)
+			# Send emails in a separate thread
+			# threading.Thread(target=self.notify_sbscrbrs).start()
 
-    def notify_sbscrbrs(self):
-        subscribers = Subscriber.objects.all()
+	def get_absolute_url(self):
+			return reverse('blog:detail', kwargs={'article_id': self.id, 'slug': self.slug})
 
-        def send_email(subscriber_email):
-            message = email_templates.NEW_ARTICLE_TEMPLATE.format(
-                article_url=self.get_absolute_url(),
-                article_title=self.title,
-                company_name="Amazing Dentals",
-                your_name="My Name",
-                contact_info="manager@socialcodepk.com"
-            )
-            send_mail(
-                f'{self.title} - Amazing Dentals',
-                message,
-                "socialcodepk@gmail.com",
-                [subscriber_email],
-                fail_silently=False,
-            )
+	def notify_sbscrbrs(self):
+			subscribers = Subscriber.objects.all()
 
-        # Define the number of threads you want in the pool
-        num_threads = 10
+			def send_email(subscriber_email):
+					message = email_templates.NEW_ARTICLE_TEMPLATE.format(
+							article_url=self.get_absolute_url(),
+							article_title=self.title,
+							company_name="Amazing Dentals",
+							your_name="My Name",
+							contact_info="manager@socialcodepk.com"
+					)
+					send_mail(
+							f'{self.title} - Amazing Dentals',
+							message,
+							"socialcodepk@gmail.com",
+							[subscriber_email],
+							fail_silently=False,
+					)
 
-        with ThreadPoolExecutor(max_workers=num_threads) as executor:
-            # Submit email sending tasks to the pool
-            futures = [executor.submit(send_email, subscriber.email) for subscriber in subscribers]
+			# Define the number of threads you want in the pool
+			num_threads = 10
 
-            # Wait for all tasks to complete
-            for future in futures:
-                try:
-                    future.result()
-                except Exception as e:
-                    print(f"Error sending email: {e}")
+			with ThreadPoolExecutor(max_workers=num_threads) as executor:
+					# Submit email sending tasks to the pool
+					futures = [executor.submit(send_email, subscriber.email) for subscriber in subscribers]
 
-        print("All emails sent")
+					# Wait for all tasks to complete
+					for future in futures:
+							try:
+									future.result()
+							except Exception as e:
+									print(f"Error sending email: {e}")
+
+			print("All emails sent")

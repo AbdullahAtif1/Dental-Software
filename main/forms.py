@@ -2,15 +2,15 @@ from django import forms
 from django.utils.translation import gettext_lazy as _
 from .models import Subscriber, Appointment, Feedback
 
-class SubscriberForm(forms.ModelForm):
+class SubscriberForm(forms.Form):
     class Meta:
         model = Subscriber
-        fields = ['email']
+        fields = ['email',]  # This should be 'email' as a TranslatableField
         labels = {
             'email': _("Email Address"),
         }
 
-class AppointmentForm(forms.ModelForm):
+class AppointmentForm(forms.Form):
     class Meta:
         model = Appointment
         fields = ['subject', 'description']
@@ -19,7 +19,7 @@ class AppointmentForm(forms.ModelForm):
             'description': _("Description"),
         }
 
-class FeedbackForm(forms.ModelForm):
+class FeedbackForm(forms.Form):
     class Meta:
         model = Feedback
         fields = ['body', 'stars']

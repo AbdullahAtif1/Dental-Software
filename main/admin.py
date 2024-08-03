@@ -2,7 +2,8 @@ from django.contrib import admin
 from .models import *
 from django.core.exceptions import ValidationError
 
-@admin.register(Appointment)
+from parler.admin import TranslatableAdmin
+
 class AppointmentAdmin(admin.ModelAdmin):
     list_display = ('subject', 'patient', 'status', 'date', 'time')
     list_filter = ('status', 'date')
@@ -14,15 +15,16 @@ class AppointmentAdmin(admin.ModelAdmin):
         super().save_model(request, obj, form, change)
 
 
-@admin.register(Feedback)
 class FeedbackAdmin(admin.ModelAdmin):
     list_display = ('name', 'email', 'stars', 'body')
     list_filter = ('stars',)
     search_fields = ('name', 'email')
 
-@admin.register(Subscriber)
 class SubscriberAdmin(admin.ModelAdmin):
     list_display = ('email', 'subscribed_at')
     search_fields = ('email',)
 
+admin.site.register(Appointment, TranslatableAdmin)
+admin.site.register(Feedback, TranslatableAdmin)
+admin.site.register(Subscriber, TranslatableAdmin)
 

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-03 23:58+0500\n"
+"POT-Creation-Date: 2024-08-04 00:03+0500\n"
 "PO-Revision-Date: 2024-08-03 16:08+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -163,3 +163,7 @@ msgstr "Name"
 #: .\main\models.py:122
 msgid "stars"
 msgstr "Stars"
+
+#: .\templates\main\index.html:13
+msgid "A Better Life Starts with a Beautiful Smile"
+msgstr "A Better Life Starts with a Beautiful Smile"

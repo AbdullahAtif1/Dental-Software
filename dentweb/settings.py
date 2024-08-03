@@ -48,8 +48,9 @@ INSTALLED_APPS = [
 		#3rd Party
 		'widget_tweaks',
 		'tinymce',
-		# 'django_phonenumbers',
+		'django_phonenumbers',
 		'phonenumber_field',
+		'parler',
 ]
 
 
@@ -59,6 +60,17 @@ LANGUAGES = [
 	('ar', _('Arabic')),
 	('en', _('English'))
 ]
+
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'ar',},
+        {'code': 'en',},
+    ),
+    'default': {
+        'fallbacks': ['ar'],
+        'hide_untranslated': False,
+    }
+}
 
 LOCALE_PATHS =  [os.path.join(BASE_DIR, ('locale'))]
 
