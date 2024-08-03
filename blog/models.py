@@ -5,54 +5,67 @@ from django.urls import reverse
 from django.core.mail import send_mail
 from main.models import Subscriber
 from main import email_templates
-# from django.utils.translation import gettext_lazy as _
+import threading
+from concurrent.futures import ThreadPoolExecutor
 
 class Article(models.Model):
 
-	STATUS_CHOICES = [
-			('Draft', 'Draft'),
-			('Published', 'Published'),
-	]
-	title = models.CharField(max_length=1000)
-	description = models.CharField(max_length=1000)
-	body = HTMLField()
-	slug = models.SlugField(blank=True)
-	header_image = models.ImageField(upload_to='imgs/', blank=True, null=True)
-	pub_date = models.DateField(auto_now_add=True)
-	updated = models.DateField(auto_now=True)
-	status = models.CharField(
-			max_length=12, choices=STATUS_CHOICES, default='Draft')
+    STATUS_CHOICES = [
+        ('Draft', 'Draft'),
+        ('Published', 'Published'),
+    ]
+    title = models.CharField(max_length=1000)
+    description = models.CharField(max_length=1000)
+    body = HTMLField()
+    slug = models.SlugField(blank=True)
+    header_image = models.ImageField(upload_to='imgs/', blank=True, null=True)
+    pub_date = models.DateField(auto_now_add=True)
+    updated = models.DateField(auto_now=True)
+    status = models.CharField(max_length=12, choices=STATUS_CHOICES, default='Draft')
 
-	def __str__(self):
-			return self.title
+    def __str__(self):
+        return self.title
 
-	def save(self, *args, **kwargs):
-			self.slug = slugify(self.title)
-			# self.notify_sbscrbrs()
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(Article, self).save(*args, **kwargs)
+        # Send emails in a separate thread
+        threading.Thread(target=self.notify_sbscrbrs).start()
 
-			super(Article, self).save(*args, **kwargs)
+    def get_absolute_url(self):
+        return reverse('blog:detail', kwargs={'article_id': self.id, 'slug': self.slug})
 
-	def get_absolute_url(self):
-			return reverse('blog:detail', kwargs={'article_id': self.id, 'slug': self.slug})
+    def notify_sbscrbrs(self):
+        subscribers = Subscriber.objects.all()
 
-	def notify_sbscrbrs(self):
+        def send_email(subscriber_email):
+            message = email_templates.NEW_ARTICLE_TEMPLATE.format(
+                article_url=self.get_absolute_url(),
+                article_title=self.title,
+                company_name="Amazing Dentals",
+                your_name="My Name",
+                contact_info="manager@socialcodepk.com"
+            )
+            send_mail(
+                f'{self.title} - Amazing Dentals',
+                message,
+                "socialcodepk@gmail.com",
+                [subscriber_email],
+                fail_silently=False,
+            )
 
-		ppl = Subscriber.objects.all()
-		for x in ppl:
-			message = email_templates.NEW_ARTICLE_TEMPLATE.format(
-					client_name = x.name,
-					article_url = self.get_absolute_url(),
-					article_title = self.title,
-					company_name = "Amazing Dentals", # Change it afterwards
-					your_name = "My Name",
-					contact_info = "manager@socialcodepk.com" # Replace with client's official email adress
-				)
-			send_mail(
-            f'{ self.title } - Amazing Dentals',
-            message,
-            "socialcodepk@gmail.com" # From Email. Replace with client's gmail account
-            [x.email],
-            fail_silently=False,
-        )
+        # Define the number of threads you want in the pool
+        num_threads = 10
 
+        with ThreadPoolExecutor(max_workers=num_threads) as executor:
+            # Submit email sending tasks to the pool
+            futures = [executor.submit(send_email, subscriber.email) for subscriber in subscribers]
 
+            # Wait for all tasks to complete
+            for future in futures:
+                try:
+                    future.result()
+                except Exception as e:
+                    print(f"Error sending email: {e}")
+
+        print("All emails sent")

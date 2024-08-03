@@ -1,6 +1,7 @@
 from django.db import models
 from django.core.mail import EmailMessage, send_mail
 from django.contrib.auth import get_user_model
+from concurrent.futures import ThreadPoolExecutor
 from . import email_templates
 from dentadmin.models import Patient
 
@@ -48,21 +49,25 @@ class Appointment(models.Model):
 	def notify_superuser(self):
 			superuser_email = get_user_model().objects.filter(is_superuser=True).values_list('email', flat=True).first()
 			if superuser_email:
-					
-					subject = self.subject
-					from_email = "socialcodepk@gmail.com" # Replace with client's gmail account
-					to = ["manager@socialcodepk.com"] # Replace with client's official email adress
-					body = f"You have a new appointment request from {self.name}. Here's the request details:\n{self.description}"
-					reply_to = self.email
 
-					EmailMessage(
+				subject = self.subject
+				from_email = "socialcodepk@gmail.com" # Replace with client's gmail account
+				to = ["manager@socialcodepk.com"] # Replace with client's official email adress
+				body = f"You have a new appointment request from {self.name}. Here's the request details:\n{self.description}"
+				reply_to = self.email
+
+				with ThreadPoolExecutor(max_workers=10) as executor:
+							executor.submit(self._send_email, subject, body, from_email, to, reply_to)
+
+	def _send_email(self, subject, body, from_email, to, reply_to):
+			EmailMessage(
 						subject,
 						body,
 						from_email, # Send from (your website)
 						to, # Send to (your admin email). Replace afterwards with something like admin@socialcodepk.com
 						[], # bcc left empty
 						reply_to = reply_to # Email from the form to get back to
-					).send(fail_silently=False)
+					).send(fail_silently=False)				
 					
 	def send_confirmation_email(self):
 		if self.status == 'approved':
@@ -81,6 +86,10 @@ class Appointment(models.Model):
 					your_name = "My Name",
 					contact_info = "manager@socialcodepk.com" # Replace with client's official email adress
 				)
+		with ThreadPoolExecutor(max_workers=10) as executor:
+				executor.submit(self._send_confirmation_email, message)
+		
+	def _send_confirmation_email(self, message):
 		send_mail(
             'Appointment Status Update',
             message,

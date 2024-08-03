@@ -41,8 +41,6 @@ Best regards,
 
 NEW_ARTICLE_TEMPLATE = """
 
-Dear {client_name},
-
 We are excited to announce the publication of our latest article: **"{article_title}"**. This new piece dives into [brief description of the article topic].
 
 Read the full article at {article_url}\nand stay updated with the latest insights and trends.
