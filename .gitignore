@@ -1,9 +1,6 @@
-dental/
 migrations/
 changes to be made before handing over.txt
 __pycache__/
 node_modules
 static/CACHE
-
-
-
+env
