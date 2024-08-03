@@ -1,10 +1,9 @@
 from django.contrib import admin
 from .models import *
 
-@admin.register(Prospect)
-class ProspectAdmin(admin.ModelAdmin):
-    list_display = ('name', 'status')
-    search_fields = ('name',)
+@admin.register(Patient)
+class PatientAdmin(admin.ModelAdmin):
+    list_display = ('user', 'status', 'email')
     list_filter = ('status',)
 
 

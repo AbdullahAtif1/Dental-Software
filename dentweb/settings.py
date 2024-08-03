@@ -47,8 +47,9 @@ INSTALLED_APPS = [
 
 		#3rd Party
 		'widget_tweaks',
-		'django_htmx',
 		'tinymce',
+		# 'django_phonenumbers',
+		'phonenumber_field',
 ]
 
 
@@ -99,7 +100,7 @@ WSGI_APPLICATION = 'dentweb.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'NAME': 'dental_web',
+       'NAME': 'dent_web_2',
        'USER': 'postgres',
        'PASSWORD': '1234',
        'HOST': 'localhost',
@@ -156,7 +157,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "socialcodepk@gmail.com"
-EMAIL_HOST_PASSWORD = "rzoi zvrx iytq wbsn"
+EMAIL_HOST_PASSWORD = "nmmn lgcp slzg xwur"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field

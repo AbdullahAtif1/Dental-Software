@@ -10,11 +10,11 @@ from django.contrib.postgres.search import TrigramSimilarity
 
 def index(request):
 
-	ran_4 = list(Article.objects.all())
+	ran_4 = list(Article.objects.filter(status='Published'))
 	random.shuffle(ran_4)
 
 	ran_4 = ran_4[:4]
-	next_artcls = Article.objects.all().order_by("-updated")
+	next_artcls = Article.objects.filter(status='Published').order_by("-updated")
 
 	p = Paginator(next_artcls, 8)
 	page_number = request.GET.get("page")

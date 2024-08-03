@@ -2,7 +2,7 @@ from django.db import models
 from django.core.mail import EmailMessage, send_mail
 from django.contrib.auth import get_user_model
 from . import email_templates
-
+from dentadmin.models import Patient
 
 # email list for the users to fill their email in for subscribing to newsletters or other promotional stuff
 class Subscriber(models.Model):
@@ -23,16 +23,13 @@ class Appointment(models.Model):
 			('not_approved', 'Not Approved'),
 	]
 
-	name = models.CharField(max_length=255)
-	email = models.EmailField()
+	patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='appointments')
 	subject = models.CharField(max_length=300)
 	description = models.TextField()
 	status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='under_review')
-	date = models.DateField(auto_now_add=True)
-	time = models.TimeField(auto_now_add=True)
+	date = models.DateField(null=True, blank=True)
+	time = models.TimeField(null=True, blank=True)
 
-
-	# When you integrate the CRM, apply FK to the Patient model
 	# Have to add phone number field for SMS
 
 	def __str__(self):
@@ -88,7 +85,7 @@ class Appointment(models.Model):
             'Appointment Status Update',
             message,
             "socialcodepk@gmail.com" # From Email. Replace with client's gmail account
-            [self.email],
+            [self.patient.email],
             fail_silently=False,
         )
 

@@ -10,11 +10,11 @@ class SubscriberForm(forms.ModelForm):
 class AppointmentForm(forms.ModelForm):
     class Meta:
         model = Appointment
-        fields = ['name', 'email', 'subject', 'description']		
+        fields = ['subject', 'description']
 
 
 class FeedbackForm(forms.ModelForm):
     class Meta:
         model = Feedback
-        fields = ['name', 'email', 'body', 'stars']
+        fields = ['body', 'stars']
 

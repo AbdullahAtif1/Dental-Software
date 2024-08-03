@@ -4,3 +4,4 @@ psycopg2
 django-widget-tweaks==1.5.0
 django-tinymce==4.1.0
 django-compressor==4.5.1
+django-phonenumbers==1.0.1

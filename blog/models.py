@@ -5,6 +5,7 @@ from django.urls import reverse
 from django.core.mail import send_mail
 from main.models import Subscriber
 from main import email_templates
+# from django.utils.translation import gettext_lazy as _
 
 class Article(models.Model):
 
@@ -47,7 +48,7 @@ class Article(models.Model):
 					contact_info = "manager@socialcodepk.com" # Replace with client's official email adress
 				)
 			send_mail(
-            'Appointment Status Update',
+            f'{ self.title } - Amazing Dentals',
             message,
             "socialcodepk@gmail.com" # From Email. Replace with client's gmail account
             [x.email],

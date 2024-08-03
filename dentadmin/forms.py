@@ -1,10 +1,12 @@
 from django import forms
-from .models import Prospect, ProspectFile
+from .models import Patient, ProspectFile
+from phonenumber_field.formfields import PhoneNumberField
 
-class ProspectForm(forms.ModelForm):
+class PatientForm(forms.ModelForm):
+    phone_number = PhoneNumberField()
     class Meta:
-        model = Prospect
-        fields = ['name', 'picture', 'bio', 'status']
+        model = Patient
+        fields = ['picture', 'status', 'email', 'phone_number']
 
 class ProspectFileForm(forms.ModelForm):
     class Meta:
