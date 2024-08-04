@@ -53,18 +53,18 @@ INSTALLED_APPS = [
 		'parler',
 ]
 
-
 from django.utils.translation import gettext_lazy as _
 
 LANGUAGES = [
-	('ar', _('Arabic')),
-	('en', _('English'))
+    ('ar', _('Arabic')),
+    ('en', _('English')),
 ]
+
 
 PARLER_LANGUAGES = {
     None: (
-        {'code': 'ar',},
-        {'code': 'en',},
+        {'code': 'ar'},
+        {'code': 'en'},
     ),
     'default': {
         'fallbacks': ['ar'],
@@ -72,11 +72,13 @@ PARLER_LANGUAGES = {
     }
 }
 
-LOCALE_PATHS =  [os.path.join(BASE_DIR, ('locale'))]
+LOCALE_PATHS = [os.path.join(BASE_DIR, 'locale')]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+		'language.DefaultLanguageMiddleware',
 		'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -84,6 +86,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# Set the default language code
+LANGUAGE_CODE = 'ar'
 
 ROOT_URLCONF = 'dentweb.urls'
 
@@ -143,7 +148,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.0/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+# LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
 
