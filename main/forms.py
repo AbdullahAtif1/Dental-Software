@@ -2,7 +2,7 @@ from django import forms
 from django.utils.translation import gettext_lazy as _
 from .models import Subscriber, Appointment, Feedback
 
-class SubscriberForm(forms.Form):
+class SubscriberForm(forms.ModelForm):
     class Meta:
         model = Subscriber
         fields = ['email',]  # This should be 'email' as a TranslatableField

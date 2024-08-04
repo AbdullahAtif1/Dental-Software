@@ -112,7 +112,7 @@ WSGI_APPLICATION = 'dentweb.wsgi.application'
 DATABASES = {
    'default': {
        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       'NAME': 'dent_web_2',
+       'NAME': 'dent_web_4',
        'USER': 'postgres',
        'PASSWORD': '1234',
        'HOST': 'localhost',

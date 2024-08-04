@@ -14,7 +14,7 @@ def index(request):
 	random.shuffle(ran_4)
 
 	ran_4 = ran_4[:4]
-	next_artcls = Article.objects.filter(status='Published').order_by("-updated")
+	next_artcls = Article.objects.filter(status='Published')
 
 	p = Paginator(next_artcls, 8)
 	page_number = request.GET.get("page")

@@ -15,18 +15,17 @@ class Article(TranslatableModel):
 			('Published', 'Published'),
 	]
 	
-	header_image = models.ImageField(_('header image'), upload_to='imgs/', blank=True, null=True)
+	header_image = models.ImageField(upload_to='imgs/', blank=True, null=True)
+	pub_date=models.DateField(auto_now_add=True)
+	updated=models.DateField(auto_now=True)
+	slug=models.SlugField(blank=True)
+	status = models.CharField(_('status'), max_length=12, choices=STATUS_CHOICES, default='Draft')
 
 	translations = TranslatedFields(
 			title=models.CharField(max_length=100),
 			description=models.TextField(),
 			body=HTMLField(),
-			slug=models.SlugField(blank=True),
-			pub_date=models.DateField(auto_now_add=True),
-			updated=models.DateField(auto_now=True),
 	)
-
-	status = models.CharField(_('status'), max_length=12, choices=STATUS_CHOICES, default='Draft')
 
 	def __str__(self):
 			return self.title
@@ -34,7 +33,7 @@ class Article(TranslatableModel):
 	def save(self, *args, **kwargs):
 			self.slug = slugify(self.title)
 			super(Article, self).save(*args, **kwargs)
-			# Send emails in a separate thread
+
 			# threading.Thread(target=self.notify_sbscrbrs).start()
 
 	def get_absolute_url(self):

@@ -10,8 +10,8 @@ from parler.models import TranslatableModel, TranslatedFields
 # email list for the users to fill their email in for subscribing to newsletters or other promotional stuff
 class Subscriber(models.Model):
 
-	email=models.EmailField(unique=True)
-	subscribed_at = models.DateTimeField(_('subscribed at'), auto_now_add=True)
+	email = models.EmailField(unique=True)
+	subscribed_at = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
 			return self.email
@@ -26,15 +26,15 @@ class Appointment(TranslatableModel):
 	]
 
 	patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='appointments', verbose_name=_('patient'))
+	status=models.CharField(max_length=20, choices=STATUS_CHOICES, default='under_review')
 
 	translations = TranslatedFields(
 			subject=models.CharField(max_length=300, editable=True),
 			description=models.TextField(editable=True),
-			status=models.CharField(max_length=20, choices=STATUS_CHOICES, default='under_review'),
 	)
 	
-	date = models.DateField(_('date'), null=True, blank=True)
-	time = models.TimeField(_('time'), null=True, blank=True)
+	date = models.DateField(null=True, blank=True)
+	time = models.TimeField(null=True, blank=True)
 
 	# Have to add phone number field for SMS
 
@@ -120,12 +120,12 @@ class Feedback(TranslatableModel):
 			(5, '5 Stars'),
 	]
 
-	email = models.EmailField(_('email address'))
+	email = models.EmailField()
+	stars=models.IntegerField(choices=STARS_CHOICES)
+	patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name="feedback")
 
 	translations = TranslatedFields(
-			name=models.CharField(max_length=255),
-			body=models.TextField(),
-			stars=models.IntegerField(choices=STARS_CHOICES),
+		body=models.TextField(),
 	)
 
 	def save(self, *args, **kwargs):

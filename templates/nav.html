@@ -1,21 +1,20 @@
+{% load static i18n %}
 {% load static %}
 
-<!-- teal 5 green 3 -->
 <nav class="fixed w-full z-20 top-0 start-0 bg-main-gradient rounded-br-full">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <a href="{% url 'main:index' %}" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="{% static 'imgs/fav.jpeg' %}" class="h-8" alt="Flowbite Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">This Could Be Yours</span>
+      <img src="{% static 'imgs/fav.jpeg' %}" class="h-8" alt="Flowbite Logo" />
+      <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">This Could Be Yours</span>
     </a>
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex mr-5 items-center p-2 w-10 h-10 justify-center text-sm text-gray-50 rounded-lg md:hidden focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
-        <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
+      <span class="sr-only">Open main menu</span>
+      <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+      </svg>
     </button>
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 rounded-lg md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0">
-
         <li class="py-2 rounded-2xl">
           <a href="{% url 'blog:index' %}" class="text-xl font-bold block py-2 px-3 rounded nav-txt md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0 md:p-0 md:hover:text-white text-white">Blog</a>
         </li>
@@ -23,17 +22,37 @@
           <a href="{% url 'main:index' %}#services" class="text-xl font-bold block py-2 px-3 rounded nav-txt md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0 md:p-0 md:hover:text-white text-white">Services</a>
         </li>
         
+        <li class="py-2 rounded-2xl">
+          <div class="relative">
+            <button id="dropdownLanguageLink" data-dropdown-toggle="dropdownLanguage" class="text-xl font-bold inline-flex items-center py-2 px-3 rounded nav-txt md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0 md:p-0 md:hover:text-white text-white">
+              Language
+              <svg class="w-2.5 h-2.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg>
+            </button>
+            <div id="dropdownLanguage" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+              <ul class="py-2 text-sm text-gray-700">
+                <li class="py-1">
+                  <a href="#" data-language="ar" class="block px-4 py-2 nav-txt">العربية</a>
+                </li>
+                <li class="py-1">
+                  <a href="#" data-language="en" class="block px-4 py-2 nav-txt">English</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
 				<li class="py-2 rounded-2xl">
           <div class="relative">
             <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="text-xl font-bold inline-flex items-center py-2 px-3 rounded nav-txt md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0 md:p-0 md:hover:text-white text-white">
-							Themes
-							<svg class="w-2.5 h-2.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-							</svg>
-						</button>	
+              Themes
+              <svg class="w-2.5 h-2.5 ms-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+              </svg>
+            </button>
             <div id="dropdownNavbar" class="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
               <ul class="py-2 text-sm text-gray-700">
-                
                 <li class="py-1">
                   <a onclick="switchTheme('')" href="#" class="block px-4 py-2 nav-txt">Teal & Green</a>
                 </li>
@@ -43,26 +62,55 @@
                 <li class="py-1">
                   <a onclick="switchTheme('red-amber')" href="#" class="block px-4 py-2 nav-txt">Red & Amber</a>
                 </li>
-
               </ul>
             </div>
           </div>
         </li>
+    
         
-				<li class="py-2 rounded-2xl">
-					<a href="{% url 'main:index' %}#book-an-appointment" class="border border-gray-100 text-white rounded-xl hover:bg-gray-50 nav-txt hover:border-none focus:ring-4 focus:outline-none focus:ring-white font-bold text-xl px-5 py-2.5 text-center">
-						Book an Appointment
-					</a>
-        </li>
-
-				{% comment %}
-				{% if request.user.is_authenticated and request.user.is_superuser %}
         <li class="py-2 rounded-2xl">
-          <a href="{% url 'dentadmin:index' %}" class="text-xl font-bold block py-2 px-3 rounded nav-txt md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0 md:p-0 md:hover:text-white text-white">Admin Panel</a>
+          <a href="{% url 'main:index' %}#book-an-appointment" class="border border-gray-100 text-white rounded-xl hover:bg-gray-50 nav-txt hover:border-none focus:ring-4 focus:outline-none focus:ring-white font-bold text-xl px-5 py-2.5 text-center">
+            Book an Appointment
+          </a>
         </li>
-				{% endif %}
-				{% endcomment %}
       </ul>
     </div>
   </div>
 </nav>
+
+<script>
+  // Set default language in localStorage if not already set
+  if (!localStorage.getItem('selectedLanguage')) {
+    localStorage.setItem('selectedLanguage', '{{ CURRENT_LANGUAGE }}');
+  }
+
+  // Update language in localStorage when user selects a language
+  document.querySelectorAll('[data-language]').forEach(link => {
+    link.addEventListener('click', function(event) {
+      event.preventDefault();
+      const selectedLanguage = this.getAttribute('data-language');
+      localStorage.setItem('selectedLanguage', selectedLanguage);
+
+      // Get the current path and replace the language prefix
+      const currentPath = window.location.pathname;
+      const pathWithoutLanguage = currentPath.replace(/^\/\w{2}/, '');
+      const newPath = `/${selectedLanguage}${pathWithoutLanguage}`;
+      
+      // Redirect to the new language URL
+      window.location.href = newPath;
+    });
+  });
+
+  // Apply stored language on page load
+  window.addEventListener('load', () => {
+    const selectedLanguage = localStorage.getItem('selectedLanguage');
+    if (selectedLanguage) {
+      // Update language dropdown based on the selected language
+      document.querySelectorAll('[data-language]').forEach(link => {
+        const href = link.getAttribute('href');
+        link.setAttribute('href', `/${selectedLanguage}${href}`);
+      });
+    }
+  });
+</script>
+
