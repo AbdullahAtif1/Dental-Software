@@ -28,7 +28,7 @@
 	<div class="flex flex-wrap gap-6 justify-center my-8 px-2">
 
     {% for article in others %}
-    <div class="max-w-xs bg-white border border-gray-200 rounded-3xl shadow-md">
+    <div class="max-w-xs bg-white border border-gray-200 rounded-3xl shadow-md text-right">
 			<img class="w-full h-52 object-cover rounded-t-lg" src="{{ article.header_image.url }}" alt="Article image" />
 			<div class="p-4 blog-page-desc rounded-b-lg">
 				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">{{ article.title }}</h3>
@@ -38,7 +38,7 @@
 				<a href="{% url 'blog:detail' article_id=article.id slug=article.slug %}" class="flex justify-center">
 					<button type="button"
 						class="hover:-translate-y-0.5 w-full text-gray-100 blog-page-art-btn focus:ring-opacity-50 transform transition  inline-flex items-center justify-center font-medium rounded-2xl text-lg p-2 mt-1 text-center me-2 mb-2">
-						Read More
+						{% trans "Read More" %}
 						<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2 mt-1 font-bold" aria-hidden="true"
 							xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
 							<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
