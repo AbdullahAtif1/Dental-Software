@@ -12,8 +12,9 @@
 	<div class="text-center text-gray-100 max-w-5xl m-auto py-20 px-10 z-10">
 		<h1 class="text-gray-100 text-5xl font-bold my-5">{% trans "A Better Life Starts with a Beautiful Smile" %}</h1>
 		<p class="text-xl">
-			{% trans "A stunning smile begins here. Trust our experts to craft a look that boosts your confidence and transforms your
-			lives" %}
+			{% trans "A stunning smile begins here. Trust our experts" %}
+			{% trans "to craft a look that boosts your confidence" %}
+			{% trans "and  transforms your lives" %}
 		</p>
 	</div>
 </div>
@@ -26,13 +27,23 @@
 		<div class="w-full lg:w-1/2 py-5">
 			<h2 class="text-3xl md:text-4xl heading font-semibold px-5">{% trans "Welcome to" %} <span
 					class="font-extrabold italic">{% trans "Your Website" %}</span></h2>
-			<p class="text-xl paragraph p-5">{% trans "At our clinic, we believe that every smile is unique and deserves the highest
-				quality of care.
-				Our dedicated team of professionals is here to provide you with a personalized and comfortable experience,
-				ensuring that each
-				visit leaves you feeling confident and well-cared for. From the moment you walk through our doors, you'll be
-				greeted with warmth
-				and compassion, making your dental journey a positive and enjoyable one." %}</p>
+			<p class="text-xl paragraph p-5">
+				{% trans "At our clinic, we believe" %}
+				{% trans "that every smile is unique" %}
+				{% trans "and deserves the highest quality" %}
+				{% trans "of care. Our dedicated team" %}
+				{% trans "of professionals is here to" %}
+				{% trans "provide you with a personalized" %}
+				{% trans "and comfortable experience, ensuring" %}
+				{% trans "that each visit leaves you" %}
+				{% trans "feeling confident and well-cared" %}
+				{% trans "for. From the moment you" %}
+				{% trans "walk through our doors, you'll" %}
+				{% trans "be greeted with warmth and" %}
+				{% trans "compassion, making your dental" %}
+				{% trans "journey a positive and enjoyable" %}
+				{% trans "one." %}
+			</p>
 
 
 			<div class="flex items-center p-4 rounded-lg">
@@ -45,8 +56,13 @@
 				<div class="w-3/4">
 					<h2 class="text-lg font-bold">{% trans "Comprehensive Services" %}</h2>
 					<p class="text-lg paragraph">
-						{% trans "We offer a full range of dental services to meet all your oral health needs.
-						From preventive care to cosmetic and restorative treatments, our team is equipped to handle it all." %}
+						{% trans "We offer a full range" %}
+						{% trans "of dental services to meet" %}
+						{% trans "all your oral health needs." %}
+						{% trans "From preventive care to cosmetic" %}
+						{% trans "and restorative treatments, our" %}
+						{% trans "team is equipped to handle" %}
+						{% trans "it all." %}
 					</p>
 				</div>
 			</div>
@@ -62,9 +78,12 @@
 				<div class="w-3/4">
 					<h2 class="text-lg font-bold">{% trans "Patient-Focused Approach" %}</h2>
 					<p class="text-lg paragraph">
-						{% trans "Your comfort and satisfaction are our top priorities. We strive to create a welcoming environment where you
-						feel at
-						ease and confident in the care you receive." %}						
+						{% trans "Your comfort and satisfaction are" %}
+						{% trans "our top priorities. We strive" %}
+						{% trans "to create a welcoming environment" %}
+						{% trans "where you feel at ease" %}
+						{% trans "and confident in the care" %}
+						{% trans "you receive." %}				
 					</p>
 				</div>
 			</div>
@@ -199,10 +218,18 @@
 
 			<p class="paragraph text-xl py-2 font-bold">{% trans "Meet the Doctor" %}</p>
 			<h2 class="text-3xl md:text-4xl heading font-semibold">{% trans "Your Name could be here!" %}</h2>
-			<p class="text-xl paragraph pt-5">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-				luctus nec ullamcorper mattis, pulvinar dapibus leo." %}</p>
-			<p class="text-xl paragraph pt-5">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-				luctus nec ullamcorper mattis, pulvinar dapibus leo." %}</p>
+			<p class="text-xl paragraph pt-5">
+				{% trans "Lorem ipsum dolor sit amet," %}
+				{% trans "consectetur adipiscing elit. Ut elit" %}
+				{% trans "tellus, luctus nec ullamcorper mattis," %}
+				{% trans "pulvinar dapibus leo." %}
+			</p>
+			<p class="text-xl paragraph pt-5">
+				{% trans "Lorem ipsum dolor sit amet," %}
+				{% trans "consectetur adipiscing elit. Ut elit" %}
+				{% trans "tellus, luctus nec ullamcorper mattis," %}
+				{% trans "pulvinar dapibus leo." %}
+			</p>
 
 
 			<a href="{% url 'main:index' %}#book-an-appointment" class="flex justify-center py-3">
@@ -300,13 +327,21 @@
 
 
 		<div class="w-full lg:w-1/2 py-5">
-			<h2 class="text-2xl md:text-4xl heading font-semibold px-5">{% trans "Committed To Dental Excellence" %}</h2>
-			<p class="text-xl paragraph p-5">{% trans "At our clinic, we blend state-of-the-art technology with unparalleled
-				expertise to deliver top-tier dental care.
-				Our team of dedicated professionals is committed to excellence, ensuring every visit is comfortable, effective,
-				and tailored to your unique needs.
-				With a patient-centric approach, we prioritize your well-being and satisfaction, offering a welcoming
-				environment where you can feel at ease." %}</p>
+			<h2 class="text-2xl md:text-4xl heading font-semibold p-5 -ml-5">{% trans "Committed To Dental Excellence" %}</h2>
+			<p>	
+				{% trans "At our clinic, we blend" %}
+				{% trans "state-of-the-art technology with" %}
+				{% trans "unparalleled expertise to deliver" %}
+				{% trans "top-tier dental care. Our team" %}
+				{% trans "of dedicated professionals is committed" %}
+				{% trans "to excellence, ensuring every visit" %}
+				{% trans "is comfortable, effective, and tailored" %}
+				{% trans "to your unique needs. With" %}
+				{% trans "a patient-centric approach, we prioritize" %}
+				{% trans "your well-being and satisfaction," %}
+				{% trans "offering a welcoming environment where" %}
+				{% trans "you can feel at ease." %}
+			</p>
 
 			<div class="flex items-center p-4 rounded-lg">
 				<div class="flex justify-center items-center w-1/4">
@@ -318,8 +353,11 @@
 				<div class="w-3/4">
 					<h2 class="text-lg font-bold">{% trans "Personalized Care" %}</h2>
 					<p class="text-lg paragraph">
-						{% trans "Our approach to dental care is uniquely tailored to each patient, ensuring treatment plans that address your
-						specific needs and concerns." %}
+						{% trans "Our approach to dental care" %}
+						{% trans "is uniquely tailored to each" %}
+						{% trans "patient, ensuring treatment plans" %}
+						{% trans "that address your specific needs" %}
+						{% trans "and concerns." %}
 					</p>
 				</div>
 			</div>
@@ -335,8 +373,11 @@
 				<div class="w-3/4">
 					<h2 class="text-lg font-bold">{% trans "Advanced Treatments" %}</h2>
 					<p class="text-lg paragraph">
-						{% trans "We stay at the forefront of dental innovation, offering advanced treatments that utilize the latest
-						techniques and technologies for optimal results." %}
+						{% trans "We stay at the forefront" %}
+						{% trans "of dental innovation, offering" %}
+						{% trans "advanced treatments that utilize" %}
+						{% trans "the latest techniques and technologies" %}
+						{% trans "for optimal results." %}
 					</p>
 				</div>
 			</div>
@@ -354,13 +395,20 @@
 	<div class="flex flex-wrap lg:flex-nowrap flex-row gap-5">
 
 		<div class="w-full lg:w-1/2 py-5">
-			<h2 class="text-2xl md:text-4xl heading font-semibold px-5">{% trans "Committed To Dental Excellence" %}</h2>
-			<p class="text-xl paragraph p-5">{% trans "At our clinic, we blend state-of-the-art technology with unparalleled
-				expertise to deliver top-tier dental care.
-				Our team of dedicated professionals is committed to excellence, ensuring every visit is comfortable, effective,
-				and tailored to your unique needs.
-				With a patient-centric approach, we prioritize your well-being and satisfaction, offering a welcoming
-				environment where you can feel at ease." %}</p>
+			<h2 class="text-2xl md:text-4xl heading font-semibold px-5">
+				{% trans "At our clinic, we blend" %}
+				{% trans "state-of-the-art technology with" %}
+				{% trans "unparalleled expertise to deliver" %}
+				{% trans "top-tier dental care. Our team" %}
+				{% trans "of dedicated professionals is committed" %}
+				{% trans "to excellence, ensuring every visit" %}
+				{% trans "is comfortable, effective, and tailored" %}
+				{% trans "to your unique needs. With" %}
+				{% trans "a patient-centric approach, we prioritize" %}
+				{% trans "your well-being and satisfaction," %}
+				{% trans "offering a welcoming environment where" %}
+				{% trans "you can feel at ease." %}
+			</p>
 
 			<div class="flex items-center p-4 rounded-lg">
 				<div class="flex justify-center items-center w-1/4">
@@ -372,8 +420,11 @@
 				<div class="w-3/4">
 					<h2 class="text-lg font-bold">{% trans "Personalized Care" %}</h2>
 					<p class="text-lg paragraph">
-						{% trans "Our approach to dental care is uniquely tailored to each patient, ensuring treatment plans that address your
-						specific needs and concerns." %}
+						{% trans "Our approach to dental care" %}
+						{% trans "is uniquely tailored to each" %}
+						{% trans "patient, ensuring treatment plans" %}
+						{% trans "that address your specific needs" %}
+						{% trans "and concerns." %}
 					</p>
 				</div>
 			</div>
@@ -389,8 +440,11 @@
 				<div class="w-3/4">
 					<h2 class="text-lg font-bold">{% trans "Advanced Treatments" %}</h2>
 					<p class="text-lg paragraph">
-						{% trans "We stay at the forefront of dental innovation, offering advanced treatments that utilize the latest
-						techniques and technologies for optimal results." %}
+						{% trans "We stay at the forefront" %}
+						{% trans "of dental innovation, offering" %}
+						{% trans "advanced treatments that utilize" %}
+						{% trans "the latest techniques and technologies" %}
+						{% trans "for optimal results." %}
 					</p>
 				</div>
 			</div>
