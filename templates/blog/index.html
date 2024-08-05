@@ -1,8 +1,9 @@
 {% extends "_base.html" %}
 {% load widget_tweaks %}
 {% load static %}
+{% load i18n %}
 
-{% block 'title' %}This Could be Yours - Blog{% endblock %}
+{% block 'title' %}{% trans "This Could be Yours - Blog" %}{% endblock %}
 
 {% block 'content' %}
 
@@ -12,7 +13,7 @@
 <div class="min-h-60 bg-main-gradient rounded-br-full py-8 shadow-2xl">
 	<div class="max-w-xl m-auto py-10">
 		<h1 class="text-white font-bold text-center text-5xl my-5">
-			This Could be Yours
+			{% trans "This Could be Yours" %}
 		</h1>
 		<div class="relative mx-5">
 			<form action="{% url 'blog:index' %}">
@@ -25,10 +26,10 @@
 				</div>
 				<input type="search" name="q" value="{{ request.GET.q }}" hx-get="{% url 'blog:index' %}"
 					class="block w-full p-4 ps-10 text-sm text-gray-900 border-none bg-gray-50 rounded-3xl"
-					placeholder="Looking for something?" required />
+					placeholder='{% trans "Looking for something?" %}' required />
 				<button type="submit"
 					class="text-white absolute end-2.5 bottom-2 mx-1 blog-page-art-btn focus:ring-2 font-medium rounded-lg text-sm px-4 py-2">
-					Search
+					{% trans "Search" %}
 				</button>
 			</form>
 		</div>
@@ -65,22 +66,23 @@
 	{% endfor %}
 </div>
 
+<!-- Smile Brighter with Our Updates! -->
 <!-- Subscription section -->
 <div class="max-w-full my-5 m-auto fxd-img-sec">
 	<div class="text-center text-gray-100 max-w-5xl m-auto py-20 px-10 z-10">
-		<h3 class="text-gray-100 text-3xl md:text-5xl font-bold my-5">Smile Brighter with Our Updates!</h3>
+		<h3 class="text-gray-100 text-3xl md:text-5xl font-bold my-5">{% trans "They Could be Subscribed to Your Newsletter" %}</h3>
 		<p class="md:text-xl">
-			Subscribe to our newsletter for the latest tips, tricks, and trends — delivered right to your
-			inbox.
+			{% trans "Subscribe to our newsletter for the latest tips, tricks, and trends — delivered right to your
+			inbox." %}
 		</p>
 		<div id="form-container">
 			<form id="subscribe-form" method="post" action="{% url 'blog:index' %}">
 				{% csrf_token %}
 				<div class="relative mt-5">
-					{% render_field form.email type="email" class="block md:w-full p-4 ps-10 text-sm text-gray-900 border-none bg-gray-50 focus:ring-teal-500 rounded-3xl" placeholder="Your Email please..." %}
+					{% render_field form.email type="email" class="block md:w-full p-4 ps-10 text-sm text-gray-900 border-none bg-gray-50 focus:ring-teal-500 rounded-3xl" placeholder='Email' %}
 					<button type="submit"
 						class="text-white absolute end-2.5 bottom-2 mx-1 blog-page-art-btn focus:ring-2 font-medium rounded-lg text-sm px-4 py-2">
-						Signup
+						{% trans "Signup" %}
 					</button>
 				</div>
 			</form>
@@ -122,7 +124,7 @@
 	class="flex items-center justify-center bottom-0 space-x-4 mt-4 bg-main-gradient p-4 rounded-tl-full shadow-md">
 	{% if page_obj.has_previous %}
 			<a href="?page={{page_obj.previous_page_number}}" class="px-4 py-2 pgntn-text bg-white border pgntn-brdr pgntn-btn-on-hover rounded-lg shadow-sm">
-				&lt; Previous
+				&lt; {% trans "Previous" %}
 			</a>
 	{% endif %}
 	
@@ -134,7 +136,7 @@
 	
 	{% if page_obj.has_next %}
 			<a href="?page={{page_obj.next_page_number}}" class="px-4 py-2 pgntn-text bg-white border pgntn-brdr pgntn-btn-on-hover rounded-lg shadow-sm">
-					Next &gt;
+				{% trans "Next" %} &gt;
 			</a>
 	{% endif %}
 </div>

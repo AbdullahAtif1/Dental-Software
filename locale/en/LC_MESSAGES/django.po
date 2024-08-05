@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-04 00:03+0500\n"
+"POT-Creation-Date: 2024-08-05 14:25+0500\n"
 "PO-Revision-Date: 2024-08-03 16:08+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,35 +20,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: .\blog\models.py:17 .\dentadmin\models.py:40
-msgid "title"
-msgstr "Title"
-
-#: .\blog\models.py:18 .\dentadmin\models.py:42 .\main\models.py:30
-msgid "description"
-msgstr "Description"
-
-#: .\blog\models.py:19 .\main\models.py:121
-msgid "body"
-msgstr "Body"
-
-#: .\blog\models.py:20
-msgid "slug"
-msgstr "Slug"
-
-#: .\blog\models.py:21
-msgid "header image"
-msgstr "Header Image"
-
 #: .\blog\models.py:22
-msgid "publication date"
-msgstr "Publication Date"
-
-#: .\blog\models.py:23
-msgid "last updated"
-msgstr "Last Updated"
-
-#: .\blog\models.py:24 .\dentadmin\models.py:17 .\main\models.py:31
 msgid "status"
 msgstr "Status"
 
@@ -84,37 +56,21 @@ msgstr "Title"
 msgid "Description"
 msgstr "Description"
 
-#: .\dentadmin\models.py:14
+#: .\dentadmin\models.py:18
 msgid "user"
 msgstr "User"
 
-#: .\dentadmin\models.py:15
-msgid "profile picture"
-msgstr "Profile Picture"
-
-#: .\dentadmin\models.py:16
-msgid "bio"
-msgstr "Bio"
-
-#: .\dentadmin\models.py:18 .\main\models.py:12 .\main\models.py:120
-msgid "email address"
-msgstr "Email Address"
-
-#: .\dentadmin\models.py:19
-msgid "phone number"
-msgstr "Phone Number"
-
-#: .\dentadmin\models.py:38
+#: .\dentadmin\models.py:40
 msgid "prospect"
 msgstr "Prospect"
 
-#: .\dentadmin\models.py:39
-msgid "file"
-msgstr "File"
+#: .\dentadmin\models.py:43
+msgid "title"
+msgstr "Title"
 
-#: .\dentadmin\models.py:41
-msgid "date and time"
-msgstr "Date and Time"
+#: .\dentadmin\models.py:44
+msgid "description"
+msgstr "Description"
 
 #: .\dentweb\settings.py:59
 msgid "Arabic"
@@ -124,7 +80,7 @@ msgstr "Arabic"
 msgid "English"
 msgstr "English"
 
-#: .\main\forms.py:18
+#: .\main\forms.py:18 .\templates\main\index.html:172
 msgid "Subject"
 msgstr "Subject"
 
@@ -136,34 +92,375 @@ msgstr "Feedback"
 msgid "Rating"
 msgstr "Rating"
 
-#: .\main\models.py:13
-msgid "subscribed at"
-msgstr "Subscribed At"
-
 #: .\main\models.py:28
 msgid "patient"
 msgstr "Patient"
 
-#: .\main\models.py:29
-msgid "subject"
-msgstr "Subject"
+#: .\templates\blog\detail.html:5
+msgid "Blog -"
+msgstr "Blog -"
 
-#: .\main\models.py:32
-msgid "date"
-msgstr "Date"
+#: .\templates\blog\detail.html:27
+msgid "You might also Like"
+msgstr "You might also Like"
 
-#: .\main\models.py:33
-msgid "time"
-msgstr "Time"
+#: .\templates\blog\index.html:6
+msgid "This Could be Yours - Blog"
+msgstr "This Could be Yours - Blog"
 
-#: .\main\models.py:119
-msgid "name"
-msgstr "Name"
+#: .\templates\blog\index.html:16
+msgid "This Could be Yours"
+msgstr "This Could be Yours"
 
-#: .\main\models.py:122
-msgid "stars"
-msgstr "Stars"
+#: .\templates\blog\index.html:29
+msgid "Looking for something?"
+msgstr "Looking for something?"
+
+#: .\templates\blog\index.html:32
+msgid "Search"
+msgstr "Search"
+
+#: .\templates\blog\index.html:73
+msgid "They Could be Subscribed to Your Newsletter"
+msgstr "They Could be Subscribed to Your Newsletter"
+
+#: .\templates\blog\index.html:85
+msgid "Signup"
+msgstr "Signup"
+
+#: .\templates\blog\index.html:127
+msgid "Previous"
+msgstr "Previous"
+
+#: .\templates\blog\index.html:139
+msgid "Next"
+msgstr "Next"
+
+#: .\templates\footer.html:13
+msgid "Contact Information"
+msgstr "Contact Information"
+
+#: .\templates\footer.html:24
+msgid "Open Hours"
+msgstr "Open Hours"
+
+#: .\templates\footer.html:27
+msgid "Mon-Fri 09:00 - 19:00"
+msgstr "Mon-Fri 09:00 - 19:00"
+
+#: .\templates\footer.html:30
+msgid "Sat-Sun 10:00 - 14:00"
+msgstr "Sat-Sun 10:00 - 14:00"
+
+#: .\templates\footer.html:35
+msgid "Reach Us"
+msgstr "Reach Us"
+
+#: .\templates\footer.html:38
+msgid "456 Smile Avenue, Dental City, CA 90210"
+msgstr "456 Smile Avenue, Dental City, CA 90210"
+
+#: .\templates\footer.html:46
+msgid "All Rights Reserved."
+msgstr "All Rights Reserved."
+
+#: .\templates\main\index.html:5 .\templates\nav.html:8
+msgid "This Could Be Yours"
+msgstr "This Could Be Yours"
 
 #: .\templates\main\index.html:13
 msgid "A Better Life Starts with a Beautiful Smile"
 msgstr "A Better Life Starts with a Beautiful Smile"
+
+#: .\templates\main\index.html:27
+msgid "Welcome to"
+msgstr "Welcome to"
+
+#: .\templates\main\index.html:28
+msgid "Your Website"
+msgstr "Your Website"
+
+#: .\templates\main\index.html:46
+msgid "Comprehensive Services"
+msgstr "Comprehensive Services"
+
+#: .\templates\main\index.html:63
+msgid "Patient-Focused Approach"
+msgstr "Patient-Focused Approach"
+
+#: .\templates\main\index.html:102
+msgid "Dentistry for Today's Lifestyle"
+msgstr "Dentistry for Today's Lifestyle"
+
+#: .\templates\main\index.html:103
+msgid "We Have All Your Dental Needs Covered"
+msgstr "We Have All Your Dental Needs Covered"
+
+#: .\templates\main\index.html:108
+msgid "01."
+msgstr "01."
+
+#: .\templates\main\index.html:109
+msgid "Dental X-Rays"
+msgstr "Dental X-Rays"
+
+#: .\templates\main\index.html:110
+msgid "Advanced imaging to diagnose and monitor dental health issues."
+msgstr "Advanced imaging to diagnose and monitor dental health issues."
+
+#: .\templates\main\index.html:113
+msgid "02."
+msgstr "02."
+
+#: .\templates\main\index.html:114
+msgid "Exams & Cleanings"
+msgstr "Exams & Cleanings"
+
+#: .\templates\main\index.html:115
+msgid "Comprehensive check-ups and professional cleanings to maintain oral health."
+msgstr "Comprehensive check-ups and professional cleanings to maintain oral health."
+
+#: .\templates\main\index.html:118
+msgid "03."
+msgstr "03."
+
+#: .\templates\main\index.html:119
+msgid "Cosmetic Dentistry"
+msgstr "Cosmetic Dentistry"
+
+#: .\templates\main\index.html:120
+msgid "Enhancing the appearance of your smile with aesthetic treatments"
+msgstr "Enhancing the appearance of your smile with aesthetic treatments"
+
+#: .\templates\main\index.html:123
+msgid "04."
+msgstr "04."
+
+#: .\templates\main\index.html:124
+msgid "Periodontal Disease"
+msgstr "Periodontal Disease"
+
+#: .\templates\main\index.html:125
+msgid "Treatment for gum disease to restore oral health and prevent complications."
+msgstr "Treatment for gum disease to restore oral health and prevent complications."
+
+#: .\templates\main\index.html:128
+msgid "05."
+msgstr "05."
+
+#: .\templates\main\index.html:129
+msgid "Root Canals"
+msgstr "Root Canals"
+
+#: .\templates\main\index.html:130
+msgid "Precision procedures to save and repair damaged or infected teeth."
+msgstr "Precision procedures to save and repair damaged or infected teeth."
+
+#: .\templates\main\index.html:133
+msgid "06."
+msgstr "06."
+
+#: .\templates\main\index.html:134
+msgid "Extractions"
+msgstr "Extractions"
+
+#: .\templates\main\index.html:135
+msgid "Safe removal of teeth that are damaged or problematic."
+msgstr "Safe removal of teeth that are damaged or problematic."
+
+#: .\templates\main\index.html:138
+msgid "07."
+msgstr "07."
+
+#: .\templates\main\index.html:139
+msgid "Teeth Whitening"
+msgstr "Teeth Whitening"
+
+#: .\templates\main\index.html:140
+msgid "Professional whitening solutions to brighten and enhance your smile."
+msgstr "Professional whitening solutions to brighten and enhance your smile."
+
+#: .\templates\main\index.html:143
+msgid "08."
+msgstr "08."
+
+#: .\templates\main\index.html:144
+msgid "Braces & Implants"
+msgstr "Braces & Implants"
+
+#: .\templates\main\index.html:145
+msgid "Orthodontic braces and dental implants for a functional and attractive smile."
+msgstr "Orthodontic braces and dental implants for a functional and attractive smile."
+
+
+#: .\templates\main\index.html:152 .\templates\main\index.html:211
+#: .\templates\nav.html:73
+msgid "Book an Appointment"
+msgstr "Book an Appointment"
+
+#: .\templates\main\index.html:161
+msgid "Your Oral Health Matters to Us"
+msgstr "Your Oral Health Matters to Us"
+
+#: .\templates\main\index.html:163
+msgid "Get Brighter Smile from Your City's Best Dentists"
+msgstr "Get Brighter Smile from Your City's Best Dentists"
+
+#: .\templates\main\index.html:169
+msgid "Book An Appointment"
+msgstr "Book An Appointment"
+
+#: .\templates\main\index.html:173
+msgid "Subject of your appointment"
+msgstr "Subject of your appointment"
+
+#: .\templates\main\index.html:176
+msgid "Your message"
+msgstr "Your message"
+
+#: .\templates\main\index.html:177
+msgid "Briefly describe why you are requesting this appointment"
+msgstr "Briefly describe why you are requesting this appointment"
+
+#: .\templates\main\index.html:179
+msgid "Request Appointment"
+msgstr "Request Appointment"
+
+#: .\templates\main\index.html:200
+msgid "Meet the Doctor"
+msgstr "Meet the Doctor"
+
+#: .\templates\main\index.html:201
+msgid "Your Name could be here!"
+msgstr "Your Name could be here!"
+
+#: .\templates\main\index.html:225
+msgid "Our Team, Our Strengths"
+msgstr "Our Team, Our Strengths"
+
+#: .\templates\main\index.html:226
+msgid "This could be Your Team"
+msgstr "This could be Your Team"
+
+#: .\templates\main\index.html:234
+msgid "Dr. Hala Karim"
+msgstr "Dr. Hala Karim"
+
+#: .\templates\main\index.html:236
+msgid "Orthodontist"
+msgstr "Orthodontist"
+
+#: .\templates\main\index.html:244
+msgid "Dr. Youssef Hassan"
+msgstr "Dr. Youssef Hassan"
+
+#: .\templates\main\index.html:246
+msgid "Prosthodontist"
+msgstr "Prosthodontist"
+
+#: .\templates\main\index.html:254
+msgid "Dr. Nadia Ali"
+msgstr "Dr. Nadia Ali"
+
+#: .\templates\main\index.html:256
+msgid "Cosmetic Dentist"
+msgstr "Cosmetic Dentist"
+
+#: .\templates\main\index.html:264
+msgid "Dr. Ahmed Al-Farsi"
+msgstr "Dr. Ahmed Al-Farsi"
+
+#: .\templates\main\index.html:266
+msgid "General Dentist"
+msgstr "General Dentist"
+
+#: .\templates\main\index.html:303 .\templates\main\index.html:357
+msgid "Committed To Dental Excellence"
+msgstr "Committed To Dental Excellence"
+
+#: .\templates\main\index.html:319 .\templates\main\index.html:373
+msgid "Personalized Care"
+msgstr "Personalized Care"
+
+#: .\templates\main\index.html:336 .\templates\main\index.html:390
+msgid "Advanced Treatments"
+msgstr "Advanced Treatments"
+
+#: .\templates\nav.html:19
+msgid "Blog"
+msgstr "Blog"
+
+#: .\templates\nav.html:22
+msgid "Services"
+msgstr "Services"
+
+#: .\templates\nav.html:28
+msgid "Language"
+msgstr "Language"
+
+#: .\templates\nav.html:49
+msgid "Themes"
+msgstr "Themes"
+
+#: .\templates\nav.html:57
+msgid "Teal & Green"
+msgstr "Teal & Green"
+
+#: .\templates\nav.html:60
+msgid "Indigo & Purple"
+msgstr "Indigo & Purple"
+
+#: .\templates\nav.html:63
+msgid "Red & Amber"
+msgstr "Red & Amber"
+
+#~ msgid "body"
+#~ msgstr "Body"
+
+#~ msgid "slug"
+#~ msgstr "Slug"
+
+#~ msgid "header image"
+#~ msgstr "Header Image"
+
+#~ msgid "publication date"
+#~ msgstr "Publication Date"
+
+#~ msgid "last updated"
+#~ msgstr "Last Updated"
+
+#~ msgid "profile picture"
+#~ msgstr "Profile Picture"
+
+#~ msgid "bio"
+#~ msgstr "Bio"
+
+#~ msgid "email address"
+#~ msgstr "Email Address"
+
+#~ msgid "phone number"
+#~ msgstr "Phone Number"
+
+#~ msgid "file"
+#~ msgstr "File"
+
+#~ msgid "date and time"
+#~ msgstr "Date and Time"
+
+#~ msgid "subscribed at"
+#~ msgstr "Subscribed At"
+
+#~ msgid "subject"
+#~ msgstr "Subject"
+
+#~ msgid "date"
+#~ msgstr "Date"
+
+#~ msgid "time"
+#~ msgstr "Time"
+
+#~ msgid "name"
+#~ msgstr "Name"
+
+#~ msgid "stars"
+#~ msgstr "Stars"

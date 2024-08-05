@@ -2,7 +2,7 @@
 {% load i18n %}
 
 {% load static %}
-{% block 'title' %}This Could Be Yours{% endblock %}
+{% block 'title' %}{% trans "This Could Be Yours" %}{% endblock %}
 
 {% block 'content' %}
 
@@ -12,8 +12,8 @@
 	<div class="text-center text-gray-100 max-w-5xl m-auto py-20 px-10 z-10">
 		<h1 class="text-gray-100 text-5xl font-bold my-5">{% trans "A Better Life Starts with a Beautiful Smile" %}</h1>
 		<p class="text-xl">
-			A stunning smile begins here. Trust our experts to craft a look that boosts your confidence and transforms your
-			lives
+			{% trans "A stunning smile begins here. Trust our experts to craft a look that boosts your confidence and transforms your
+			lives" %}
 		</p>
 	</div>
 </div>
@@ -24,15 +24,15 @@
 	<div class="flex flex-wrap lg:flex-nowrap flex-row gap-5">
 
 		<div class="w-full lg:w-1/2 py-5">
-			<h2 class="text-3xl md:text-4xl heading font-semibold px-5">Welcome to <span
-					class="font-extrabold italic">Your Website</span></h2>
-			<p class="text-xl paragraph p-5">At our clinic, we believe that every smile is unique and deserves the highest
+			<h2 class="text-3xl md:text-4xl heading font-semibold px-5">{% trans "Welcome to" %} <span
+					class="font-extrabold italic">{% trans "Your Website" %}</span></h2>
+			<p class="text-xl paragraph p-5">{% trans "At our clinic, we believe that every smile is unique and deserves the highest
 				quality of care.
 				Our dedicated team of professionals is here to provide you with a personalized and comfortable experience,
 				ensuring that each
 				visit leaves you feeling confident and well-cared for. From the moment you walk through our doors, you'll be
 				greeted with warmth
-				and compassion, making your dental journey a positive and enjoyable one.</p>
+				and compassion, making your dental journey a positive and enjoyable one." %}</p>
 
 
 			<div class="flex items-center p-4 rounded-lg">
@@ -43,10 +43,10 @@
 					</svg>
 				</div>
 				<div class="w-3/4">
-					<h2 class="text-lg font-bold">Comprehensive Services</h2>
+					<h2 class="text-lg font-bold">{% trans "Comprehensive Services" %}</h2>
 					<p class="text-lg paragraph">
-						We offer a full range of dental services to meet all your oral health needs.
-						From preventive care to cosmetic and restorative treatments, our team is equipped to handle it all.
+						{% trans "We offer a full range of dental services to meet all your oral health needs.
+						From preventive care to cosmetic and restorative treatments, our team is equipped to handle it all." %}
 					</p>
 				</div>
 			</div>
@@ -60,11 +60,11 @@
 					</svg>
 				</div>
 				<div class="w-3/4">
-					<h2 class="text-lg font-bold">Patient-Focused Approach</h2>
+					<h2 class="text-lg font-bold">{% trans "Patient-Focused Approach" %}</h2>
 					<p class="text-lg paragraph">
-						Your comfort and satisfaction are our top priorities. We strive to create a welcoming environment where you
+						{% trans "Your comfort and satisfaction are our top priorities. We strive to create a welcoming environment where you
 						feel at
-						ease and confident in the care you receive.
+						ease and confident in the care you receive." %}						
 					</p>
 				</div>
 			</div>
@@ -99,57 +99,57 @@
 	class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-1  max-w-7xl mx-auto my-24 py-10 scroll-mt-14">
 	<!-- Box 1: Spans 1 row and 2 columns in lg and above, spans full width in md and below -->
 	<div class="md:col-span-2 lg:col-span-2 lg:row-span-1 p-5 cntnr flex flex-col justify-center rounded-tl-lg">
-		<h2 class="text-3xl md:text-4xl heading font-semibold px-2">Dentistry for Today's Lifestyle</h2>
-		<p class="paragraph text-xl p-2 font-bold">We Have All Your Dental Needs Covered</p>
+		<h2 class="text-3xl md:text-4xl heading font-semibold px-2">{% trans "Dentistry for Today's Lifestyle" %}</h2>
+		<p class="paragraph text-xl p-2 font-bold">{% trans "We Have All Your Dental Needs Covered" %}</p>
 	</div>
 
 	<!-- Box 2 to 8: Regular boxes -->
 	<div class="p-4 py-10 sg-itm itm-0 bg-teal-700">
-		<h4 class="text-xl ">01.</h4>
-		<h3 class="text-2xl font-extrabold ">Dental X-Rays</h3>
-		<p class="text-lg ">Advanced imaging to diagnose and monitor dental health issues.</p>
+		<h4 class="text-xl ">{% trans "01." %}</h4>
+		<h3 class="text-2xl font-extrabold ">{% trans "Dental X-Rays" %}</h3>
+		<p class="text-lg ">{% trans "Advanced imaging to diagnose and monitor dental health issues." %}</p>
 	</div>
 	<div class="p-4 py-10 sg-itm itm-1">
-		<h4 class="text-xl ">02.</h4>
-		<h3 class="text-2xl font-extrabold ">Exams & Cleanings</h3>
-		<p class="text-lg ">Comprehensive check-ups and professional cleanings to maintain oral health.</p>
+		<h4 class="text-xl ">{% trans "02." %}</h4>
+		<h3 class="text-2xl font-extrabold ">{% trans "Exams & Cleanings" %}</h3>
+		<p class="text-lg ">{% trans "Comprehensive check-ups and professional cleanings to maintain oral health." %}</p>
 	</div>
 	<div class="p-4 py-10 sg-itm itm-2">
-		<h4 class="text-xl ">03.</h4>
-		<h3 class="text-2xl font-extrabold ">Cosmetic Dentistry</h3>
-		<p class="text-lg ">Enhancing the appearance of your smile with aesthetic treatments</p>
+		<h4 class="text-xl ">{% trans "03." %}</h4>
+		<h3 class="text-2xl font-extrabold ">{% trans "Cosmetic Dentistry" %}</h3>
+		<p class="text-lg ">{% trans "Enhancing the appearance of your smile with aesthetic treatments" %}</p>
 	</div>
 	<div class="p-4 py-10 sg-itm itm-3">
-		<h4 class="text-xl ">04.</h4>
-		<h3 class="text-2xl font-extrabold ">Periodontal Disease</h3>
-		<p class="text-lg ">Treatment for gum disease to restore oral health and prevent complications.</p>
+		<h4 class="text-xl ">{% trans "04." %}</h4>
+		<h3 class="text-2xl font-extrabold ">{% trans "Periodontal Disease" %}</h3>
+		<p class="text-lg ">{% trans "Treatment for gum disease to restore oral health and prevent complications." %}</p>
 	</div>
 	<div class="p-4 py-10 sg-itm itm-4">
-		<h4 class="text-xl ">05.</h4>
-		<h3 class="text-2xl font-extrabold ">Root Canals</h3>
-		<p class="text-lg ">Precision procedures to save and repair damaged or infected teeth.</p>
+		<h4 class="text-xl ">{% trans "05." %}</h4>
+		<h3 class="text-2xl font-extrabold ">{% trans "Root Canals" %}</h3>
+		<p class="text-lg ">{% trans "Precision procedures to save and repair damaged or infected teeth." %}</p>
 	</div>
 	<div class="p-4 py-10 sg-itm itm-5">
-		<h4 class="text-xl ">06.</h4>
-		<h3 class="text-2xl font-extrabold ">Extractions</h3>
-		<p class="text-lg ">Safe removal of teeth that are damaged or problematic.</p>
+		<h4 class="text-xl ">{% trans "06." %}</h4>
+		<h3 class="text-2xl font-extrabold ">{% trans "Extractions" %}</h3>
+		<p class="text-lg ">{% trans "Safe removal of teeth that are damaged or problematic." %}</p>
 	</div>
 	<div class="p-4 py-10 sg-itm itm-6">
-		<h4 class="text-xl ">07.</h4>
-		<h3 class="text-2xl font-extrabold ">Teeth Whitening</h3>
-		<p class="text-lg ">Professional whitening solutions to brighten and enhance your smile.</p>
+		<h4 class="text-xl ">{% trans "07." %}</h4>
+		<h3 class="text-2xl font-extrabold ">{% trans "Teeth Whitening" %}</h3>
+		<p class="text-lg ">{% trans "Professional whitening solutions to brighten and enhance your smile." %}</p>
 	</div>
 	<div class="p-4 py-10 sg-itm itm-7">
-		<h4 class="text-xl ">08.</h4>
-		<h3 class="text-2xl font-extrabold ">Braces & Implants</h3>
-		<p class="text-lg ">Orthodontic braces and dental implants for a functional and attractive smile.</p>
+		<h4 class="text-xl ">{% trans "08." %}</h4>
+		<h3 class="text-2xl font-extrabold ">{% trans "Braces & Implants" %}</h3>
+		<p class="text-lg ">{% trans "Orthodontic braces and dental implants for a functional and attractive smile." %}</p>
 	</div>
 
 	<!-- Box 10: Spans 1 row and 2 columns in lg and above, full width in md and below -->
 	<div
 		class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-br-full p-4 flex flex-col justify-center items-center shadow-xl">
 		<a href="{% url 'main:index' %}#book-an-appointment"
-			class="text-2xl md:text-3xl text-gray-100 font-semibold px-2">Book an Appointment</a>
+			class="text-2xl md:text-3xl text-gray-100 font-semibold px-2">{% trans "Book an Appointment" %}</a>
 	</div>
 </div>
 
@@ -158,25 +158,25 @@
 <div id="book-an-appointment" class="min-h-full w-full my-24 py-10 scroll-mt-36">
 	<div class="max-w-7xl mx-auto flex flex-wrap gap-2">
 			<div class="flex flex-col lg:justify-end max-w-3xl lg:max-w-xl xl:max-w-3xl xl:pt-32">
-					<p class="text-lg md:text-2xl lg:text-3xl text-gray-200 font-semibold px-5">Your Oral Health Matters to Us</p>
+					<p class="text-lg md:text-2xl lg:text-3xl text-gray-200 font-semibold px-5">{% trans "Your Oral Health Matters to Us" %}</p>
 					<hr class="border-white max-w-xl mx-auto">
-					<h3 class="text-3xl md:text-5xl lg:text-4xl xl:text-5xl text-white p-5 leading-tight">Get Brighter Smile from Your City's Best Dentists</h3>
+					<h3 class="text-3xl md:text-5xl lg:text-4xl xl:text-5xl text-white p-5 leading-tight">{% trans "Get Brighter Smile from Your City's Best Dentists" %}</h3>
 			</div>
 			<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
 					<div class="cntnr rounded-2xl p-6">
 							<form class="w-full">
 									<div>
-										<h4 class="text-2xl text-center paragraph p-5">Book An Appointment</h4>
+										<h4 class="text-2xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
 									</div>
 									<div class="mb-5">
-											<label for="subject" class="block mb-2 text-sm font-medium paragraph">Subject</label>
-											<input type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Subject of your appointment" required />
+											<label for="subject" class="block mb-2 text-sm font-medium paragraph">{% trans "Subject" %}</label>
+											<input type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder='{% trans "Subject of your appointment" %}' required />
 									</div>
 									<div class="mb-5">
-										<label for="message" class="block mb-2 text-sm font-medium paragraph">Your message</label>
-										<textarea rows="5" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Briefly describe why you are requesting this appointment"></textarea>
+										<label for="message" class="block mb-2 text-sm font-medium paragraph">{% trans "Your message" %}</label>
+										<textarea rows="5" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder='{% trans "Briefly describe why you are requesting this appointment" %}'></textarea>
 									</div>
-									<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center">Request Appointment</button>
+									<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center">{% trans "Request Appointment" %}</button>
 							</form>
 					</div>
 			</div>
@@ -197,18 +197,18 @@
 
 		<div class="cntnr w-full lg:w-1/2 p-10 flex flex-col justify-center">
 
-			<p class="paragraph text-xl py-2 font-bold">Meet the Doctor</p>
-			<h2 class="text-3xl md:text-4xl heading font-semibold">Your Name could be here!</h2>
-			<p class="text-xl paragraph pt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-				luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-			<p class="text-xl paragraph pt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
-				luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+			<p class="paragraph text-xl py-2 font-bold">{% trans "Meet the Doctor" %}</p>
+			<h2 class="text-3xl md:text-4xl heading font-semibold">{% trans "Your Name could be here!" %}</h2>
+			<p class="text-xl paragraph pt-5">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+				luctus nec ullamcorper mattis, pulvinar dapibus leo." %}</p>
+			<p class="text-xl paragraph pt-5">{% trans "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,
+				luctus nec ullamcorper mattis, pulvinar dapibus leo." %}</p>
 
 
 			<a href="{% url 'main:index' %}#book-an-appointment" class="flex justify-center py-3">
 				<button type="button"
 					class="text-gray-100 w-full bg-main-gradient focus:ring-0 focus:outline-none focus:ring-opacity-50 transform transition inline-flex items-center justify-center font-medium rounded-lg text-2xl p-1 mt-1 text-center me-2 mb-2">
-					Book an Appointment
+					{% trans "Book an Appointment" %}
 				</button>
 			</a>
 
@@ -222,8 +222,8 @@
 <div id="meet-the-dctrs" class="w-full my-24 py-10 ">
 
 	<div class="md:col-span-2 lg:col-span-2 lg:row-span-1 p-5 flex flex-col justify-center text-center">
-		<h2 class="text-3xl md:text-4xl text-white font-semibold px-2">Our Team, Our Strength</h2>
-		<p class="text-gray-100 text-xl p-2 font-bold">This could be Your Team</p>
+		<h2 class="text-3xl md:text-4xl text-white font-semibold px-2">{% trans "Our Team, Our Strengths" %}</h2>
+		<p class="text-gray-100 text-xl p-2 font-bold">{% trans "This could be Your Team" %}</p>
 	</div>
 
 	<div class="flex flex-wrap gap-6 justify-center p-5">
@@ -231,9 +231,9 @@
 		<div class="max-w-xs bg-white rounded-lg shadow-xl">
 			<img class="w-full h-auto object-cover rounded-t-lg" src="{% static 'imgs/d8.jpeg' %}" alt="Article image" />
 			<div class="p-4 blog-page-desc rounded-b-lg text-center">
-				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">Dr. Hala Karim</h3>
+				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">{% trans "Dr. Hala Karim" %}</h3>
 				<p class="mb-2 text-xl font-normal text-gray-800">
-					Orthodontist
+					{% trans "Orthodontist" %}
 				</p>
 			</div>
 		</div>
@@ -241,9 +241,9 @@
 		<div class="max-w-xs bg-white rounded-lg shadow-xl">
 			<img class="w-full h-auto object-cover rounded-t-lg" src="{% static 'imgs/d7.jpeg' %}" alt="Article image" />
 			<div class="p-4 blog-page-desc rounded-b-lg text-center">
-				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">Dr. Youssef Hassan</h3>
+				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">{% trans "Dr. Youssef Hassan" %}</h3>
 				<p class="mb-2 text-xl font-normal text-gray-800">
-					Prosthodontist
+					{% trans "Prosthodontist" %}
 				</p>
 			</div>
 		</div>
@@ -251,9 +251,9 @@
 		<div class="max-w-xs bg-white rounded-lg shadow-xl">
 			<img class="w-full h-auto object-cover rounded-t-lg" src="{% static 'imgs/d6.jpeg' %}" alt="Article image" />
 			<div class="p-4 blog-page-desc rounded-b-lg text-center">
-				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">Dr. Nadia Ali</h3>
+				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">{% trans "Dr. Nadia Ali" %}</h3>
 				<p class="mb-2 text-xl font-normal text-gray-800">
-					Cosmetic Dentist
+					{% trans "Cosmetic Dentist" %}
 				</p>
 			</div>
 		</div>
@@ -261,9 +261,9 @@
 		<div class="max-w-xs bg-white rounded-lg shadow-xl">
 			<img class="w-full h-auto object-cover rounded-t-lg" src="{% static 'imgs/d9.jpeg' %}" alt="Article image" />
 			<div class="p-4 blog-page-desc rounded-b-lg text-center">
-				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">Dr. Ahmed Al-Farsi</h3>
+				<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">{% trans "Dr. Ahmed Al-Farsi" %}</h3>
 				<p class="mb-2 text-xl font-normal text-gray-800">
-					General Dentist
+					{% trans "General Dentist" %}
 				</p>
 			</div>
 		</div>
@@ -300,13 +300,13 @@
 
 
 		<div class="w-full lg:w-1/2 py-5">
-			<h2 class="text-2xl md:text-4xl heading font-semibold px-5">Committed To Dental Excellence</h2>
-			<p class="text-xl paragraph p-5">At our clinic, we blend state-of-the-art technology with unparalleled
+			<h2 class="text-2xl md:text-4xl heading font-semibold px-5">{% trans "Committed To Dental Excellence" %}</h2>
+			<p class="text-xl paragraph p-5">{% trans "At our clinic, we blend state-of-the-art technology with unparalleled
 				expertise to deliver top-tier dental care.
 				Our team of dedicated professionals is committed to excellence, ensuring every visit is comfortable, effective,
 				and tailored to your unique needs.
 				With a patient-centric approach, we prioritize your well-being and satisfaction, offering a welcoming
-				environment where you can feel at ease.</p>
+				environment where you can feel at ease." %}</p>
 
 			<div class="flex items-center p-4 rounded-lg">
 				<div class="flex justify-center items-center w-1/4">
@@ -316,10 +316,10 @@
 					</svg>
 				</div>
 				<div class="w-3/4">
-					<h2 class="text-lg font-bold">Personalized Care</h2>
+					<h2 class="text-lg font-bold">{% trans "Personalized Care" %}</h2>
 					<p class="text-lg paragraph">
-						Our approach to dental care is uniquely tailored to each patient, ensuring treatment plans that address your
-						specific needs and concerns.
+						{% trans "Our approach to dental care is uniquely tailored to each patient, ensuring treatment plans that address your
+						specific needs and concerns." %}
 					</p>
 				</div>
 			</div>
@@ -333,10 +333,10 @@
 					</svg>
 				</div>
 				<div class="w-3/4">
-					<h2 class="text-lg font-bold">Advanced Treatments</h2>
+					<h2 class="text-lg font-bold">{% trans "Advanced Treatments" %}</h2>
 					<p class="text-lg paragraph">
-						We stay at the forefront of dental innovation, offering advanced treatments that utilize the latest
-						techniques and technologies for optimal results.
+						{% trans "We stay at the forefront of dental innovation, offering advanced treatments that utilize the latest
+						techniques and technologies for optimal results." %}
 					</p>
 				</div>
 			</div>
@@ -354,14 +354,13 @@
 	<div class="flex flex-wrap lg:flex-nowrap flex-row gap-5">
 
 		<div class="w-full lg:w-1/2 py-5">
-			<h2 class="text-2xl md:text-4xl heading font-semibold px-5">Committed To Dental Excellence</h2>
-			<p class="text-xl paragraph p-5">At our clinic, we blend state-of-the-art technology with unparalleled
+			<h2 class="text-2xl md:text-4xl heading font-semibold px-5">{% trans "Committed To Dental Excellence" %}</h2>
+			<p class="text-xl paragraph p-5">{% trans "At our clinic, we blend state-of-the-art technology with unparalleled
 				expertise to deliver top-tier dental care.
 				Our team of dedicated professionals is committed to excellence, ensuring every visit is comfortable, effective,
 				and tailored to your unique needs.
 				With a patient-centric approach, we prioritize your well-being and satisfaction, offering a welcoming
-				environment where you can feel at ease.</p>
-
+				environment where you can feel at ease." %}</p>
 
 			<div class="flex items-center p-4 rounded-lg">
 				<div class="flex justify-center items-center w-1/4">
@@ -371,10 +370,10 @@
 					</svg>
 				</div>
 				<div class="w-3/4">
-					<h2 class="text-lg font-bold">Personalized Care</h2>
+					<h2 class="text-lg font-bold">{% trans "Personalized Care" %}</h2>
 					<p class="text-lg paragraph">
-						Our approach to dental care is uniquely tailored to each patient, ensuring treatment plans that address your
-						specific needs and concerns.
+						{% trans "Our approach to dental care is uniquely tailored to each patient, ensuring treatment plans that address your
+						specific needs and concerns." %}
 					</p>
 				</div>
 			</div>
@@ -388,10 +387,10 @@
 					</svg>
 				</div>
 				<div class="w-3/4">
-					<h2 class="text-lg font-bold">Advanced Treatments</h2>
+					<h2 class="text-lg font-bold">{% trans "Advanced Treatments" %}</h2>
 					<p class="text-lg paragraph">
-						We stay at the forefront of dental innovation, offering advanced treatments that utilize the latest
-						techniques and technologies for optimal results.
+						{% trans "We stay at the forefront of dental innovation, offering advanced treatments that utilize the latest
+						techniques and technologies for optimal results." %}
 					</p>
 				</div>
 			</div>

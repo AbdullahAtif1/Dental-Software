@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-04 00:03+0500\n"
+"POT-Creation-Date: 2024-08-05 14:25+0500\n"
 "PO-Revision-Date: 2024-08-03 16:08+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -21,35 +21,7 @@ msgstr ""
 "&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: .\blog\models.py:17 .\dentadmin\models.py:40
-msgid "title"
-msgstr "العنوان"
-
-#: .\blog\models.py:18 .\dentadmin\models.py:42 .\main\models.py:30
-msgid "description"
-msgstr "الوصف"
-
-#: .\blog\models.py:19 .\main\models.py:121
-msgid "body"
-msgstr "المحتوى"
-
-#: .\blog\models.py:20
-msgid "slug"
-msgstr "الرابط الثابت"
-
-#: .\blog\models.py:21
-msgid "header image"
-msgstr "صورة الرأس"
-
 #: .\blog\models.py:22
-msgid "publication date"
-msgstr "تاريخ النشر"
-
-#: .\blog\models.py:23
-msgid "last updated"
-msgstr "آخر تحديث"
-
-#: .\blog\models.py:24 .\dentadmin\models.py:17 .\main\models.py:31
 msgid "status"
 msgstr "الحالة"
 
@@ -85,37 +57,21 @@ msgstr "العنوان"
 msgid "Description"
 msgstr "الوصف"
 
-#: .\dentadmin\models.py:14
+#: .\dentadmin\models.py:18
 msgid "user"
 msgstr "المستخدم"
 
-#: .\dentadmin\models.py:15
-msgid "profile picture"
-msgstr "صورة الملف الشخصي"
-
-#: .\dentadmin\models.py:16
-msgid "bio"
-msgstr "السيرة الذاتية"
-
-#: .\dentadmin\models.py:18 .\main\models.py:12 .\main\models.py:120
-msgid "email address"
-msgstr "عنوان البريد الإلكتروني"
-
-#: .\dentadmin\models.py:19
-msgid "phone number"
-msgstr "رقم الهاتف"
-
-#: .\dentadmin\models.py:38
+#: .\dentadmin\models.py:40
 msgid "prospect"
 msgstr "العميل المحتمل"
 
-#: .\dentadmin\models.py:39
-msgid "file"
-msgstr "ملف"
+#: .\dentadmin\models.py:43
+msgid "title"
+msgstr "العنوان"
 
-#: .\dentadmin\models.py:41
-msgid "date and time"
-msgstr "التاريخ والوقت"
+#: .\dentadmin\models.py:44
+msgid "description"
+msgstr "الوصف"
 
 #: .\dentweb\settings.py:59
 msgid "Arabic"
@@ -125,7 +81,7 @@ msgstr "عربي"
 msgid "English"
 msgstr "إنجليزي"
 
-#: .\main\forms.py:18
+#: .\main\forms.py:18 .\templates\main\index.html:172
 msgid "Subject"
 msgstr "الموضوع"
 
@@ -137,34 +93,374 @@ msgstr "تغذية راجعة"
 msgid "Rating"
 msgstr "تقييم"
 
-#: .\main\models.py:13
-msgid "subscribed at"
-msgstr "تاريخ الاشتراك"
-
 #: .\main\models.py:28
 msgid "patient"
 msgstr "المريض"
 
-#: .\main\models.py:29
-msgid "subject"
-msgstr "الموضوع"
+#: .\templates\blog\detail.html:5
+msgid "Blog -"
+msgstr "المدونة -"
 
-#: .\main\models.py:32
-msgid "date"
-msgstr "التاريخ"
+#: .\templates\blog\detail.html:27
+msgid "You might also Like"
+msgstr "قد يعجبك أيضًا"
 
-#: .\main\models.py:33
-msgid "time"
-msgstr "الوقت"
+#: .\templates\blog\index.html:6
+msgid "This Could be Yours - Blog"
+msgstr "قد تكون هذه مدونتك - المدونة"
 
-#: .\main\models.py:119
-msgid "name"
-msgstr "الاسم"
+#: .\templates\blog\index.html:16
+msgid "This Could be Yours"
+msgstr "قد تكون هذه لك"
 
-#: .\main\models.py:122
-msgid "stars"
-msgstr "النجوم"
+#: .\templates\blog\index.html:29
+msgid "Looking for something?"
+msgstr "تبحث عن شيء؟"
+
+#: .\templates\blog\index.html:32
+msgid "Search"
+msgstr "بحث"
+
+#: .\templates\blog\index.html:73
+msgid "They Could be Subscribed to Your Newsletter"
+msgstr "يمكن أن يكونوا مشتركين في النشرة الإخبارية الخاصة بك"
+
+#: .\templates\blog\index.html:85
+msgid "Signup"
+msgstr "اشترك"
+
+#: .\templates\blog\index.html:127
+msgid "Previous"
+msgstr "السابق"
+
+#: .\templates\blog\index.html:139
+msgid "Next"
+msgstr "التالي"
+
+#: .\templates\footer.html:13
+msgid "Contact Information"
+msgstr "معلومات الاتصال"
+
+#: .\templates\footer.html:24
+msgid "Open Hours"
+msgstr "ساعات العمل"
+
+#: .\templates\footer.html:27
+msgid "Mon-Fri 09:00 - 19:00"
+msgstr "الإثنين-الجمعة 09:00 - 19:00"
+
+#: .\templates\footer.html:30
+msgid "Sat-Sun 10:00 - 14:00"
+msgstr "السبت-الأحد 10:00 - 14:00"
+
+#: .\templates\footer.html:35
+msgid "Reach Us"
+msgstr "تواصل معنا"
+
+#: .\templates\footer.html:38
+msgid "456 Smile Avenue, Dental City, CA 90210"
+msgstr "456 شارع الابتسامة، مدينة طب الأسنان، كاليفورنيا 90210"
+
+#: .\templates\footer.html:46
+msgid "All Rights Reserved."
+msgstr "جميع الحقوق محفوظة."
+
+#: .\templates\main\index.html:5 .\templates\nav.html:8
+msgid "This Could Be Yours"
+msgstr "قد يكون هذا لك"
 
 #: .\templates\main\index.html:13
 msgid "A Better Life Starts with a Beautiful Smile"
 msgstr "حياة أفضل تبدأ بابتسامة جميلة"
+
+#: .\templates\main\index.html:27
+msgid "Welcome to"
+msgstr "مرحبًا بك في"
+
+#: .\templates\main\index.html:28
+msgid "Your Website"
+msgstr "موقعك الإلكتروني"
+
+#: .\templates\main\index.html:46
+msgid "Comprehensive Services"
+msgstr "خدمات شاملة"
+
+#: .\templates\main\index.html:63
+msgid "Patient-Focused Approach"
+msgstr "نهج يركز على المريض"
+
+#: .\templates\main\index.html:102
+msgid "Dentistry for Today's Lifestyle"
+msgstr "طب الأسنان لنمط الحياة العصري"
+
+#: .\templates\main\index.html:103
+msgid "We Have All Your Dental Needs Covered"
+msgstr "لدينا جميع احتياجاتك لطب الأسنان"
+
+#: .\templates\main\index.html:108
+msgid "01."
+msgstr "01."
+
+#: .\templates\main\index.html:109
+msgid "Dental X-Rays"
+msgstr "الأشعة السينية للأسنان"
+
+#: .\templates\main\index.html:110
+msgid "Advanced imaging to diagnose and monitor dental health issues."
+msgstr "التصوير المتقدم لتشخيص ومراقبة مشكلات صحة الأسنان."
+
+#: .\templates\main\index.html:113
+msgid "02."
+msgstr "02."
+
+#: .\templates\main\index.html:114
+msgid "Exams & Cleanings"
+msgstr "الفحوصات والتنظيفات"
+
+#: .\templates\main\index.html:115
+msgid "Comprehensive check-ups and professional cleanings to maintain oral health."
+msgstr "فحوصات شاملة وتنظيفات احترافية للحفاظ على صحة الفم."
+
+#: .\templates\main\index.html:118
+msgid "03."
+msgstr "03."
+
+#: .\templates\main\index.html:119
+msgid "Cosmetic Dentistry"
+msgstr "طب الأسنان التجميلي"
+
+#: .\templates\main\index.html:120
+msgid "Enhancing the appearance of your smile with aesthetic treatments"
+msgstr "تعزيز مظهر ابتسامتك من خلال العلاجات التجميلية"
+
+#: .\templates\main\index.html:123
+msgid "04."
+msgstr "04."
+
+#: .\templates\main\index.html:124
+msgid "Periodontal Disease"
+msgstr "أمراض اللثة"
+
+#: .\templates\main\index.html:125
+msgid "Treatment for gum disease to restore oral health and prevent complications."
+msgstr "علاج لأمراض اللثة لاستعادة صحة الفم ومنع المضاعفات."
+
+#: .\templates\main\index.html:128
+msgid "05."
+msgstr "05."
+
+#: .\templates\main\index.html:129
+msgid "Root Canals"
+msgstr "قنوات الجذور"
+
+#: .\templates\main\index.html:130
+msgid "Precision procedures to save and repair damaged or infected teeth."
+msgstr "إجراءات دقيقة لإنقاذ وإصلاح الأسنان التالفة أو المصابة."
+
+#: .\templates\main\index.html:133
+msgid "06."
+msgstr "06."
+
+#: .\templates\main\index.html:134
+msgid "Extractions"
+msgstr "قلع الأسنان"
+
+#: .\templates\main\index.html:135
+msgid "Safe removal of teeth that are damaged or problematic."
+msgstr "إزالة آمنة للأسنان التالفة أو المشكلة."
+
+#: .\templates\main\index.html:138
+msgid "07."
+msgstr "07."
+
+#: .\templates\main\index.html:139
+msgid "Teeth Whitening"
+msgstr "تبييض الأسنان"
+
+#: .\templates\main\index.html:140
+msgid "Professional whitening solutions to brighten and enhance your smile."
+msgstr "حلول تبييض احترافية لتفتيح وتحسين ابتسامتك."
+
+#: .\templates\main\index.html:143
+msgid "08."
+msgstr "08."
+
+#: .\templates\main\index.html:144
+msgid "Braces & Implants"
+msgstr "تقويم الأسنان وزرع الأسنان"
+
+#: .\templates\main\index.html:145
+msgid "Orthodontic braces and dental implants for a functional and attractive smile."
+msgstr "تقويم الأسنان وزرعات الأسنان من أجل ابتسامة وظيفية وجذابة."
+
+#: .\templates\main\index.html:152 .\templates\main\index.html:211
+#: .\templates\nav.html:73
+msgid "Book an Appointment"
+msgstr "احجز موعدًا"
+
+#: .\templates\main\index.html:161
+msgid "Your Oral Health Matters to Us"
+msgstr "صحتك الفموية تهمنا"
+
+#: .\templates\main\index.html:163
+msgid "Get Brighter Smile from Your City's Best Dentists"
+msgstr "احصل على ابتسامة أكثر إشراقًا من أفضل أطباء الأسنان في مدينتك"
+
+#: .\templates\main\index.html:169
+msgid "Book An Appointment"
+msgstr "احجز موعدًا"
+
+#: .\templates\main\index.html:173
+msgid "Subject of your appointment"
+msgstr "موضوع موعدك"
+
+#: .\templates\main\index.html:176
+msgid "Your message"
+msgstr "رسالتك"
+
+#: .\templates\main\index.html:177
+msgid "Briefly describe why you are requesting this appointment"
+msgstr "صف بإيجاز سبب طلبك لهذا الموعد"
+
+#: .\templates\main\index.html:179
+msgid "Request Appointment"
+msgstr "طلب موعد"
+
+#: .\templates\main\index.html:200
+msgid "Meet the Doctor"
+msgstr "قابل الطبيب"
+
+#: .\templates\main\index.html:201
+msgid "Your Name could be here!"
+msgstr "يمكن أن يكون اسمك هنا!"
+
+#: .\templates\main\index.html:225
+msgid "Our Team, Our Strengths"
+msgstr "فريقنا، قوتنا"
+
+#: .\templates\main\index.html:226
+msgid "This could be Your Team"
+msgstr "يمكن أن يكون هذا فريقك"
+
+#: .\templates\main\index.html:234
+msgid "Dr. Hala Karim"
+msgstr "الدكتورة هالة كريم"
+
+#: .\templates\main\index.html:236
+msgid "Orthodontist"
+msgstr "أخصائية تقويم الأسنان"
+
+#: .\templates\main\index.html:244
+msgid "Dr. Youssef Hassan"
+msgstr "الدكتور يوسف حسن"
+
+#: .\templates\main\index.html:246
+msgid "Prosthodontist"
+msgstr "أخصائي تركيبات الأسنان"
+
+#: .\templates\main\index.html:254
+msgid "Dr. Nadia Ali"
+msgstr "الدكتورة نادية علي"
+
+#: .\templates\main\index.html:256
+msgid "Cosmetic Dentist"
+msgstr "طبيبة تجميل الأسنان"
+
+#: .\templates\main\index.html:264
+msgid "Dr. Ahmed Al-Farsi"
+msgstr "الدكتور أحمد الفارسي"
+
+#: .\templates\main\index.html:266
+msgid "General Dentist"
+msgstr "طبيب أسنان عام"
+
+#: .\templates\main\index.html:303 .\templates\main\index.html:357
+msgid "Committed To Dental Excellence"
+msgstr "ملتزمون بالتميز في طب الأسنان"
+
+#: .\templates\main\index.html:319 .\templates\main\index.html:373
+msgid "Personalized Care"
+msgstr "رعاية شخصية"
+
+#: .\templates\main\index.html:336 .\templates\main\index.html:390
+msgid "Advanced Treatments"
+msgstr "علاجات متقدمة"
+
+#: .\templates\nav.html:19
+msgid "Blog"
+msgstr "مدونة"
+
+#: .\templates\nav.html:22
+msgid "Services"
+msgstr "خدمات"
+
+#: .\templates\nav.html:28
+msgid "Language"
+msgstr "اللغة"
+
+#: .\templates\nav.html:49
+msgid "Themes"
+msgstr "الثيمات"
+
+#: .\templates\nav.html:57
+msgid "Teal & Green"
+msgstr "أخضر مزرق وأخضر"
+
+#: .\templates\nav.html:60
+msgid "Indigo & Purple"
+msgstr "نيلي وأرجواني"
+
+#: .\templates\nav.html:63
+msgid "Red & Amber"
+msgstr "أحمر وكهرماني"
+
+#~ msgid "body"
+#~ msgstr "المحتوى"
+
+#~ msgid "slug"
+#~ msgstr "الرابط الثابت"
+
+#~ msgid "header image"
+#~ msgstr "صورة الرأس"
+
+#~ msgid "publication date"
+#~ msgstr "تاريخ النشر"
+
+#~ msgid "last updated"
+#~ msgstr "آخر تحديث"
+
+#~ msgid "profile picture"
+#~ msgstr "صورة الملف الشخصي"
+
+#~ msgid "bio"
+#~ msgstr "السيرة الذاتية"
+
+#~ msgid "email address"
+#~ msgstr "عنوان البريد الإلكتروني"
+
+#~ msgid "phone number"
+#~ msgstr "رقم الهاتف"
+
+#~ msgid "file"
+#~ msgstr "ملف"
+
+#~ msgid "date and time"
+#~ msgstr "التاريخ والوقت"
+
+#~ msgid "subscribed at"
+#~ msgstr "تاريخ الاشتراك"
+
+#~ msgid "subject"
+#~ msgstr "الموضوع"
+
+#~ msgid "date"
+#~ msgstr "التاريخ"
+
+#~ msgid "time"
+#~ msgstr "الوقت"
+
+#~ msgid "name"
+#~ msgstr "الاسم"
+
+#~ msgid "stars"
+#~ msgstr "النجوم"
