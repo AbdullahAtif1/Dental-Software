@@ -24,7 +24,7 @@ class SubscriberAdmin(admin.ModelAdmin):
     list_display = ('email', 'subscribed_at')
     search_fields = ('email',)
 
-admin.site.register(Appointment, TranslatableAdmin)
+admin.site.register(Appointment)
 admin.site.register(Feedback, TranslatableAdmin)
 admin.site.register(Subscriber, TranslatableAdmin)
 

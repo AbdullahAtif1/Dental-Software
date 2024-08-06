@@ -1,15 +1,18 @@
 from django.shortcuts import render
 from .forms import AppointmentForm
 from django.http import JsonResponse
+from dentadmin.models import Patient
 
 def index(request):
 
+	
 	form = AppointmentForm()
 	if request.method == "POST":
+		patient = Patient.objects.get(user=request.user) 
 		form = AppointmentForm(request.POST)
 		if form.is_valid():
 			instance = form.save(commit=False)
-			instance.patient = request.user
+			instance.patient = patient
 			instance.save()
 			
 			if request.headers.get('x-requested-with') == 'XMLHttpRequest':

@@ -1,6 +1,6 @@
 {% extends "_base.html" %}
 {% load i18n %}
-
+{% load widget_tweaks %}
 
 {% load static %}
 {% block 'title' %}{% trans "This Could Be Yours" %}{% endblock %}
@@ -28,6 +28,7 @@
 
 <div id="hmpg-hdr" class="max-w-full py-10 m-auto md:shadow-xl">
 	<div class="text-center text-gray-100 max-w-5xl m-auto py-20 px-10 z-10">
+		{{ request.user }}
 		<h1 class="text-gray-100 text-4xl lg:text-5xl font-bold my-5">{% trans "A Better Life Starts with a Beautiful Smile" %}</h1>
 		<p class="text-2xl">
 			{% trans "A stunning smile begins here. Trust our experts" %}
@@ -524,18 +525,19 @@
 <div id="book-an-appointment-ar" class="book-an-appointment-ar min-h-full w-full my-24 py-10 hidden scroll-mt-24 lg:block">
 	<div class="max-w-7xl mx-auto flex flex-wrap gap-2">
 		<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
-				<div class="cntnr rounded-2xl p-6">
-						<form class="w-full">
+				<div class="cntnr rounded-2xl p-6" id="form-container">
+						<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:index' %}">
+							{% csrf_token %}
 								<div>
 									<h4 class="text-4xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
 								</div>
 								<div class="mb-5">
 										<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Subject" %}</label>
-										<input type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder='{% trans "Subject of your appointment" %}' required />
+										{% render_field form.subject type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="موضوع موعدك" %}
 								</div>
 								<div class="mb-5">
-									<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Your message" %}</label>
-									<textarea rows="5" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder='{% trans "Briefly describe why you are requesting this appointment" %}'></textarea>
+										<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Your message" %}</label>
+										{% render_field form.description rows="5" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="وصف موجز لسبب طلبك لهذا الموعد" %}
 								</div>
 								<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-4xl px-5 py-2.5 text-center">{% trans "Request Appointment" %}</button>
 						</form>
@@ -559,22 +561,23 @@
 				<h3 class="text-4xl md:text-6xl text-white p-5 leading-tight">{% trans "Get Brighter Smile from Your City's Best Dentists" %}</h3>
 		</div>
 		<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
-				<div class="cntnr rounded-2xl p-6">
-						<form class="w-full">
-								<div class="mb-5">
-									<h4 class="text-4xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
-								</div>
-								<div class="mb-5">
-										<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Subject" %}</label>
-										<input type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder='{% trans "Subject of your appointment" %}' required />
-								</div>
-								<div class="mb-5">
-									<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Your message" %}</label>
-									<textarea rows="5" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-2xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder='{% trans "Briefly describe why you are requesting this appointment" %}'></textarea>
-								</div>
-								<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-3xl px-5 py-2.5 text-center">{% trans "Request Appointment" %}</button>
-						</form>
-				</div>
+			<div class="cntnr rounded-2xl p-6" id="form-container">
+				<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:index' %}">
+					{% csrf_token %}
+						<div>
+							<h4 class="text-4xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
+						</div>
+						<div class="mb-5">
+								<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Subject" %}</label>
+								{% render_field form.subject type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="موضوع موعدك" %}
+						</div>
+						<div class="mb-5">
+								<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Your message" %}</label>
+								{% render_field form.description rows="5" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="وصف موجز لسبب طلبك لهذا الموعد" %}
+						</div>
+						<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-4xl px-5 py-2.5 text-center">{% trans "Request Appointment" %}</button>
+				</form>
+		</div>
 		</div>
 	</div>
 </div>
@@ -589,22 +592,23 @@
 					<h3 class="text-3xl md:text-5xl lg:text-4xl xl:text-5xl text-white p-5 leading-tight">{% trans "Get Brighter Smile from Your City's Best Dentists" %}</h3>
 			</div>
 			<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
-					<div class="cntnr rounded-2xl p-6">
-							<form class="w-full">
-									<div>
-										<h4 class="text-3xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
-									</div>
-									<div class="mb-5">
-											<label for="subject" class="block mb-2 text-xl font-medium paragraph">{% trans "Subject" %}</label>
-											<input type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl lg:text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder='{% trans "Subject of your appointment" %}' required />
-									</div>
-									<div class="mb-5">
-										<label for="message" class="block mb-2 text-xl font-medium paragraph">{% trans "Your message" %}</label>
-										<textarea rows="5" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl lg:text-lg rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder='{% trans "Briefly describe why you are requesting this appointment" %}'></textarea>
-									</div>
-									<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-lg px-5 py-2.5 text-center">{% trans "Request Appointment" %}</button>
-							</form>
-					</div>
+				<div class="cntnr rounded-2xl p-6" id="form-container">
+					<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:index' %}">
+						{% csrf_token %}
+							<div>
+								<h4 class="text-3xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
+							</div>
+							<div class="mb-5">
+									<label for="subject" class="block mb-2 text-xl font-medium paragraph">{% trans "Subject" %}</label>
+									{% render_field form.subject type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Subject of your Appointment" %}
+							</div>
+							<div class="mb-5">
+									<label for="message" class="block mb-2 text-xl font-medium paragraph">{% trans "Your message" %}</label>
+									{% render_field form.description rows="5" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Briefly describe why you are requesting this appointment" %}
+							</div>
+							<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-3xl px-5 py-2.5 text-center">{% trans "Request Appointment" %}</button>
+					</form>
+			</div>
 			</div>
 	</div>
 </div>
@@ -1175,6 +1179,25 @@
 {% block 'script' %}
 
 <script>
+
+	$(document).ready(function () {
+		$('#apntmnt-form').on('submit', function (event) {
+			event.preventDefault();
+			var form = $(this);
+			$.ajax({
+				url: form.attr('action'),
+				method: form.attr('method'),
+				data: form.serialize(),
+				success: function (data) {
+					$('#form-container').html('<p class="flex flex-col items-end pt-6 paragraph text-2xl md:text-4xl font-bold">' + data.message + '</p>');
+				},
+				error: function (xhr, errmsg, err) {
+					console.log(xhr.status + ": " + xhr.responseText);
+					$('#form-container').html('<p class="flex flex-col items-end pt-6 paragraph text-2xl md:text-4xl font-bold">There was an error with your submission</p>');
+				}
+			});
+		});
+	});
 
 
 </script>

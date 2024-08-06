@@ -18,7 +18,7 @@ class Subscriber(models.Model):
 
 
 # Appointment booking functionality displayed on the client side
-class Appointment(TranslatableModel):
+class Appointment(models.Model):
 	STATUS_CHOICES = [
 			('under_review', 'Under Review'),
 			('approved', 'Approved'),
@@ -27,11 +27,8 @@ class Appointment(TranslatableModel):
 
 	patient = models.ForeignKey(Patient, on_delete=models.CASCADE, related_name='appointments', verbose_name=_('patient'))
 	status=models.CharField(max_length=20, choices=STATUS_CHOICES, default='under_review')
-
-	translations = TranslatedFields(
-			subject=models.CharField(max_length=300, editable=True),
-			description=models.TextField(editable=True),
-	)
+	subject=models.CharField(max_length=300, editable=True, default="")
+	description=models.TextField(editable=True, default="")
 	
 	date = models.DateField(null=True, blank=True)
 	time = models.TimeField(null=True, blank=True)
@@ -77,7 +74,7 @@ class Appointment(TranslatableModel):
 	def send_confirmation_email(self):
 		if self.status == 'approved':
 				message = email_templates.APPOINTMENT_APPROVAL_TEMPLATE.format(
-					client_name = self.name,
+					client_name = self.patient.user.username,
 					appointment_date = self.date,
 					appointment_time = self.time,
 					company_name = "Amazing Dentals", # Change it afterwards
@@ -86,7 +83,7 @@ class Appointment(TranslatableModel):
 				)
 		else:
 				message = email_templates.APPOINTMENT_NOT_APPROVED_TEMPLATE.format(
-					client_name = self.name,
+					client_name = self.patient.user.username,
 					company_name = "Amazing Dentals", # Change it afterwards
 					your_name = "My Name",
 					contact_info = "manager@socialcodepk.com" # Replace with client's official email adress
@@ -102,13 +99,14 @@ class Appointment(TranslatableModel):
             [self.patient.email],
             fail_silently=False,
         )
+		print("Email sent")
 
 	def add_to_sbscrbr_list(self):
+			email = self.patient.user.email
+			subscriber, created = Subscriber.objects.get_or_create(email=email)
+			if created:
+					pass
 
-		if not Subscriber.objects.filter(email=self.email).exists(): # Add the appointment applying person to the mailing list
-			subscriber = Subscriber.objects.create(email = self.email)
-			subscriber.save(force_insert=True)
-		return	
 
 
 class Feedback(TranslatableModel):

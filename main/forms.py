@@ -10,10 +10,10 @@ class SubscriberForm(forms.ModelForm):
             'email': _("Email Address"),
         }
 
-class AppointmentForm(forms.Form):
+class AppointmentForm(forms.ModelForm):
     class Meta:
         model = Appointment
-        fields = ['subject', 'description']
+        fields = ('subject', 'description')
         labels = {
             'subject': _("Subject"),
             'description': _("Description"),
