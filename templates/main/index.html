@@ -509,7 +509,7 @@
 	<!-- Box 10: Spans 1 row and 2 columns in lg and above, full width in md and below -->
 		<a href="{% url 'main:index' %}#book-an-appointment"
 			class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-br-full p-4 flex flex-col justify-center items-center shadow-xl no-underline">
-			<div class="text-5xl text-gray-100 font-semibold px-2">
+			<div class="text-3xl md:text-4xl text-gray-100 font-semibold px-2">
 				{% trans "Book an Appointment" %}
 			</div>
 		</a>
@@ -521,7 +521,7 @@
 
 {% if CURRENT_LANGUAGE == 'ar' %}
 
-<div id="book-an-appointment-ar" class="book-an-appointment-ar min-h-full w-full my-24 py-10 scroll-mt-14 hidden lg:block">
+<div id="book-an-appointment-ar" class="book-an-appointment-ar min-h-full w-full my-24 py-10 hidden scroll-mt-24 lg:block">
 	<div class="max-w-7xl mx-auto flex flex-wrap gap-2">
 		<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
 				<div class="cntnr rounded-2xl p-6">
@@ -551,7 +551,7 @@
 
 <!-- below lg -->
 
-<div id="book-an-appointment-ar-blw-lg" class="book-an-appointment-ar min-h-full w-full my-24 py-10 scroll-mt-14 blogk lg:hidden">
+<div id="book-an-appointment-ar-blw-lg" class="book-an-appointment-ar scroll-mt-24 min-h-full w-full my-24 py-10 blogk lg:hidden">
 	<div class="max-w-7xl mx-auto flex flex-wrap gap-2">
 		<div class="flex flex-col lg:justify-end max-w-3xl lg:max-w-xl xl:max-w-3xl xl:pt-32 text-right">
 				<p class="text-3xl md:text-4xl text-gray-200 font-semibold px-5">{% trans "Your Oral Health Matters to Us" %}</p>
@@ -581,7 +581,7 @@
 
 {% elif CURRENT_LANGUAGE == 'en' %}
 
-<div id="book-an-appointment" class="min-h-full w-full my-24 py-10 scroll-mt-14">
+<div id="book-an-appointment" class="min-h-full scroll-mt-24 w-full my-24 py-10">
 	<div class="max-w-7xl mx-auto flex flex-wrap gap-2">
 			<div class="flex flex-col lg:justify-end max-w-3xl lg:max-w-xl xl:max-w-3xl xl:pt-32">
 					<p class="text-lg md:text-2xl lg:text-3xl text-gray-200 font-semibold px-5">{% trans "Your Oral Health Matters to Us" %}</p>

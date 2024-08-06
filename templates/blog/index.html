@@ -20,7 +20,7 @@
 		</h1>
 		<div class="relative mx-5">
 			<form action="{% url 'blog:index' %}">
-				<div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+				<div class="absolute inset-y-0 end-0 flex items-center pe-3 pointer-events-none">
 					<svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
 						fill="none" viewBox="0 0 20 20">
 						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -28,13 +28,13 @@
 					</svg>
 				</div>
 				<input type="search" name="q" value="{{ request.GET.q }}" hx-get="{% url 'blog:index' %}"
-					class="block w-full p-4 ps-10 text-sm text-gray-900 border-none bg-gray-50 rounded-3xl"
+					class="block w-full text-right p-4 pe-10 text-2xl text-gray-900 border-none bg-gray-50 rounded-3xl"
 					placeholder='{% trans "Looking for something?" %}' required />
 				<button type="submit"
-					class="text-white absolute end-2.5 bottom-2 mx-1 blog-page-art-btn focus:ring-2 font-medium rounded-lg text-sm px-4 py-2">
+					class="text-white absolute start-2.5 bottom-2 mx-1 blog-page-art-btn focus:ring-2 font-medium rounded-lg text-2xl px-4 py-2">
 					{% trans "Search" %}
 				</button>
-			</form>
+			</form>			
 		</div>
 	</div>
 </div>
@@ -56,10 +56,10 @@
 					</svg>
 				</div>
 				<input type="search" name="q" value="{{ request.GET.q }}" hx-get="{% url 'blog:index' %}"
-					class="block w-full p-4 ps-10 text-sm text-gray-900 border-none bg-gray-50 rounded-3xl"
+					class="block w-full p-4 ps-10 text-lg text-gray-900 border-none bg-gray-50 rounded-3xl"
 					placeholder='{% trans "Looking for something?" %}' required />
 				<button type="submit"
-					class="text-white absolute end-2.5 bottom-2 mx-1 blog-page-art-btn focus:ring-2 font-medium rounded-lg text-sm px-4 py-2">
+					class="text-white absolute end-2.5 bottom-2 mx-1 blog-page-art-btn focus:ring-2 font-medium rounded-lg text-lg px-4 py-2">
 					{% trans "Search" %}
 				</button>
 			</form>
@@ -82,7 +82,7 @@
 				<img class="w-full h-52 object-cover rounded-t-lg" src="{{ article.header_image.url }}" alt="Article image" />
 				<div class="p-4 blog-page-desc rounded-b-lg">
 					<h3 class="mb-1 text-3xl font-semibold tracking-tight heading">{{ article.title }}</h3>
-					<p class="mb-2 text-xl font-normal text-gray-900">
+					<p class="mb-2 text-2xl font-normal text-gray-900">
 						{{ article.description|truncatewords:10 }}
 					</p>
 					<a href="{% url 'blog:detail' article_id=article.id slug=article.slug %}" class="flex justify-center">
@@ -133,6 +133,34 @@
 
 		<!-- Smile Brighter with Our Updates! -->
 		<!-------------------------------------------------------- Subscription section -------------------------------------------------------------->
+
+		{% if CURRENT_LANGUAGE == 'ar' %}
+
+		<div class="max-w-full my-5 m-auto fxd-img-sec">
+			<div class="text-center text-gray-100 max-w-5xl m-auto py-20 px-10 z-10">
+				<h3 class="text-gray-100 text-5xl md:text-5xl font-bold my-5">{% trans "They Could be Subscribed to Your Newsletter" %}</h3>
+				<p class="text-3xl">
+					{% trans "Subscribe to our newsletter for the latest" %}
+					{% trans " tips, tricks, and trends — " %}
+					{% trans "delivered right to your inbox." %}
+				</p>
+				<div id="form-container">
+					<form id="subscribe-form" method="post" action="{% url 'blog:index' %}">
+						{% csrf_token %}
+						<div class="relative mt-5">
+							{% render_field form.email type="email" class="block md:w-full p-4 ps-10 text-2xl text-gray-900 border-none bg-gray-50 focus:ring-teal-500 rounded-3xl" placeholder='بريد إلكتروني' %}
+							<button type="submit"
+								class="text-white absolute end-2.5 bottom-2 mx-1 blog-page-art-btn focus:ring-2 font-medium rounded-lg text-2xl px-4 py-2">
+								{% trans "Signup" %}
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		{% elif CURRENT_LANGUAGE == 'en' %}
+
 		<div class="max-w-full my-5 m-auto fxd-img-sec">
 			<div class="text-center text-gray-100 max-w-5xl m-auto py-20 px-10 z-10">
 				<h3 class="text-gray-100 text-3xl md:text-5xl font-bold my-5">{% trans "They Could be Subscribed to Your Newsletter" %}</h3>
@@ -156,33 +184,66 @@
 			</div>
 		</div>
 
+		{% endif %}
+
 {% endif %}
 
 <!-- rest of the articles -->
-<div class="flex flex-wrap gap-6 justify-center my-8 px-2">
-	{% for article in page_obj.object_list %}
-	<div class="max-w-xs bg-white border border-gray-200 rounded-3xl shadow-md text-right">
-		<img class="w-full h-52 object-cover rounded-t-lg" src="{{ article.header_image.url }}" alt="Article image" />
-		<div class="p-4 blog-page-desc rounded-b-lg">
-			<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">{{ article.title }}</h3>
-			<p class="mb-2 text-lg font-normal text-gray-900">
-				{{ article.description|truncatewords:10 }}
-			</p>
-			<a href="{% url 'blog:detail' article_id=article.id slug=article.slug %}" class="flex justify-center">
-				<button type="button"
-					class="hover:-translate-y-0.5 w-full text-gray-100 blog-page-art-btn focus:ring-opacity-50 transform transition  inline-flex items-center justify-center font-medium rounded-2xl text-lg p-2 mt-1 text-center me-2 mb-2">
-					{% trans "Read More" %}
-					<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2 mt-1 font-bold" aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-							d="M1 5h12m0 0L9 1m4 4L9 9" />
-					</svg>
-				</button>
-			</a>
+{% if CURRENT_LANGUAGE == 'ar' %}
+
+		<div class="flex flex-wrap gap-10 justify-center my-10 px-3">
+			{% for article in page_obj.object_list %}
+			<div class="max-w-xs bg-white border border-gray-200 rounded-3xl shadow-md text-right">
+				<img class="w-full h-52 object-cover rounded-t-lg" src="{{ article.header_image.url }}" alt="Article image" />
+				<div class="p-4 blog-page-desc rounded-b-lg">
+					<h3 class="mb-1 text-3xl font-semibold tracking-tight heading">{{ article.title }}</h3>
+					<p class="mb-2 text-2xl font-normal text-gray-900">
+						{{ article.description|truncatewords:10 }}
+					</p>
+					<a href="{% url 'blog:detail' article_id=article.id slug=article.slug %}" class="flex justify-center">
+						<button type="button"
+							class="hover:-translate-y-0.5 w-full text-gray-100 blog-page-art-btn focus:ring-opacity-50 transform transition  inline-flex items-center justify-center font-medium rounded-2xl text-xl p-2 mt-1 text-center me-2 mb-2">
+							<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2 mt-1 mr-2 font-bold" aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+									d="M13 5H1m0 0l4-4M1 5l4 4" />
+							</svg>
+							{% trans "Read More" %}
+						</button>
+					</a>
+				</div>
+			</div>
+			{% endfor %}
 		</div>
-	</div>
-	{% endfor %}
-</div>
+
+		{% elif CURRENT_LANGUAGE == 'en' %}
+
+		<div class="flex flex-wrap gap-10 justify-center my-10 px-3">
+			{% for article in page_obj.object_list %}
+			<div class="max-w-xs bg-white border border-gray-200 rounded-3xl shadow-md">
+				<img class="w-full h-52 object-cover rounded-t-lg" src="{{ article.header_image.url }}" alt="Article image" />
+				<div class="p-4 blog-page-desc rounded-b-lg">
+					<h3 class="mb-1 text-2xl font-semibold tracking-tight heading">{{ article.title }}</h3>
+					<p class="mb-2 text-lg font-normal text-gray-900">
+						{{ article.description|truncatewords:10 }}
+					</p>
+					<a href="{% url 'blog:detail' article_id=article.id slug=article.slug %}" class="flex justify-center">
+						<button type="button"
+							class="hover:-translate-y-0.5 w-full text-gray-100 blog-page-art-btn focus:ring-opacity-50 transform transition  inline-flex items-center justify-center font-medium rounded-2xl text-lg p-2 mt-1 text-center me-2 mb-2">
+							{% trans "Read More" %}
+							<svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2 mt-1 font-bold" aria-hidden="true"
+								xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+								<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+									d="M1 5h12m0 0L9 1m4 4L9 9" />
+							</svg>
+						</button>
+					</a>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+
+		{% endif %}
 
 
 <!-- Pagination buttons -->
