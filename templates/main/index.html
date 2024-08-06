@@ -16,7 +16,7 @@
 <div id="hmpg-hdr" class="max-w-full py-10 m-auto md:shadow-xl">
 	<div class="text-center text-gray-100 max-w-5xl m-auto py-20 px-10 z-10">
 		<h1 class="text-gray-100 text-6xl font-bold my-5">{% trans "A Better Life Starts with a Beautiful Smile" %}</h1>
-		<p class="text-3xl">
+		<p class="text-4xl">
 			{% trans "A stunning smile begins here. Trust our experts" %}
 			{% trans "to craft a look that boosts your confidence" %}
 			{% trans "and  transforms your lives" %}
@@ -28,8 +28,8 @@
 
 <div id="hmpg-hdr" class="max-w-full py-10 m-auto md:shadow-xl">
 	<div class="text-center text-gray-100 max-w-5xl m-auto py-20 px-10 z-10">
-		<h1 class="text-gray-100 text-5xl font-bold my-5">{% trans "A Better Life Starts with a Beautiful Smile" %}</h1>
-		<p class="text-xl">
+		<h1 class="text-gray-100 text-4xl lg:text-5xl font-bold my-5">{% trans "A Better Life Starts with a Beautiful Smile" %}</h1>
+		<p class="text-2xl">
 			{% trans "A stunning smile begins here. Trust our experts" %}
 			{% trans "to craft a look that boosts your confidence" %}
 			{% trans "and  transforms your lives" %}
@@ -321,7 +321,81 @@
 
 {% if CURRENT_LANGUAGE == 'ar' %}
 
-<div id="services" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-cols-reverse gap-1 max-w-7xl mx-auto my-24 py-10 scroll-mt-14 text-right">
+<!-- Above lg -->
+
+<div class="hidden lg:block">
+
+	<div id="services" 
+		class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-cols-reverse gap-1 
+				max-w-7xl mx-auto my-24 py-10 scroll-mt-14 text-right">
+
+		<!-- Box 2 to 8: Regular boxes -->
+		<div class="p-4 py-10 sg-itm itm-0">
+			<h4 class="text-2xl">{% trans "01." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Dental X-Rays" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Advanced imaging to diagnose and monitor dental health issues." %}</p>
+		</div>
+		<div class="p-4 py-10 sg-itm itm-1">
+			<h4 class="text-2xl">{% trans "02." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Exams & Cleanings" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Comprehensive check-ups and professional cleanings to maintain oral health." %}</p>
+		</div>
+
+		<div class="md:col-span-2 lg:col-span-2 lg:row-span-1 p-5 cntnr flex flex-col justify-center rounded-tl-lg">
+			<h2 class="text-5xl heading font-semibold px-2">{% trans "Dentistry for Today's Lifestyle" %}</h2>
+			<p class="paragraph text-2xl mt-3 p-2 font-bold">{% trans "We Have All Your Dental Needs Covered" %}</p>
+		</div>
+
+		<div class="p-4 py-10 sg-itm itm-2">
+			<h4 class="text-2xl">{% trans "03." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Cosmetic Dentistry" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Enhancing the appearance of your smile with aesthetic treatments" %}</p>
+		</div>
+		<div class="p-4 py-10 sg-itm itm-3">
+			<h4 class="text-2xl">{% trans "04." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Periodontal Disease" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Treatment for gum disease to restore oral health and prevent complications." %}</p>
+		</div>
+		<div class="p-4 py-10 sg-itm itm-4">
+			<h4 class="text-2xl">{% trans "05." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Root Canals" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Precision procedures to save and repair damaged or infected teeth." %}</p>
+		</div>
+		<div class="p-4 py-10 sg-itm itm-5">
+			<h4 class="text-2xl">{% trans "06." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Extractions" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Safe removal of teeth that are damaged or problematic." %}</p>
+		</div>
+
+		
+		<a href="{% url 'main:index' %}#book-an-appointment-ar"
+			class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-bl-full p-4 flex flex-col justify-center items-center shadow-xl no-underline">
+			<div class="text-5xl text-gray-100 font-semibold px-2">
+				{% trans "Book an Appointment" %}
+			</div>
+		</a>
+
+
+		<div class="p-4 py-10 sg-itm itm-6">
+			<h4 class="text-2xl">{% trans "07." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Teeth Whitening" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Professional whitening solutions to brighten and enhance your smile." %}</p>
+		</div>
+		<div class="p-4 py-10 sg-itm itm-7">
+			<h4 class="text-2xl">{% trans "08." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Braces & Implants" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Orthodontic braces and dental implants for a functional and attractive smile." %}</p>
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Below lg -->
+
+<div id="services-blw-lg" 
+	class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:grid-cols-reverse gap-1 
+				max-w-7xl mx-auto my-24 py-10 scroll-mt-14 text-right lg:hidden">
 
 	<!-- Box 1: Spans 1 row and 2 columns in lg and above, spans full width in md and below -->
 	<div class="md:col-span-2 lg:col-span-2 lg:row-span-1 p-5 cntnr flex flex-col justify-center rounded-tl-lg">
@@ -372,11 +446,12 @@
 	</div>
 
 	<!-- Box 10: Spans 1 row and 2 columns in lg and above, full width in md and below -->
-	<div
-		class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-br-full p-4 flex flex-col justify-center items-center shadow-xl">
-		<a href="{% url 'main:index' %}#book-an-appointment"
-			class="text-5xl text-gray-100 font-semibold px-2">{% trans "Book an Appointment" %}</a>
-	</div>
+	<a href="{% url 'main:index' %}#book-an-appointment-ar"
+		class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-br-full p-4 flex flex-col justify-center items-center shadow-xl no-underline">
+		<div class="text-5xl text-gray-100 font-semibold px-2">
+			{% trans "Book an Appointment" %}
+		</div>
+	</a>
 </div>
 
 
@@ -432,11 +507,12 @@
 	</div>
 
 	<!-- Box 10: Spans 1 row and 2 columns in lg and above, full width in md and below -->
-	<div
-		class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-br-full p-4 flex flex-col justify-center items-center shadow-xl">
 		<a href="{% url 'main:index' %}#book-an-appointment"
-			class="text-2xl md:text-3xl text-gray-100 font-semibold px-2">{% trans "Book an Appointment" %}</a>
-	</div>
+			class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-br-full p-4 flex flex-col justify-center items-center shadow-xl no-underline">
+			<div class="text-5xl text-gray-100 font-semibold px-2">
+				{% trans "Book an Appointment" %}
+			</div>
+		</a>
 </div>
 
 {% endif %}
@@ -445,7 +521,7 @@
 
 {% if CURRENT_LANGUAGE == 'ar' %}
 
-<div id="book-an-appointment-ar" class="min-h-full w-full my-24 py-10 scroll-mt-14 hidden lg:block">
+<div id="book-an-appointment-ar" class="book-an-appointment-ar min-h-full w-full my-24 py-10 scroll-mt-14 hidden lg:block">
 	<div class="max-w-7xl mx-auto flex flex-wrap gap-2">
 		<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
 				<div class="cntnr rounded-2xl p-6">
@@ -475,7 +551,7 @@
 
 <!-- below lg -->
 
-<div id="book-an-appointment-ar" class="min-h-full w-full my-24 py-10 scroll-mt-14 blogk lg:hidden">
+<div id="book-an-appointment-ar-blw-lg" class="book-an-appointment-ar min-h-full w-full my-24 py-10 scroll-mt-14 blogk lg:hidden">
 	<div class="max-w-7xl mx-auto flex flex-wrap gap-2">
 		<div class="flex flex-col lg:justify-end max-w-3xl lg:max-w-xl xl:max-w-3xl xl:pt-32 text-right">
 				<p class="text-3xl md:text-4xl text-gray-200 font-semibold px-5">{% trans "Your Oral Health Matters to Us" %}</p>
