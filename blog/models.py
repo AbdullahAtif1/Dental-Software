@@ -8,12 +8,8 @@ from django.core.mail import send_mail
 from main.models import Subscriber
 from main import email_templates
 from django.utils.translation import gettext_lazy as _
-from concurrent.futures import ThreadPoolExecutor
 import threading
 from parler.models import TranslatableModel, TranslatedFields
-import logging
-
-logger = logging.getLogger(__name__)
 
 class Article(TranslatableModel):
 	STATUS_CHOICES = [
@@ -66,7 +62,6 @@ class Article(TranslatableModel):
 					thread = threading.Thread(target=self.send_email, args=(sbscrbr.email,))
 					thread.start()
 					threads.append(thread)
-
 
 	def send_email(self, subscriber_email):
 			message = email_templates.NEW_ARTICLE_TEMPLATE.format(

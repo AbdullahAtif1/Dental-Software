@@ -88,7 +88,7 @@ MIDDLEWARE = [
 ]
 
 # Set the default language code
-LANGUAGE_CODE = 'ar'
+LANGUAGE_CODE = 'en'
 
 ROOT_URLCONF = 'dentweb.urls'
 

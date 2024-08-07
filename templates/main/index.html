@@ -526,21 +526,45 @@
 	<div class="max-w-7xl mx-auto flex flex-wrap gap-2">
 		<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
 				<div class="cntnr rounded-2xl p-6" id="form-container">
-						<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:index' %}">
-							{% csrf_token %}
-								<div>
-									<h4 class="text-4xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
-								</div>
-								<div class="mb-5">
-										<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Subject" %}</label>
-										{% render_field form.subject type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="موضوع موعدك" %}
-								</div>
-								<div class="mb-5">
-										<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Your message" %}</label>
-										{% render_field form.description rows="5" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="وصف موجز لسبب طلبك لهذا الموعد" %}
-								</div>
-								<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-4xl px-5 py-2.5 text-center">{% trans "Request Appointment" %}</button>
-						</form>
+
+					{% if request.user.is_authenticated %}
+
+					<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:index' %}">
+						{% csrf_token %}
+							<div>
+								<h4 class="text-4xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
+							</div>
+							<div class="mb-5">
+									<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Subject" %}</label>
+									{% render_field form.subject type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="موضوع موعدك" %}
+							</div>
+							<div class="mb-5">
+									<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Your message" %}</label>
+									{% render_field form.description rows="5" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="وصف موجز لسبب طلبك لهذا الموعد" %}
+							</div>
+							<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-4xl px-5 py-2.5 text-center">{% trans "Request Appointment" %}</button>
+					</form>
+
+					{% else %}
+
+					<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:index' %}">
+						{% csrf_token %}
+							<div>
+								<h4 class="text-2xl text-center paragraph p-5">الرجاء تسجيل الدخول لحجز موعد</h4>
+							</div>
+							<div class="mb-5">
+									<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">اسم المستخدم</label>
+									{% render_field lform.username type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="عبدالله عاطف" %}
+							</div>
+							<div class="mb-5">
+									<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">كلمة المرور</label>
+									{% render_field lform.password type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="*****" %}
+							</div>
+							<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-2xl px-5 py-2.5 text-center">تسجيل الدخول</button>
+					</form>
+
+					{% endif %}
+
 				</div>
 		</div>
 		<div class="flex flex-col lg:justify-end max-w-3xl lg:max-w-xl xl:max-w-3xl xl:pt-32 text-right">
@@ -562,6 +586,8 @@
 		</div>
 		<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
 			<div class="cntnr rounded-2xl p-6" id="form-container">
+				{% if request.user.is_authenticated %}
+
 				<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:index' %}">
 					{% csrf_token %}
 						<div>
@@ -577,6 +603,26 @@
 						</div>
 						<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-4xl px-5 py-2.5 text-center">{% trans "Request Appointment" %}</button>
 				</form>
+
+				{% else %}
+
+				<form class="w-full" method="post">
+					{% csrf_token %}
+						<div>
+							<h4 class="text-2xl text-center paragraph p-5">الرجاء تسجيل الدخول لحجز موعد</h4>
+						</div>
+						<div class="mb-5">
+								<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">اسم المستخدم</label>
+								{% render_field lform.username type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="عبدالله عاطف" %}
+						</div>
+						<div class="mb-5">
+								<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">كلمة المرور</label>
+								{% render_field lform.password type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="*****" %}
+						</div>
+						<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-xl px-5 py-2.5 text-center">تسجيل الدخول</button>
+				</form>
+
+				{% endif %}
 		</div>
 		</div>
 	</div>
@@ -593,21 +639,43 @@
 			</div>
 			<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
 				<div class="cntnr rounded-2xl p-6" id="form-container">
+					{% if request.user.is_authenticated %}
+
 					<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:index' %}">
 						{% csrf_token %}
 							<div>
-								<h4 class="text-3xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
+								<h4 class="text-4xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
 							</div>
 							<div class="mb-5">
-									<label for="subject" class="block mb-2 text-xl font-medium paragraph">{% trans "Subject" %}</label>
-									{% render_field form.subject type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Subject of your Appointment" %}
+									<label for="subject" class="block mb-2 text-xl font-medium paragraph text-right">{% trans "Subject" %}</label>
+									{% render_field form.subject type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="موضوع موعدك" %}
 							</div>
 							<div class="mb-5">
-									<label for="message" class="block mb-2 text-xl font-medium paragraph">{% trans "Your message" %}</label>
-									{% render_field form.description rows="5" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Briefly describe why you are requesting this appointment" %}
+									<label for="message" class="block mb-2 text-xl font-medium paragraph text-right">{% trans "Your message" %}</label>
+									{% render_field form.description rows="5" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="وصف موجز لسبب طلبك لهذا الموعد" %}
 							</div>
-							<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-3xl px-5 py-2.5 text-center">{% trans "Request Appointment" %}</button>
+							<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-4xl px-5 py-2.5 text-center">{% trans "Request Appointment" %}</button>
 					</form>
+
+					{% else %}
+
+					<form class="w-full" method="post">
+						{% csrf_token %}
+							<div>
+								<h4 class="text-2xl text-center paragraph p-5">Please log in to book an appointment</h4>
+							</div>
+							<div class="mb-5">
+									<label for="subject" class="block mb-2 text-2xl font-medium paragraph">Username</label>
+									{% render_field lform.username type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Abdullah Atif" %}
+							</div>
+							<div class="mb-5">
+									<label for="message" class="block mb-2 text-2xl font-medium paragraph">Password</label>
+									{% render_field lform.password type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="*****" %}
+							</div>
+							<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-2xl px-5 py-2.5 text-center">Login</button>
+					</form>
+
+					{% endif %}
 			</div>
 			</div>
 	</div>

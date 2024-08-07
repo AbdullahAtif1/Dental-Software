@@ -1,7 +1,7 @@
 from django.db import models
 from django.core.mail import EmailMessage, send_mail
 from django.contrib.auth import get_user_model
-from concurrent.futures import ThreadPoolExecutor
+import threading
 from . import email_templates
 from dentadmin.models import Patient
 from django.utils.translation import gettext_lazy as _
@@ -54,13 +54,14 @@ class Appointment(models.Model):
 
 				subject = self.subject
 				from_email = "socialcodepk@gmail.com" # Replace with client's gmail account
-				to = ["manager@socialcodepk.com"] # Replace with client's official email adress
+				to = ["pyabdpy@gmail.com"] # Replace with client's official email adress
 				body = f"You have a new appointment request from {self.patient.user.username}. Here's the request details:\n{self.description}"
-				reply_to = self.patient.user.email
+				reply_to = [self.patient.user.email]
 
-				with ThreadPoolExecutor(max_workers=10) as executor:
-							print("executing thread pool")
-							executor.submit(self._send_email, subject, body, from_email, to, reply_to)
+				threads = []
+				thread = threading.Thread(target=self._send_email, args=(subject, body, from_email, to, reply_to))
+				thread.start()
+				threads.append(thread)
 
 	def _send_email(self, subject, body, from_email, to, reply_to):
 			EmailMessage(
@@ -71,7 +72,8 @@ class Appointment(models.Model):
 						[], # bcc left empty
 						reply_to = reply_to # Email from the form to get back to
 					).send(fail_silently=False)
-			print("Email sernt to" + to)
+			print("Email sernt to")
+			print(to)
 					
 	def send_confirmation_email(self):
 		if self.status == 'approved':
@@ -90,8 +92,11 @@ class Appointment(models.Model):
 					your_name = "My Name",
 					contact_info = "manager@socialcodepk.com" # Replace with client's official email adress
 				)
-		with ThreadPoolExecutor(max_workers=10) as executor:
-				executor.submit(self._send_confirmation_email, message)
+
+		threads = []
+		thread = threading.Thread(target=self._send_confirmation_email, args=(message))
+		thread.start()
+		threads.append(thread)
 		
 	def _send_confirmation_email(self, message):
 		send_mail(
