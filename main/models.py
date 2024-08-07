@@ -55,10 +55,11 @@ class Appointment(models.Model):
 				subject = self.subject
 				from_email = "socialcodepk@gmail.com" # Replace with client's gmail account
 				to = ["manager@socialcodepk.com"] # Replace with client's official email adress
-				body = f"You have a new appointment request from {self.name}. Here's the request details:\n{self.description}"
-				reply_to = self.email
+				body = f"You have a new appointment request from {self.patient.user.username}. Here's the request details:\n{self.description}"
+				reply_to = self.patient.user.email
 
 				with ThreadPoolExecutor(max_workers=10) as executor:
+							print("executing thread pool")
 							executor.submit(self._send_email, subject, body, from_email, to, reply_to)
 
 	def _send_email(self, subject, body, from_email, to, reply_to):
@@ -69,7 +70,8 @@ class Appointment(models.Model):
 						to, # Send to (your admin email). Replace afterwards with something like admin@socialcodepk.com
 						[], # bcc left empty
 						reply_to = reply_to # Email from the form to get back to
-					).send(fail_silently=False)				
+					).send(fail_silently=False)
+			print("Email sernt to" + to)
 					
 	def send_confirmation_email(self):
 		if self.status == 'approved':
@@ -132,7 +134,7 @@ class Feedback(TranslatableModel):
 		super().save(*args, **kwargs)
 
 	def __str__(self):
-			return f'Feedback from {self.name}'
+			return f'Feedback from {self.patient.user.username}'
 
 	def add_to_sbscrbr_list(self):
 
