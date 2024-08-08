@@ -32,10 +32,9 @@ def index(request):
                 if user:
                     login(request, user)
                     return redirect(reverse('main:index'))
-            else: 
-                for error in loginform.errors:
-                    print(error)
-                        
+                else:
+                    loginform.add_error(None, "Invalid username or password.")
+
 
     context = {'form': form, 'lform': loginform}
     return render(request, 'main/index.html', context)

@@ -554,6 +554,19 @@
 							<div>
 								<h4 class="text-2xl text-center paragraph p-5">الرجاء تسجيل الدخول لحجز موعد</h4>
 							</div>
+							{% if lform.errors %}
+									<div class="text-red-700 text-lg">
+											{% for field in lform %}
+													{% for error in field.errors %}
+															<p>{{ error }}</p>
+													{% endfor %}
+											{% endfor %}
+											{% for error in lform.non_field_errors %}
+													<p>{{ error }}</p>
+											{% endfor %}
+									</div>
+							{% endif %}
+
 							<div class="mb-5">
 									<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">اسم المستخدم</label>
 									{% render_field lform.username type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="عبدالله عاطف" %}
@@ -613,6 +626,18 @@
 						<div>
 							<h4 class="text-2xl text-center paragraph p-5">الرجاء تسجيل الدخول لحجز موعد</h4>
 						</div>
+						{% if lform.errors %}
+								<div class="text-red-700 text-lg">
+										{% for field in lform %}
+												{% for error in field.errors %}
+														<p>{{ error }}</p>
+												{% endfor %}
+										{% endfor %}
+										{% for error in lform.non_field_errors %}
+												<p>{{ error }}</p>
+										{% endfor %}
+								</div>
+						{% endif %}
 						<div class="mb-5">
 								<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">اسم المستخدم</label>
 								{% render_field lform.username type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="عبدالله عاطف" %}
@@ -666,6 +691,18 @@
 							<div>
 								<h4 class="text-2xl text-center paragraph p-5">Please log in to book an appointment</h4>
 							</div>
+							{% if lform.errors %}
+									<div class="text-red-700 text-lg">
+											{% for field in lform %}
+													{% for error in field.errors %}
+															<p>{{ error }}</p>
+													{% endfor %}
+											{% endfor %}
+											{% for error in lform.non_field_errors %}
+													<p>{{ error }}</p>
+											{% endfor %}
+									</div>
+							{% endif %}
 							<div class="mb-5">
 									<label for="subject" class="block mb-2 text-2xl font-medium paragraph">Username</label>
 									{% render_field lform.username type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Abdullah Atif" %}
