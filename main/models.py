@@ -55,7 +55,7 @@ class Appointment(models.Model):
 				subject = self.subject
 				from_email = "socialcodepk@gmail.com" # Replace with client's gmail account
 				to = ["pyabdpy@gmail.com"] # Replace with client's official email adress
-				body = f"You have a new appointment request from {self.patient.user.username}. Here's the request details:\n{self.description}"
+				body = f"You have a new appointment request from {self.patient.user.username}.\nThis is what they want they want talk about: {self.subject}.\n Here's the request details:\n{self.description}"
 				reply_to = [self.patient.user.email]
 
 				threads = []

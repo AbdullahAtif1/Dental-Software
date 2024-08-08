@@ -11,7 +11,6 @@ def index(request):
 
     if request.method == "POST":
         if request.user.is_authenticated:
-            # Handle appointment form submission
             patient = Patient.objects.get(user=request.user) 
             form = AppointmentForm(request.POST)
             if form.is_valid():
@@ -25,7 +24,6 @@ def index(request):
                 if request.headers.get('x-requested-with') == 'XMLHttpRequest':
                     return JsonResponse({'message': 'There was an error with your submission. Please try again later'}, status=400)
         else:
-            # Handle login form submission
             loginform = LoginForm(request.POST)
             if loginform.is_valid():
                 username = loginform.cleaned_data['username']
@@ -33,7 +31,11 @@ def index(request):
                 user = authenticate(request, username=username, password=password)
                 if user:
                     login(request, user)
-                return redirect(request.path)
+                    return redirect(reverse('main:index'))
+            else: 
+                for error in loginform.errors:
+                    print(error)
+                        
 
     context = {'form': form, 'lform': loginform}
     return render(request, 'main/index.html', context)
