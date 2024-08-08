@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-06 14:24+0500\n"
+"POT-Creation-Date: 2024-08-08 15:06+0500\n"
 "PO-Revision-Date: 2024-08-03 16:08+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -20,39 +20,39 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Poedit 3.4.4\n"
 
-#: .\blog\models.py:22
+#: .\blog\models.py:24
 msgid "status"
 msgstr "Status"
 
-#: .\dentadmin\forms.py:12
+#: .\dentadmin\forms.py:28
 msgid "Profile Picture"
 msgstr "Profile Picture"
 
-#: .\dentadmin\forms.py:13
+#: .\dentadmin\forms.py:29
 msgid "Status"
 msgstr "Status"
 
-#: .\dentadmin\forms.py:14 .\main\forms.py:10
+#: .\dentadmin\forms.py:30 .\main\forms.py:10
 msgid "Email Address"
 msgstr "Email Address"
 
-#: .\dentadmin\forms.py:15
+#: .\dentadmin\forms.py:31
 msgid "Phone Number"
 msgstr "Phone Number"
 
-#: .\dentadmin\forms.py:23
+#: .\dentadmin\forms.py:39
 msgid "Prospect"
 msgstr "Prospect"
 
-#: .\dentadmin\forms.py:24
+#: .\dentadmin\forms.py:40
 msgid "File"
 msgstr "File"
 
-#: .\dentadmin\forms.py:25
+#: .\dentadmin\forms.py:41
 msgid "Title"
 msgstr "Title"
 
-#: .\dentadmin\forms.py:26 .\main\forms.py:19
+#: .\dentadmin\forms.py:42 .\main\forms.py:19
 msgid "Description"
 msgstr "Description"
 
@@ -60,15 +60,15 @@ msgstr "Description"
 msgid "user"
 msgstr "User"
 
-#: .\dentadmin\models.py:40
+#: .\dentadmin\models.py:43
 msgid "prospect"
 msgstr "Prospect"
 
-#: .\dentadmin\models.py:43
+#: .\dentadmin\models.py:46
 msgid "title"
 msgstr "Title"
 
-#: .\dentadmin\models.py:44
+#: .\dentadmin\models.py:47
 msgid "description"
 msgstr "Description"
 
@@ -80,8 +80,8 @@ msgstr "Arabic"
 msgid "English"
 msgstr "English"
 
-#: .\main\forms.py:18 .\templates\main\index.html:530
-#: .\templates\main\index.html:565 .\templates\main\index.html:595
+#: .\main\forms.py:18 .\templates\main\index.html:540
+#: .\templates\main\index.html:612 .\templates\main\index.html:677
 msgid "Subject"
 msgstr "Subject"
 
@@ -105,8 +105,9 @@ msgstr "Blog -"
 msgid "You might also Like"
 msgstr "You might also Like"
 
-#: .\templates\blog\detail.html:41 .\templates\blog\index.html:56
-#: .\templates\blog\index.html:109
+#: .\templates\blog\detail.html:41 .\templates\blog\index.html:96
+#: .\templates\blog\index.html:118 .\templates\blog\index.html:211
+#: .\templates\blog\index.html:233
 msgid "Read More"
 msgstr "Read More"
 
@@ -114,45 +115,45 @@ msgstr "Read More"
 msgid "This Could be Yours - Blog"
 msgstr "This Could be Yours - Blog"
 
-#: .\templates\blog\index.html:16
+#: .\templates\blog\index.html:19 .\templates\blog\index.html:47
 msgid "This Could be Yours"
 msgstr "This Could be Yours"
 
-#: .\templates\blog\index.html:29
+#: .\templates\blog\index.html:32 .\templates\blog\index.html:60
 msgid "Looking for something?"
 msgstr "Looking for something?"
 
-#: .\templates\blog\index.html:32
+#: .\templates\blog\index.html:35 .\templates\blog\index.html:63
 msgid "Search"
 msgstr "Search"
 
-#: .\templates\blog\index.html:73
+#: .\templates\blog\index.html:141 .\templates\blog\index.html:166
 msgid "They Could be Subscribed to Your Newsletter"
 msgstr "They Could be Subscribed to Your Newsletter"
 
-#: .\templates\blog\index.html:75
+#: .\templates\blog\index.html:143 .\templates\blog\index.html:168
 #, fuzzy
 #| msgid "They Could be Subscribed to Your Newsletter"
 msgid "Subscribe to our newsletter for the latest"
 msgstr "They Could be Subscribed to Your Newsletter"
 
-#: .\templates\blog\index.html:76
+#: .\templates\blog\index.html:144 .\templates\blog\index.html:169
 msgid " tips, tricks, and trends — "
 msgstr ""
 
-#: .\templates\blog\index.html:77
+#: .\templates\blog\index.html:145 .\templates\blog\index.html:170
 msgid "delivered right to your inbox."
 msgstr ""
 
-#: .\templates\blog\index.html:86
+#: .\templates\blog\index.html:154 .\templates\blog\index.html:179
 msgid "Signup"
 msgstr "Signup"
 
-#: .\templates\blog\index.html:128
+#: .\templates\blog\index.html:254
 msgid "Previous"
 msgstr "Previous"
 
-#: .\templates\blog\index.html:140
+#: .\templates\blog\index.html:266
 msgid "Next"
 msgstr "Next"
 
@@ -188,543 +189,533 @@ msgstr "All Rights Reserved."
 msgid "This Could Be Yours"
 msgstr "This Could Be Yours"
 
-#: .\templates\main\index.html:18 .\templates\main\index.html:31
+#: .\templates\main\index.html:20 .\templates\main\index.html:34
 msgid "A Better Life Starts with a Beautiful Smile"
 msgstr "A Better Life Starts with a Beautiful Smile"
 
-#: .\templates\main\index.html:20 .\templates\main\index.html:33
+#: .\templates\main\index.html:22 .\templates\main\index.html:36
 msgid "A stunning smile begins here. Trust our experts"
 msgstr "A stunning smile begins here. Trust our experts"
 
-#: .\templates\main\index.html:21 .\templates\main\index.html:34
+#: .\templates\main\index.html:23 .\templates\main\index.html:37
 msgid "to craft a look that boosts your confidence"
 msgstr "to craft a look that boosts your confidence"
 
-#: .\templates\main\index.html:22 .\templates\main\index.html:35
+#: .\templates\main\index.html:24 .\templates\main\index.html:38
 msgid "and  transforms your lives"
 msgstr "and  transforms your lives"
 
-#: .\templates\main\index.html:72 .\templates\main\index.html:231
+#: .\templates\main\index.html:75 .\templates\main\index.html:234
 msgid "Welcome to"
 msgstr "Welcome to"
 
-#: .\templates\main\index.html:72 .\templates\main\index.html:232
+#: .\templates\main\index.html:75 .\templates\main\index.html:235
 msgid "Your Website"
 msgstr "Your Website"
 
-#: .\templates\main\index.html:75 .\templates\main\index.html:234
+#: .\templates\main\index.html:78 .\templates\main\index.html:237
 msgid "At our clinic, we believe"
 msgstr "At our clinic, we believe"
 
-#: .\templates\main\index.html:76 .\templates\main\index.html:235
+#: .\templates\main\index.html:79 .\templates\main\index.html:238
 msgid "that every smile is unique"
 msgstr "that every smile is unique"
 
-#: .\templates\main\index.html:77 .\templates\main\index.html:236
+#: .\templates\main\index.html:80 .\templates\main\index.html:239
 msgid "and deserves the highest quality"
 msgstr "and deserves the highest quality"
 
-#: .\templates\main\index.html:78 .\templates\main\index.html:237
+#: .\templates\main\index.html:81 .\templates\main\index.html:240
 msgid "of care. Our dedicated team"
 msgstr "of care. Our dedicated team"
 
-#: .\templates\main\index.html:79 .\templates\main\index.html:238
+#: .\templates\main\index.html:82 .\templates\main\index.html:241
 msgid "of professionals is here to"
 msgstr "of professionals is here to"
 
-#: .\templates\main\index.html:80 .\templates\main\index.html:239
+#: .\templates\main\index.html:83 .\templates\main\index.html:242
 msgid "provide you with a personalized"
 msgstr "provide you with a personalized"
 
-#: .\templates\main\index.html:81 .\templates\main\index.html:240
+#: .\templates\main\index.html:84 .\templates\main\index.html:243
 msgid "and comfortable experience, ensuring"
 msgstr "and comfortable experience, ensuring"
 
-#: .\templates\main\index.html:82 .\templates\main\index.html:241
+#: .\templates\main\index.html:85 .\templates\main\index.html:244
 msgid "that each visit leaves you"
 msgstr "that each visit leaves you"
 
-#: .\templates\main\index.html:83 .\templates\main\index.html:242
+#: .\templates\main\index.html:86 .\templates\main\index.html:245
 msgid "feeling confident and well-cared"
 msgstr "feeling confident and well-cared"
 
-#: .\templates\main\index.html:84 .\templates\main\index.html:243
+#: .\templates\main\index.html:87 .\templates\main\index.html:246
 msgid "for. From the moment you"
 msgstr "for. From the moment you"
 
-#: .\templates\main\index.html:85 .\templates\main\index.html:244
+#: .\templates\main\index.html:88 .\templates\main\index.html:247
 msgid "walk through our doors, you'll"
 msgstr "walk through our doors, you'll"
 
-#: .\templates\main\index.html:86 .\templates\main\index.html:245
+#: .\templates\main\index.html:89 .\templates\main\index.html:248
 msgid "be greeted with warmth and"
 msgstr "be greeted with warmth and"
 
-#: .\templates\main\index.html:87 .\templates\main\index.html:246
+#: .\templates\main\index.html:90 .\templates\main\index.html:249
 msgid "compassion, making your dental"
 msgstr "compassion, making your dental"
 
-#: .\templates\main\index.html:88 .\templates\main\index.html:247
+#: .\templates\main\index.html:91 .\templates\main\index.html:250
 msgid "journey a positive and enjoyable"
 msgstr "journey a positive and enjoyable"
 
-#: .\templates\main\index.html:89 .\templates\main\index.html:248
+#: .\templates\main\index.html:92 .\templates\main\index.html:251
 msgid "one."
 msgstr "one."
 
-#: .\templates\main\index.html:94 .\templates\main\index.html:260
+#: .\templates\main\index.html:97 .\templates\main\index.html:263
 msgid "Comprehensive Services"
 msgstr "Comprehensive Services"
 
-#: .\templates\main\index.html:96 .\templates\main\index.html:262
+#: .\templates\main\index.html:99 .\templates\main\index.html:265
 msgid "We offer a full range"
 msgstr "We offer a full range"
 
-#: .\templates\main\index.html:97 .\templates\main\index.html:263
+#: .\templates\main\index.html:100 .\templates\main\index.html:266
 msgid "of dental services to meet"
 msgstr "of dental services to meet"
 
-#: .\templates\main\index.html:98 .\templates\main\index.html:264
+#: .\templates\main\index.html:101 .\templates\main\index.html:267
 msgid "all your oral health needs."
 msgstr "all your oral health needs."
 
-#: .\templates\main\index.html:99 .\templates\main\index.html:265
+#: .\templates\main\index.html:102 .\templates\main\index.html:268
 msgid "From preventive care to cosmetic"
 msgstr "From preventive care to cosmetic"
 
-#: .\templates\main\index.html:100 .\templates\main\index.html:266
+#: .\templates\main\index.html:103 .\templates\main\index.html:269
 msgid "and restorative treatments, our"
 msgstr "and restorative treatments, our"
 
-#: .\templates\main\index.html:101 .\templates\main\index.html:267
+#: .\templates\main\index.html:104 .\templates\main\index.html:270
 msgid "team is equipped to handle"
 msgstr "team is equipped to handle"
 
-#: .\templates\main\index.html:102 .\templates\main\index.html:268
+#: .\templates\main\index.html:105 .\templates\main\index.html:271
 msgid "it all."
 msgstr "it all."
 
-#: .\templates\main\index.html:115 .\templates\main\index.html:282
+#: .\templates\main\index.html:118 .\templates\main\index.html:285
 msgid "Patient-Focused Approach"
 msgstr "Patient-Focused Approach"
 
-#: .\templates\main\index.html:117 .\templates\main\index.html:284
+#: .\templates\main\index.html:120 .\templates\main\index.html:287
 msgid "Your comfort and satisfaction are"
 msgstr "Your comfort and satisfaction are"
 
-#: .\templates\main\index.html:118 .\templates\main\index.html:285
+#: .\templates\main\index.html:121 .\templates\main\index.html:288
 msgid "our top priorities. We strive"
 msgstr "our top priorities. We strive"
 
-#: .\templates\main\index.html:119 .\templates\main\index.html:286
+#: .\templates\main\index.html:122 .\templates\main\index.html:289
 msgid "to create a welcoming environment"
 msgstr "to create a welcoming environment"
 
-#: .\templates\main\index.html:120 .\templates\main\index.html:287
+#: .\templates\main\index.html:123 .\templates\main\index.html:290
 msgid "where you feel at ease"
 msgstr "where you feel at ease"
 
-#: .\templates\main\index.html:121 .\templates\main\index.html:288
+#: .\templates\main\index.html:124 .\templates\main\index.html:291
 msgid "and confident in the care"
 msgstr "and confident in the care"
 
-#: .\templates\main\index.html:122 .\templates\main\index.html:289
+#: .\templates\main\index.html:125 .\templates\main\index.html:292
 msgid "you receive."
 msgstr "you receive."
 
-#: .\templates\main\index.html:144 .\templates\main\index.html:820
-#: .\templates\main\index.html:907 .\templates\main\index.html:1016
-#: .\templates\main\index.html:1085
+#: .\templates\main\index.html:147 .\templates\main\index.html:934
+#: .\templates\main\index.html:1021 .\templates\main\index.html:1130
+#: .\templates\main\index.html:1199
 msgid "Committed To Dental Excellence"
 msgstr "Committed To Dental Excellence"
 
-#: .\templates\main\index.html:146 .\templates\main\index.html:822
-#: .\templates\main\index.html:909 .\templates\main\index.html:1018
-#: .\templates\main\index.html:1087
+#: .\templates\main\index.html:149 .\templates\main\index.html:936
+#: .\templates\main\index.html:1023 .\templates\main\index.html:1132
+#: .\templates\main\index.html:1201
 msgid "At our clinic, we blend"
 msgstr "At our clinic, we blend"
 
-#: .\templates\main\index.html:147 .\templates\main\index.html:823
-#: .\templates\main\index.html:910 .\templates\main\index.html:1019
-#: .\templates\main\index.html:1088
+#: .\templates\main\index.html:150 .\templates\main\index.html:937
+#: .\templates\main\index.html:1024 .\templates\main\index.html:1133
+#: .\templates\main\index.html:1202
 msgid "state-of-the-art technology with"
 msgstr "state-of-the-art technology with"
 
-#: .\templates\main\index.html:148 .\templates\main\index.html:824
-#: .\templates\main\index.html:911 .\templates\main\index.html:1020
-#: .\templates\main\index.html:1089
+#: .\templates\main\index.html:151 .\templates\main\index.html:938
+#: .\templates\main\index.html:1025 .\templates\main\index.html:1134
+#: .\templates\main\index.html:1203
 msgid "unparalleled expertise to deliver"
 msgstr "unparalleled expertise to deliver"
 
-#: .\templates\main\index.html:149 .\templates\main\index.html:825
-#: .\templates\main\index.html:912 .\templates\main\index.html:1021
-#: .\templates\main\index.html:1090
+#: .\templates\main\index.html:152 .\templates\main\index.html:939
+#: .\templates\main\index.html:1026 .\templates\main\index.html:1135
+#: .\templates\main\index.html:1204
 msgid "top-tier dental care. Our team"
 msgstr "top-tier dental care. Our team"
 
-#: .\templates\main\index.html:150 .\templates\main\index.html:826
-#: .\templates\main\index.html:913 .\templates\main\index.html:1022
-#: .\templates\main\index.html:1091
+#: .\templates\main\index.html:153 .\templates\main\index.html:940
+#: .\templates\main\index.html:1027 .\templates\main\index.html:1136
+#: .\templates\main\index.html:1205
 msgid "of dedicated professionals is committed"
 msgstr "of dedicated professionals is committed"
 
-#: .\templates\main\index.html:151 .\templates\main\index.html:827
-#: .\templates\main\index.html:914 .\templates\main\index.html:1023
-#: .\templates\main\index.html:1092
+#: .\templates\main\index.html:154 .\templates\main\index.html:941
+#: .\templates\main\index.html:1028 .\templates\main\index.html:1137
+#: .\templates\main\index.html:1206
 msgid "to excellence, ensuring every visit"
 msgstr "to excellence, ensuring every visit"
 
-#: .\templates\main\index.html:152 .\templates\main\index.html:828
-#: .\templates\main\index.html:915 .\templates\main\index.html:1024
-#: .\templates\main\index.html:1093
+#: .\templates\main\index.html:155 .\templates\main\index.html:942
+#: .\templates\main\index.html:1029 .\templates\main\index.html:1138
+#: .\templates\main\index.html:1207
 msgid "is comfortable, effective, and tailored"
 msgstr "is comfortable, effective, and tailored"
 
-#: .\templates\main\index.html:153 .\templates\main\index.html:829
-#: .\templates\main\index.html:916 .\templates\main\index.html:1025
-#: .\templates\main\index.html:1094
+#: .\templates\main\index.html:156 .\templates\main\index.html:943
+#: .\templates\main\index.html:1030 .\templates\main\index.html:1139
+#: .\templates\main\index.html:1208
 msgid "to your unique needs. With"
 msgstr "to your unique needs. With"
 
-#: .\templates\main\index.html:154 .\templates\main\index.html:830
-#: .\templates\main\index.html:917 .\templates\main\index.html:1026
-#: .\templates\main\index.html:1095
+#: .\templates\main\index.html:157 .\templates\main\index.html:944
+#: .\templates\main\index.html:1031 .\templates\main\index.html:1140
+#: .\templates\main\index.html:1209
 msgid "a patient-centric approach, we prioritize"
 msgstr "a patient-centric approach, we prioritize"
 
-#: .\templates\main\index.html:155 .\templates\main\index.html:831
-#: .\templates\main\index.html:918 .\templates\main\index.html:1027
-#: .\templates\main\index.html:1096
+#: .\templates\main\index.html:158 .\templates\main\index.html:945
+#: .\templates\main\index.html:1032 .\templates\main\index.html:1141
+#: .\templates\main\index.html:1210
 msgid "your well-being and satisfaction,"
 msgstr "your well-being and satisfaction,"
 
-#: .\templates\main\index.html:156 .\templates\main\index.html:832
-#: .\templates\main\index.html:919 .\templates\main\index.html:1028
-#: .\templates\main\index.html:1097
+#: .\templates\main\index.html:159 .\templates\main\index.html:946
+#: .\templates\main\index.html:1033 .\templates\main\index.html:1142
+#: .\templates\main\index.html:1211
 msgid "offering a welcoming environment where"
 msgstr "offering a welcoming environment where"
 
-#: .\templates\main\index.html:157 .\templates\main\index.html:833
-#: .\templates\main\index.html:920 .\templates\main\index.html:1029
-#: .\templates\main\index.html:1098
+#: .\templates\main\index.html:160 .\templates\main\index.html:947
+#: .\templates\main\index.html:1034 .\templates\main\index.html:1143
+#: .\templates\main\index.html:1212
 msgid "you can feel at ease."
 msgstr "you can feel at ease."
 
-#: .\templates\main\index.html:162 .\templates\main\index.html:838
-#: .\templates\main\index.html:925 .\templates\main\index.html:1040
-#: .\templates\main\index.html:1109
+#: .\templates\main\index.html:165 .\templates\main\index.html:952
+#: .\templates\main\index.html:1039 .\templates\main\index.html:1154
+#: .\templates\main\index.html:1223
 msgid "Personalized Care"
 msgstr "Personalized Care"
 
-#: .\templates\main\index.html:164 .\templates\main\index.html:840
-#: .\templates\main\index.html:927 .\templates\main\index.html:1042
-#: .\templates\main\index.html:1111
+#: .\templates\main\index.html:167 .\templates\main\index.html:954
+#: .\templates\main\index.html:1041 .\templates\main\index.html:1156
+#: .\templates\main\index.html:1225
 msgid "Our approach to dental care"
 msgstr "Our approach to dental care"
 
-#: .\templates\main\index.html:165 .\templates\main\index.html:841
-#: .\templates\main\index.html:928 .\templates\main\index.html:1043
-#: .\templates\main\index.html:1112
+#: .\templates\main\index.html:168 .\templates\main\index.html:955
+#: .\templates\main\index.html:1042 .\templates\main\index.html:1157
+#: .\templates\main\index.html:1226
 msgid "is uniquely tailored to each"
 msgstr "is uniquely tailored to each"
 
-#: .\templates\main\index.html:166 .\templates\main\index.html:842
-#: .\templates\main\index.html:929 .\templates\main\index.html:1044
-#: .\templates\main\index.html:1113
+#: .\templates\main\index.html:169 .\templates\main\index.html:956
+#: .\templates\main\index.html:1043 .\templates\main\index.html:1158
+#: .\templates\main\index.html:1227
 msgid "patient, ensuring treatment plans"
 msgstr "patient, ensuring treatment plans"
 
-#: .\templates\main\index.html:167 .\templates\main\index.html:843
-#: .\templates\main\index.html:930 .\templates\main\index.html:1045
-#: .\templates\main\index.html:1114
+#: .\templates\main\index.html:170 .\templates\main\index.html:957
+#: .\templates\main\index.html:1044 .\templates\main\index.html:1159
+#: .\templates\main\index.html:1228
 msgid "that address your specific needs"
 msgstr "that address your specific needs"
 
-#: .\templates\main\index.html:168 .\templates\main\index.html:844
-#: .\templates\main\index.html:931 .\templates\main\index.html:1046
-#: .\templates\main\index.html:1115
+#: .\templates\main\index.html:171 .\templates\main\index.html:958
+#: .\templates\main\index.html:1045 .\templates\main\index.html:1160
+#: .\templates\main\index.html:1229
 msgid "and concerns."
 msgstr "and concerns."
 
-#: .\templates\main\index.html:182 .\templates\main\index.html:858
-#: .\templates\main\index.html:945 .\templates\main\index.html:1060
-#: .\templates\main\index.html:1129
+#: .\templates\main\index.html:185 .\templates\main\index.html:972
+#: .\templates\main\index.html:1059 .\templates\main\index.html:1174
+#: .\templates\main\index.html:1243
 msgid "Advanced Treatments"
 msgstr "Advanced Treatments"
 
-#: .\templates\main\index.html:184 .\templates\main\index.html:860
-#: .\templates\main\index.html:947 .\templates\main\index.html:1062
-#: .\templates\main\index.html:1131
+#: .\templates\main\index.html:187 .\templates\main\index.html:974
+#: .\templates\main\index.html:1061 .\templates\main\index.html:1176
+#: .\templates\main\index.html:1245
 msgid "We stay at the forefront"
 msgstr "We stay at the forefront"
 
-#: .\templates\main\index.html:185 .\templates\main\index.html:861
-#: .\templates\main\index.html:948 .\templates\main\index.html:1063
-#: .\templates\main\index.html:1132
+#: .\templates\main\index.html:188 .\templates\main\index.html:975
+#: .\templates\main\index.html:1062 .\templates\main\index.html:1177
+#: .\templates\main\index.html:1246
 msgid "of dental innovation, offering"
 msgstr "of dental innovation, offering"
 
-#: .\templates\main\index.html:186 .\templates\main\index.html:862
-#: .\templates\main\index.html:949 .\templates\main\index.html:1064
-#: .\templates\main\index.html:1133
+#: .\templates\main\index.html:189 .\templates\main\index.html:976
+#: .\templates\main\index.html:1063 .\templates\main\index.html:1178
+#: .\templates\main\index.html:1247
 msgid "advanced treatments that utilize"
 msgstr "Advanced Treatments"
 
-#: .\templates\main\index.html:187 .\templates\main\index.html:863
-#: .\templates\main\index.html:950 .\templates\main\index.html:1065
-#: .\templates\main\index.html:1134
+#: .\templates\main\index.html:190 .\templates\main\index.html:977
+#: .\templates\main\index.html:1064 .\templates\main\index.html:1179
+#: .\templates\main\index.html:1248
 msgid "the latest techniques and technologies"
 msgstr "the latest techniques and technologies"
 
-#: .\templates\main\index.html:188 .\templates\main\index.html:864
-#: .\templates\main\index.html:951 .\templates\main\index.html:1066
-#: .\templates\main\index.html:1135
+#: .\templates\main\index.html:191 .\templates\main\index.html:978
+#: .\templates\main\index.html:1065 .\templates\main\index.html:1180
+#: .\templates\main\index.html:1249
 msgid "for optimal results."
 msgstr "for optimal results."
 
-#: .\templates\main\index.html:336 .\templates\main\index.html:407
-#: .\templates\main\index.html:467
+#: .\templates\main\index.html:337 .\templates\main\index.html:411
+#: .\templates\main\index.html:472
 msgid "01."
 msgstr "01."
 
-#: .\templates\main\index.html:337 .\templates\main\index.html:408
-#: .\templates\main\index.html:468
+#: .\templates\main\index.html:338 .\templates\main\index.html:412
+#: .\templates\main\index.html:473
 msgid "Dental X-Rays"
 msgstr "Dental X-Rays"
 
-#: .\templates\main\index.html:338 .\templates\main\index.html:409
-#: .\templates\main\index.html:469
+#: .\templates\main\index.html:339 .\templates\main\index.html:413
+#: .\templates\main\index.html:474
 msgid "Advanced imaging to diagnose and monitor dental health issues."
 msgstr "Advanced imaging to diagnose and monitor dental health issues."
 
-#: .\templates\main\index.html:341 .\templates\main\index.html:412
-#: .\templates\main\index.html:472
+#: .\templates\main\index.html:342 .\templates\main\index.html:416
+#: .\templates\main\index.html:477
 msgid "02."
 msgstr "02."
 
-#: .\templates\main\index.html:342 .\templates\main\index.html:413
-#: .\templates\main\index.html:473
+#: .\templates\main\index.html:343 .\templates\main\index.html:417
+#: .\templates\main\index.html:478
 msgid "Exams & Cleanings"
 msgstr "Exams & Cleanings"
 
-#: .\templates\main\index.html:343 .\templates\main\index.html:414
-#: .\templates\main\index.html:474
+#: .\templates\main\index.html:344 .\templates\main\index.html:418
+#: .\templates\main\index.html:479
 msgid ""
 "Comprehensive check-ups and professional cleanings to maintain oral health."
 msgstr ""
 "Comprehensive check-ups and professional cleanings to maintain oral health."
 
-#: .\templates\main\index.html:347 .\templates\main\index.html:401
-#: .\templates\main\index.html:461
+#: .\templates\main\index.html:348 .\templates\main\index.html:405
+#: .\templates\main\index.html:466
 msgid "Dentistry for Today's Lifestyle"
 msgstr "Dentistry for Today's Lifestyle"
 
-#: .\templates\main\index.html:348 .\templates\main\index.html:402
-#: .\templates\main\index.html:462
+#: .\templates\main\index.html:349 .\templates\main\index.html:406
+#: .\templates\main\index.html:467
 msgid "We Have All Your Dental Needs Covered"
 msgstr "We Have All Your Dental Needs Covered"
 
-#: .\templates\main\index.html:352 .\templates\main\index.html:417
-#: .\templates\main\index.html:477
+#: .\templates\main\index.html:353 .\templates\main\index.html:421
+#: .\templates\main\index.html:482
 msgid "03."
 msgstr "03."
 
-#: .\templates\main\index.html:353 .\templates\main\index.html:418
-#: .\templates\main\index.html:478
+#: .\templates\main\index.html:354 .\templates\main\index.html:422
+#: .\templates\main\index.html:483
 msgid "Cosmetic Dentistry"
 msgstr "Cosmetic Dentistry"
 
-#: .\templates\main\index.html:354 .\templates\main\index.html:419
-#: .\templates\main\index.html:479
+#: .\templates\main\index.html:355 .\templates\main\index.html:423
+#: .\templates\main\index.html:484
 msgid "Enhancing the appearance of your smile with aesthetic treatments"
 msgstr "Enhancing the appearance of your smile with aesthetic treatments"
 
-#: .\templates\main\index.html:357 .\templates\main\index.html:422
-#: .\templates\main\index.html:482
+#: .\templates\main\index.html:358 .\templates\main\index.html:426
+#: .\templates\main\index.html:487
 msgid "04."
 msgstr "04."
 
-#: .\templates\main\index.html:358 .\templates\main\index.html:423
-#: .\templates\main\index.html:483
+#: .\templates\main\index.html:359 .\templates\main\index.html:427
+#: .\templates\main\index.html:488
 msgid "Periodontal Disease"
 msgstr "Periodontal Disease"
 
-#: .\templates\main\index.html:359 .\templates\main\index.html:424
-#: .\templates\main\index.html:484
+#: .\templates\main\index.html:360 .\templates\main\index.html:428
+#: .\templates\main\index.html:489
 msgid ""
 "Treatment for gum disease to restore oral health and prevent complications."
 msgstr ""
 "Treatment for gum disease to restore oral health and prevent complications."
 
-#: .\templates\main\index.html:362 .\templates\main\index.html:427
-#: .\templates\main\index.html:487
+#: .\templates\main\index.html:363 .\templates\main\index.html:431
+#: .\templates\main\index.html:492
 msgid "05."
 msgstr "05."
 
-#: .\templates\main\index.html:363 .\templates\main\index.html:428
-#: .\templates\main\index.html:488
+#: .\templates\main\index.html:364 .\templates\main\index.html:432
+#: .\templates\main\index.html:493
 msgid "Root Canals"
 msgstr "Root Canals"
 
-#: .\templates\main\index.html:364 .\templates\main\index.html:429
-#: .\templates\main\index.html:489
+#: .\templates\main\index.html:365 .\templates\main\index.html:433
+#: .\templates\main\index.html:494
 msgid "Precision procedures to save and repair damaged or infected teeth."
 msgstr "Precision procedures to save and repair damaged or infected teeth."
 
-#: .\templates\main\index.html:367 .\templates\main\index.html:432
-#: .\templates\main\index.html:492
+#: .\templates\main\index.html:368 .\templates\main\index.html:436
+#: .\templates\main\index.html:497
 msgid "06."
 msgstr "06."
 
-#: .\templates\main\index.html:368 .\templates\main\index.html:433
-#: .\templates\main\index.html:493
+#: .\templates\main\index.html:369 .\templates\main\index.html:437
+#: .\templates\main\index.html:498
 msgid "Extractions"
 msgstr "Extractions"
 
-#: .\templates\main\index.html:369 .\templates\main\index.html:434
-#: .\templates\main\index.html:494
+#: .\templates\main\index.html:370 .\templates\main\index.html:438
+#: .\templates\main\index.html:499
 msgid "Safe removal of teeth that are damaged or problematic."
 msgstr "Safe removal of teeth that are damaged or problematic."
 
-#: .\templates\main\index.html:375 .\templates\main\index.html:451
-#: .\templates\main\index.html:511 .\templates\main\index.html:639
-#: .\templates\main\index.html:686 .\templates\nav.html:75
-#: .\templates\nav.html:83
+#: .\templates\main\index.html:377 .\templates\main\index.html:455
+#: .\templates\main\index.html:516 .\templates\main\index.html:753
+#: .\templates\main\index.html:800 .\templates\nav.html:85
+#: .\templates\nav.html:90 .\templates\nav.html:98
 msgid "Book an Appointment"
 msgstr "Book an Appointment"
 
-#: .\templates\main\index.html:379 .\templates\main\index.html:437
-#: .\templates\main\index.html:497
+#: .\templates\main\index.html:383 .\templates\main\index.html:441
+#: .\templates\main\index.html:502
 msgid "07."
 msgstr "07."
 
-#: .\templates\main\index.html:380 .\templates\main\index.html:438
-#: .\templates\main\index.html:498
+#: .\templates\main\index.html:384 .\templates\main\index.html:442
+#: .\templates\main\index.html:503
 msgid "Teeth Whitening"
 msgstr "Teeth Whitening"
 
-#: .\templates\main\index.html:381 .\templates\main\index.html:439
-#: .\templates\main\index.html:499
+#: .\templates\main\index.html:385 .\templates\main\index.html:443
+#: .\templates\main\index.html:504
 msgid "Professional whitening solutions to brighten and enhance your smile."
 msgstr "Professional whitening solutions to brighten and enhance your smile."
 
-#: .\templates\main\index.html:384 .\templates\main\index.html:442
-#: .\templates\main\index.html:502
+#: .\templates\main\index.html:388 .\templates\main\index.html:446
+#: .\templates\main\index.html:507
 msgid "08."
 msgstr "08."
 
-#: .\templates\main\index.html:385 .\templates\main\index.html:443
-#: .\templates\main\index.html:503
+#: .\templates\main\index.html:389 .\templates\main\index.html:447
+#: .\templates\main\index.html:508
 msgid "Braces & Implants"
 msgstr "Braces & Implants"
 
-#: .\templates\main\index.html:386 .\templates\main\index.html:444
-#: .\templates\main\index.html:504
+#: .\templates\main\index.html:390 .\templates\main\index.html:448
+#: .\templates\main\index.html:509
 msgid ""
 "Orthodontic braces and dental implants for a functional and attractive smile."
 msgstr ""
 "Orthodontic braces and dental implants for a functional and attractive smile."
 
-#: .\templates\main\index.html:527 .\templates\main\index.html:562
-#: .\templates\main\index.html:592
+#: .\templates\main\index.html:537 .\templates\main\index.html:609
+#: .\templates\main\index.html:674
 msgid "Book An Appointment"
 msgstr "Book An Appointment"
 
-#: .\templates\main\index.html:531 .\templates\main\index.html:566
-#: .\templates\main\index.html:596
-msgid "Subject of your appointment"
-msgstr "Subject of your appointment"
-
-#: .\templates\main\index.html:534 .\templates\main\index.html:569
-#: .\templates\main\index.html:599
+#: .\templates\main\index.html:544 .\templates\main\index.html:616
+#: .\templates\main\index.html:681
 msgid "Your message"
 msgstr "Your message"
 
-#: .\templates\main\index.html:535 .\templates\main\index.html:570
-#: .\templates\main\index.html:600
-msgid "Briefly describe why you are requesting this appointment"
-msgstr "Briefly describe why you are requesting this appointment"
-
-#: .\templates\main\index.html:537 .\templates\main\index.html:572
-#: .\templates\main\index.html:602
+#: .\templates\main\index.html:547 .\templates\main\index.html:619
+#: .\templates\main\index.html:684
 msgid "Request Appointment"
 msgstr "Request Appointment"
 
-#: .\templates\main\index.html:542 .\templates\main\index.html:554
-#: .\templates\main\index.html:584
+#: .\templates\main\index.html:586 .\templates\main\index.html:598
+#: .\templates\main\index.html:663
 msgid "Your Oral Health Matters to Us"
 msgstr "Your Oral Health Matters to Us"
 
-#: .\templates\main\index.html:544 .\templates\main\index.html:556
-#: .\templates\main\index.html:586
+#: .\templates\main\index.html:588 .\templates\main\index.html:600
+#: .\templates\main\index.html:665
 msgid "Get Brighter Smile from Your City's Best Dentists"
 msgstr "Get Brighter Smile from Your City's Best Dentists"
 
-#: .\templates\main\index.html:620 .\templates\main\index.html:667
+#: .\templates\main\index.html:734 .\templates\main\index.html:781
 msgid "Meet the Doctor"
 msgstr "Meet the Doctor"
 
-#: .\templates\main\index.html:621 .\templates\main\index.html:668
+#: .\templates\main\index.html:735 .\templates\main\index.html:782
 msgid "Your Name could be here!"
 msgstr "Your Name could be here!"
 
-#: .\templates\main\index.html:623 .\templates\main\index.html:629
-#: .\templates\main\index.html:670 .\templates\main\index.html:676
+#: .\templates\main\index.html:737 .\templates\main\index.html:743
+#: .\templates\main\index.html:784 .\templates\main\index.html:790
 msgid "Lorem ipsum dolor sit amet,"
 msgstr "Lorem ipsum dolor sit amet,"
 
-#: .\templates\main\index.html:624 .\templates\main\index.html:630
-#: .\templates\main\index.html:671 .\templates\main\index.html:677
+#: .\templates\main\index.html:738 .\templates\main\index.html:744
+#: .\templates\main\index.html:785 .\templates\main\index.html:791
 msgid "consectetur adipiscing elit. Ut elit"
 msgstr "consectetur adipiscing elit. Ut elit"
 
-#: .\templates\main\index.html:625 .\templates\main\index.html:631
-#: .\templates\main\index.html:672 .\templates\main\index.html:678
+#: .\templates\main\index.html:739 .\templates\main\index.html:745
+#: .\templates\main\index.html:786 .\templates\main\index.html:792
 msgid "tellus, luctus nec ullamcorper mattis,"
 msgstr "tellus, luctus nec ullamcorper mattis,"
 
-#: .\templates\main\index.html:626 .\templates\main\index.html:632
-#: .\templates\main\index.html:673 .\templates\main\index.html:679
+#: .\templates\main\index.html:740 .\templates\main\index.html:746
+#: .\templates\main\index.html:787 .\templates\main\index.html:793
 msgid "pulvinar dapibus leo."
 msgstr "pulvinar dapibus leo."
 
-#: .\templates\main\index.html:704 .\templates\main\index.html:758
+#: .\templates\main\index.html:818 .\templates\main\index.html:872
 msgid "Our Team, Our Strengths"
 msgstr "Our Team, Our Strengths"
 
-#: .\templates\main\index.html:705 .\templates\main\index.html:759
+#: .\templates\main\index.html:819 .\templates\main\index.html:873
 msgid "This could be Your Team"
 msgstr "This could be Your Team"
 
-#: .\templates\main\index.html:713 .\templates\main\index.html:767
+#: .\templates\main\index.html:827 .\templates\main\index.html:881
 msgid "Dr. Hala Karim"
 msgstr "Dr. Hala Karim"
 
-#: .\templates\main\index.html:715 .\templates\main\index.html:769
+#: .\templates\main\index.html:829 .\templates\main\index.html:883
 msgid "Orthodontist"
 msgstr "Orthodontist"
 
-#: .\templates\main\index.html:723 .\templates\main\index.html:777
+#: .\templates\main\index.html:837 .\templates\main\index.html:891
 msgid "Dr. Youssef Hassan"
 msgstr "Dr. Youssef Hassan"
 
-#: .\templates\main\index.html:725 .\templates\main\index.html:779
+#: .\templates\main\index.html:839 .\templates\main\index.html:893
 msgid "Prosthodontist"
 msgstr "Prosthodontist"
 
-#: .\templates\main\index.html:733 .\templates\main\index.html:787
+#: .\templates\main\index.html:847 .\templates\main\index.html:901
 msgid "Dr. Nadia Ali"
 msgstr "Dr. Nadia Ali"
 
-#: .\templates\main\index.html:735 .\templates\main\index.html:789
+#: .\templates\main\index.html:849 .\templates\main\index.html:903
 msgid "Cosmetic Dentist"
 msgstr "Cosmetic Dentist"
 
-#: .\templates\main\index.html:743 .\templates\main\index.html:797
+#: .\templates\main\index.html:857 .\templates\main\index.html:911
 msgid "Dr. Ahmed Al-Farsi"
 msgstr "Dr. Ahmed Al-Farsi"
 
-#: .\templates\main\index.html:745 .\templates\main\index.html:799
+#: .\templates\main\index.html:859 .\templates\main\index.html:913
 msgid "General Dentist"
 msgstr "General Dentist"
 
@@ -732,29 +723,39 @@ msgstr "General Dentist"
 msgid "Blog"
 msgstr "Blog"
 
-#: .\templates\nav.html:22
+#: .\templates\nav.html:23 .\templates\nav.html:26
 msgid "Services"
 msgstr "Services"
 
-#: .\templates\nav.html:28
+#: .\templates\nav.html:31
+msgid "Logout"
+msgstr "Logout"
+
+#: .\templates\nav.html:38
 msgid "Language"
 msgstr "Language"
 
-#: .\templates\nav.html:49
+#: .\templates\nav.html:59
 msgid "Themes"
 msgstr "Themes"
 
-#: .\templates\nav.html:57
+#: .\templates\nav.html:67
 msgid "Teal & Green"
 msgstr "Teal & Green"
 
-#: .\templates\nav.html:60
+#: .\templates\nav.html:70
 msgid "Indigo & Purple"
 msgstr "Indigo & Purple"
 
-#: .\templates\nav.html:63
+#: .\templates\nav.html:73
 msgid "Red & Amber"
 msgstr "Red & Amber"
+
+#~ msgid "Subject of your appointment"
+#~ msgstr "Subject of your appointment"
+
+#~ msgid "Briefly describe why you are requesting this appointment"
+#~ msgstr "Briefly describe why you are requesting this appointment"
 
 #~ msgid "body"
 #~ msgstr "Body"

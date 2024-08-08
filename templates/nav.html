@@ -25,6 +25,12 @@
 				<li class="py-2 rounded-2xl block lg:hidden">
           <a href="{% url 'main:index' %}#services-blw-lg" class="text-xl font-bold block py-2 px-3 rounded nav-txt md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0 md:p-0 md:hover:text-white text-white">{% trans "Services" %}</a>
         </li>
+
+				{% if request.user.is_authenticated %}
+				<li class="py-2 rounded-2xl hidden lg:block">
+					<a href="{% url 'main:logout' %}?next={{ request.path }}" class="text-xl font-bold block py-2 px-3 rounded nav-txt md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0 md:p-0 md:hover:text-white text-white">{% trans "Logout" %}</a>
+				</li>
+				{% endif %}
         
         <li class="py-2 rounded-2xl">
           <div class="relative">

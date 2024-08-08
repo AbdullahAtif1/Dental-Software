@@ -4,6 +4,8 @@ from .forms import AppointmentForm, LoginForm
 from django.http import JsonResponse
 from dentadmin.models import Patient
 from django.contrib.auth import authenticate, login
+from django.contrib.auth import logout
+
 
 def index(request):
     form = AppointmentForm()
@@ -38,3 +40,9 @@ def index(request):
 
     context = {'form': form, 'lform': loginform}
     return render(request, 'main/index.html', context)
+
+
+def custom_logout(request):
+    logout(request)
+    # Redirect back to the same page
+    return redirect(request.META.get('HTTP_REFERER', '/'))
