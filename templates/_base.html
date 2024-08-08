@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -452,6 +453,31 @@
 	{% include 'nav.html' %}
 
 	{% block 'content' %}{% endblock %}
+
+	{% get_current_language as CURRENT_LANGUAGE %}
+
+	{% if CURRENT_LANGUAGE == 'ar' %}
+
+	<a href="#"
+   class="fixed bottom-4 left-4 w-12 h-12 rounded-full blog-page-art-btn flex items-center justify-center text-white shadow-lg z-10">
+   <!-- Arrow SVG icon -->
+		<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"/>
+		</svg>
+	</a>
+
+	{% elif CURRENT_LANGUAGE == 'en' %}
+
+	<a href="#"
+   class="fixed bottom-4 right-4 w-12 h-12 rounded-full blog-page-art-btn flex items-center justify-center text-white shadow-lg z-10">
+   <!-- Arrow SVG icon -->
+		<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"/>
+		</svg>
+	</a>
+
+	{% endif %}
+
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 	
