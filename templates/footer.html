@@ -1,5 +1,58 @@
 {% load static %}
 {% load i18n %}
+{% get_current_language as CURRENT_LANGUAGE %}
+
+{% if CURRENT_LANGUAGE == 'ar' %}
+
+<footer class="bg-main-gradient">
+	<div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+		<div class="flex justify-center gap-7 flex-col md:flex-row-reverse md:gap-0 md:justify-between">
+			<div class="mb-6 md:mb-0">
+				<a href="{% url 'main:index' %}" class="flex items-center">
+					<img src="{% static 'imgs/fav.jpeg' %}" class="max-h-32 max-w-sm shadow-2xl" alt="Logo" />
+				</a>
+			</div>
+			<div class="text-right">
+				<h2 class="mb-6 md:text-2xl  font-bold uppercase text-white">{% trans "Contact Information" %}</h2>
+				<ul class="text-gray-100 text-xl font-medium">
+					<li class="mb-4">
+						<a href="">+1800 456 789</a>
+					</li>
+					<li>
+						<a href="">+1800 456 780</a>
+					</li>
+				</ul>
+			</div>
+			<div class="text-right">
+				<h2 class="mb-6 md:text-2xl  font-bold uppercase text-white">{% trans "Open Hours" %}</h2>
+				<ul class="text-gray-100 text-xl font-medium">
+					<li class="mb-4">
+						<a href="#">{% trans "Mon-Fri 09:00 - 19:00" %}</a>
+					</li>
+					<li>
+						<a href="#">{% trans "Sat-Sun 10:00 - 14:00" %}</a>
+					</li>
+				</ul>
+			</div>
+			<div class="text-right">
+				<h2 class="mb-6 md:text-2xl  font-bold uppercase text-white">{% trans "Reach Us" %}</h2>
+				<ul class="text-gray-100 text-xl font-medium">
+					<li class="mb-4">
+						<a href=""">{% trans "456 Smile Avenue, Dental City, CA 90210" %}</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<hr class="my-6 border-gray-100 sm:mx-auto lg:my-8" />
+			<div class="sm:flex sm:items-center sm:justify-end">
+				<span class="text-sm text-gray-100 sm:text-center ">© 2024 <a href="https://socialcodepk.com/" class="hover:underline" target="_blank"
+					>SocialCodePk</a>. {% trans "All Rights Reserved." %}
+				</span>
+			</div>
+	</div>
+</footer>
+
+{% elif CURRENT_LANGUAGE == 'en' %}
 
 <footer class="bg-main-gradient">
 	<div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -10,41 +63,43 @@
 				</a>
 			</div>
 			<div>
-				<h2 class="mb-6 md:text-2xl underline font-bold uppercase text-white">{% trans "Contact Information" %}</h2>
+				<h2 class="mb-6 md:text-2xl  font-bold uppercase text-white">{% trans "Contact Information" %}</h2>
 				<ul class="text-gray-100 text-xl font-medium">
 					<li class="mb-4">
-						<a href="" class="hover:underline">+1800 456 789</a>
+						<a href="">+1800 456 789</a>
 					</li>
 					<li>
-						<a href="" class="hover:underline">+1800 456 780</a>
+						<a href="">+1800 456 780</a>
 					</li>
 				</ul>
 			</div>
 			<div>
-				<h2 class="mb-6 md:text-2xl underline font-bold uppercase text-white">{% trans "Open Hours" %}</h2>
+				<h2 class="mb-6 md:text-2xl  font-bold uppercase text-white">{% trans "Open Hours" %}</h2>
 				<ul class="text-gray-100 text-xl font-medium">
 					<li class="mb-4">
-						<a href="#" class="hover:underline">{% trans "Mon-Fri 09:00 - 19:00" %}</a>
+						<a href="#">{% trans "Mon-Fri 09:00 - 19:00" %}</a>
 					</li>
 					<li>
-						<a href="#" class="hover:underline">{% trans "Sat-Sun 10:00 - 14:00" %}</a>
+						<a href="#">{% trans "Sat-Sun 10:00 - 14:00" %}</a>
 					</li>
 				</ul>
 			</div>
 			<div>
-				<h2 class="mb-6 md:text-2xl underline font-bold uppercase text-white">{% trans "Reach Us" %}</h2>
+				<h2 class="mb-6 md:text-2xl  font-bold uppercase text-white">{% trans "Reach Us" %}</h2>
 				<ul class="text-gray-100 text-xl font-medium">
 					<li class="mb-4">
-						<a href="" class="hover:underline ">{% trans "456 Smile Avenue, Dental City, CA 90210" %}</a>
+						<a href=""">{% trans "456 Smile Avenue, Dental City, CA 90210" %}</a>
 					</li>
 				</ul>
 			</div>
 		</div>
 		<hr class="my-6 border-gray-100 sm:mx-auto lg:my-8" />
-		<div class="sm:flex sm:items-center sm:justify-between">
-			<span class="text-sm text-gray-100 sm:text-center ">© 2024 <a href="https://socialcodepk.com/" target="_blank"
-					class="hover:underline">SocialCodePk</a>. {% trans "All Rights Reserved." %}
-			</span>
-		</div>
+			<div class="sm:flex sm:items-center sm:justify-between">
+				<span class="text-sm text-gray-100 sm:text-center ">© 2024 <a href="https://socialcodepk.com/" class="hover:underline" target="_blank"
+					>SocialCodePk</a>. {% trans "All Rights Reserved." %}
+				</span>
+			</div>
 	</div>
 </footer>
+
+{% endif %}
