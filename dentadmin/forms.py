@@ -23,7 +23,7 @@ class PatientForm(forms.ModelForm):
     phone_number = PhoneNumberField()
     class Meta:
         model = Patient
-        fields = ['picture', 'status', 'email', 'phone_number']
+        fields = ['picture', 'phone_number']
         labels = {
             'picture': _("Profile Picture"),
             'status': _("Status"),

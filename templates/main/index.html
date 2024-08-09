@@ -212,10 +212,6 @@
 		<div class="w-full lg:w-1/2 ml-5 block md:hidden relative">
 			<div class="flex justify-center">
 				<img class="h-auto max-w-sm  left-10 pr-1 md:p-5 rounded-t-full" src="{% static 'imgs/d3.jpg' %}" alt="Welcome">
-				<img style="top: 200px;" class="h-auto max-w-sm md:p-5 absolute z-10" src="{% static 'imgs/d4.jpeg' %}"
-					alt="Welcome">
-				<img style="top: 450px;" class="h-auto max-w-sm md:p-5 absolute z-10 rounded-b-full"
-					src="{% static 'imgs/d0.jpg' %}" alt="Welcome">
 			</div>
 		</div>
 
@@ -305,10 +301,6 @@
 		<div class="w-full lg:w-1/2 ml-5 block md:hidden relative">
 			<div class="flex justify-center">
 				<img class="h-auto max-w-sm  left-10 pr-1 md:p-5 rounded-t-full" src="{% static 'imgs/d3.jpg' %}" alt="Welcome">
-				<img style="top: 200px;" class="h-auto max-w-sm md:p-5 absolute z-10" src="{% static 'imgs/d4.jpeg' %}"
-					alt="Welcome">
-				<img style="top: 450px;" class="h-auto max-w-sm md:p-5 absolute z-10 rounded-b-full"
-					src="{% static 'imgs/d0.jpg' %}" alt="Welcome">
 			</div>
 		</div>
 
@@ -330,15 +322,15 @@
 				max-w-7xl mx-auto my-24 py-10 scroll-mt-14 text-right">
 
 		<!-- Box 2 to 8: Regular boxes -->
-		<div class="p-4 py-10 sg-itm itm-0">
-			<h4 class="text-2xl">{% trans "01." %}</h4>
-			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Dental X-Rays" %}</h3>
-			<p class="text-3xl lg:text-2xl pt-4">{% trans "Advanced imaging to diagnose and monitor dental health issues." %}</p>
-		</div>
 		<div class="p-4 py-10 sg-itm itm-1">
 			<h4 class="text-2xl">{% trans "02." %}</h4>
 			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Exams & Cleanings" %}</h3>
 			<p class="text-3xl lg:text-2xl pt-4">{% trans "Comprehensive check-ups and professional cleanings to maintain oral health." %}</p>
+		</div>
+		<div class="p-4 py-10 sg-itm itm-0">
+			<h4 class="text-2xl">{% trans "01." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Dental X-Rays" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Advanced imaging to diagnose and monitor dental health issues." %}</p>
 		</div>
 
 		<div class="md:col-span-2 lg:col-span-2 lg:row-span-1 p-5 cntnr flex flex-col justify-center rounded-tl-lg">
@@ -346,25 +338,25 @@
 			<p class="paragraph text-2xl mt-3 p-2 font-bold">{% trans "We Have All Your Dental Needs Covered" %}</p>
 		</div>
 
-		<div class="p-4 py-10 sg-itm itm-2">
-			<h4 class="text-2xl">{% trans "03." %}</h4>
-			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Cosmetic Dentistry" %}</h3>
-			<p class="text-3xl lg:text-2xl pt-4">{% trans "Enhancing the appearance of your smile with aesthetic treatments" %}</p>
-		</div>
-		<div class="p-4 py-10 sg-itm itm-3">
-			<h4 class="text-2xl">{% trans "04." %}</h4>
-			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Periodontal Disease" %}</h3>
-			<p class="text-3xl lg:text-2xl pt-4">{% trans "Treatment for gum disease to restore oral health and prevent complications." %}</p>
+		<div class="p-4 py-10 sg-itm itm-5">
+			<h4 class="text-2xl">{% trans "06." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Extractions" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Safe removal of teeth that are damaged or problematic." %}</p>
 		</div>
 		<div class="p-4 py-10 sg-itm itm-4">
 			<h4 class="text-2xl">{% trans "05." %}</h4>
 			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Root Canals" %}</h3>
 			<p class="text-3xl lg:text-2xl pt-4">{% trans "Precision procedures to save and repair damaged or infected teeth." %}</p>
 		</div>
-		<div class="p-4 py-10 sg-itm itm-5">
-			<h4 class="text-2xl">{% trans "06." %}</h4>
-			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Extractions" %}</h3>
-			<p class="text-3xl lg:text-2xl pt-4">{% trans "Safe removal of teeth that are damaged or problematic." %}</p>
+		<div class="p-4 py-10 sg-itm itm-3">
+			<h4 class="text-2xl">{% trans "04." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Periodontal Disease" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Treatment for gum disease to restore oral health and prevent complications." %}</p>
+		</div>
+		<div class="p-4 py-10 sg-itm itm-2">
+			<h4 class="text-2xl">{% trans "03." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Cosmetic Dentistry" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Enhancing the appearance of your smile with aesthetic treatments" %}</p>
 		</div>
 
 		
@@ -375,16 +367,15 @@
 			</div>
 		</a>
 
-
-		<div class="p-4 py-10 sg-itm itm-6">
-			<h4 class="text-2xl">{% trans "07." %}</h4>
-			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Teeth Whitening" %}</h3>
-			<p class="text-3xl lg:text-2xl pt-4">{% trans "Professional whitening solutions to brighten and enhance your smile." %}</p>
-		</div>
 		<div class="p-4 py-10 sg-itm itm-7">
 			<h4 class="text-2xl">{% trans "08." %}</h4>
 			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Braces & Implants" %}</h3>
 			<p class="text-3xl lg:text-2xl pt-4">{% trans "Orthodontic braces and dental implants for a functional and attractive smile." %}</p>
+		</div>
+		<div class="p-4 py-10 sg-itm itm-6">
+			<h4 class="text-2xl">{% trans "07." %}</h4>
+			<h3 class="text-4xl lg:text-3xl font-extrabold ">{% trans "Teeth Whitening" %}</h3>
+			<p class="text-3xl lg:text-2xl pt-4">{% trans "Professional whitening solutions to brighten and enhance your smile." %}</p>
 		</div>
 
 	</div>
@@ -447,7 +438,7 @@
 
 	<!-- Box 10: Spans 1 row and 2 columns in lg and above, full width in md and below -->
 	<a href="{% url 'main:index' %}#book-an-appointment-ar"
-		class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-br-full p-4 flex flex-col justify-center items-center shadow-xl no-underline">
+		class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-bl-full p-4 flex flex-col justify-center items-center shadow-xl no-underline">
 		<div class="text-5xl text-gray-100 font-semibold px-2">
 			{% trans "Book an Appointment" %}
 		</div>
@@ -530,6 +521,16 @@
 
 					<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:index' %}">
 						{% csrf_token %}
+						{% if messages %}
+								<div>
+										{% for message in messages %}
+												<div class="text-green-600 text-lg">
+														{{ message }}
+												</div>
+										{% endfor %}
+								</div>
+						{% endif %}
+				
 							<div>
 								<h4 class="text-4xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
 							</div>
@@ -1086,10 +1087,6 @@
 		<div class="w-full lg:w-1/2 ml-5 block md:hidden relative">
 			<div class="flex justify-center">
 				<img class="h-auto max-w-sm  left-10 pr-1 md:p-5 rounded-t-full" src="{% static 'imgs/d3.jpg' %}" alt="Welcome">
-				<img style="top: 200px;" class="h-auto max-w-sm md:p-5 absolute z-10" src="{% static 'imgs/d4.jpeg' %}"
-					alt="Welcome">
-				<img style="top: 450px;" class="h-auto max-w-sm md:p-5 absolute z-10 rounded-b-full"
-					src="{% static 'imgs/d0.jpg' %}" alt="Welcome">
 			</div>
 		</div>
 
@@ -1264,10 +1261,6 @@
 		<div class="w-full lg:w-1/2 ml-5 block md:hidden relative">
 			<div class="flex justify-center">
 				<img class="h-auto max-w-sm  left-10 pr-1 md:p-5 rounded-t-full" src="{% static 'imgs/d3.jpg' %}" alt="Welcome">
-				<img style="top: 200px;" class="h-auto max-w-sm md:p-5 absolute z-10" src="{% static 'imgs/d4.jpeg' %}"
-					alt="Welcome">
-				<img style="top: 450px;" class="h-auto max-w-sm md:p-5 absolute z-10 rounded-b-full"
-					src="{% static 'imgs/d0.jpg' %}" alt="Welcome">
 			</div>
 		</div>
 

@@ -22,15 +22,15 @@ class Patient(TranslatableModel):
 			bio=models.TextField(null=True, blank=True),
 	)
 
-	@receiver(post_save, sender=User)
-	def create_or_update_user_profile(sender, instance, created, **kwargs):
-			if created:
-					# Create a new Patient instance when a User is created
-					Patient.objects.create(user=instance, email=instance.email)
-			else:
-					# Update the email of the existing Patient instance
-					instance.patient.email = instance.email
-					instance.patient.save()
+	# @receiver(post_save, sender=User)
+	# def create_or_update_user_profile(sender, instance, created, **kwargs):
+	# 		if created:
+	# 				# Create a new Patient instance when a User is created
+	# 				Patient.objects.create(user=instance, email=instance.email)
+	# 		else:
+	# 				# Update the email of the existing Patient instance
+	# 				instance.patient.email = instance.email
+	# 				instance.patient.save()
 
 	# Get the phone number from the signup form, it'll include patient form with fields, image, phone number, bio
 
