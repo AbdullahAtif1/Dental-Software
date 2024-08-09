@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-10 00:07+0500\n"
+"POT-Creation-Date: 2024-08-10 00:35+0500\n"
 "PO-Revision-Date: 2024-08-03 16:08+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -24,7 +24,8 @@ msgstr ""
 msgid "status"
 msgstr "Status"
 
-#: .\dentadmin\forms.py:28
+#: .\dentadmin\forms.py:28 .\templates\main\signup.html:61
+#: .\templates\main\signup.html:127 .\templates\main\signup.html:185
 msgid "Profile Picture"
 msgstr "Profile Picture"
 
@@ -36,7 +37,8 @@ msgstr "Status"
 msgid "Email Address"
 msgstr "Email Address"
 
-#: .\dentadmin\forms.py:31
+#: .\dentadmin\forms.py:31 .\templates\main\signup.html:57
+#: .\templates\main\signup.html:123 .\templates\main\signup.html:181
 msgid "Phone Number"
 msgstr "Phone Number"
 
@@ -132,8 +134,6 @@ msgid "They Could be Subscribed to Your Newsletter"
 msgstr "They Could be Subscribed to Your Newsletter"
 
 #: .\templates\blog\index.html:143 .\templates\blog\index.html:168
-#, fuzzy
-#| msgid "They Could be Subscribed to Your Newsletter"
 msgid "Subscribe to our newsletter for the latest"
 msgstr "They Could be Subscribed to Your Newsletter"
 
@@ -146,8 +146,10 @@ msgid "delivered right to your inbox."
 msgstr ""
 
 #: .\templates\blog\index.html:154 .\templates\blog\index.html:179
-#: .\templates\main\index.html:581 .\templates\main\index.html:659
-#: .\templates\main\index.html:731
+#: .\templates\main\index.html:580 .\templates\main\index.html:658
+#: .\templates\main\index.html:731 .\templates\main\signup.html:23
+#: .\templates\main\signup.html:65 .\templates\main\signup.html:131
+#: .\templates\main\signup.html:147 .\templates\main\signup.html:189
 msgid "Signup"
 msgstr "Signup"
 
@@ -644,20 +646,18 @@ msgstr "Your message"
 msgid "Request Appointment"
 msgstr "Request Appointment"
 
-#: .\templates\main\index.html:579 .\templates\main\index.html:657
+#: .\templates\main\index.html:582 .\templates\main\index.html:660
 #: .\templates\main\index.html:729
 msgid "Don't have an account?"
 msgstr "Don't have an account?"
 
 #: .\templates\main\index.html:591 .\templates\main\index.html:603
-#: .\templates\main\index.html:675 .\templates\main\signup.html:52
-#: .\templates\main\signup.html:64
+#: .\templates\main\index.html:675 .\templates\main\signup.html:78
 msgid "Your Oral Health Matters to Us"
 msgstr "Your Oral Health Matters to Us"
 
 #: .\templates\main\index.html:593 .\templates\main\index.html:605
-#: .\templates\main\index.html:677 .\templates\main\signup.html:54
-#: .\templates\main\signup.html:66
+#: .\templates\main\index.html:677 .\templates\main\signup.html:80
 msgid "Get Brighter Smile from Your City's Best Dentists"
 msgstr "Get Brighter Smile from Your City's Best Dentists"
 
@@ -728,6 +728,26 @@ msgstr "Dr. Ahmed Al-Farsi"
 #: .\templates\main\index.html:879 .\templates\main\index.html:933
 msgid "General Dentist"
 msgstr "General Dentist"
+
+#: .\templates\main\signup.html:39 .\templates\main\signup.html:105
+#: .\templates\main\signup.html:163
+msgid "Username"
+msgstr "Username"
+
+#: .\templates\main\signup.html:43 .\templates\main\signup.html:109
+#: .\templates\main\signup.html:167
+msgid "Password"
+msgstr "Password"
+
+#: .\templates\main\signup.html:47 .\templates\main\signup.html:113
+#: .\templates\main\signup.html:171
+msgid "Confirm Password"
+msgstr "Confirm Password"
+
+#: .\templates\main\signup.html:53 .\templates\main\signup.html:119
+#: .\templates\main\signup.html:177
+msgid "Email"
+msgstr "Email"
 
 #: .\templates\nav.html:19
 msgid "Blog"
@@ -811,9 +831,6 @@ msgstr "Red & Amber"
 
 #~ msgid "time"
 #~ msgstr "Time"
-
-#~ msgid "name"
-#~ msgstr "Name"
 
 #~ msgid "stars"
 #~ msgstr "Stars"

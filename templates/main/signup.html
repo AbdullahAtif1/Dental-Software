@@ -12,15 +12,15 @@
 
 	{% if CURRENT_LANGUAGE == 'ar' %}
 
-	<div id="book-an-appointment-ar" class="book-an-appointment-ar min-h-full w-full my-24 py-10 hidden scroll-mt-24 lg:block">
+	<div id="book-an-appointment-ar" class="book-an-appointment-ar min-h-full w-full mt-24 mb-9 py-10 hidden scroll-mt-24 lg:block">
 		<div class="max-w-7xl mx-auto flex flex-wrap gap-2">
 			<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
 					<div class="cntnr rounded-2xl p-6">
 
-						<form class="w-full" method="post">
+						<form class="w-full text-right" method="post">
 							{% csrf_token %}
 								<div>
-									<h4 class="text-2xl text-center paragraph p-5">الرجاء تسجيل الدخول لحجز موعد</h4>
+									<h4 class="text-4xl text-center paragraph p-5">{% trans "Signup" %}</h4>
 								</div>
 								{% if signupform.errors %}
 										<div class="text-red-700 text-lg">
@@ -34,45 +34,54 @@
 												{% endfor %}
 										</div>
 								{% endif %}
-
-								<div class="mb-5">
-										<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">اسم المستخدم</label>
-										{% render_field signupform.username type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="عبدالله عاطف" %}
+							<div class="flex flex-wrap gap-5">
+								<div class="mb-5 flex-grow">
+										<label for="message" class="block mb-2 text-2xl font-medium paragraph">{% trans "Confirm Password" %}</label>
+										{% render_field signupform.password2 type="password" class="shadow-sm text-right bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="*****" %}
 								</div>
-								<div class="mb-5">
-										<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">كلمة المرور</label>
-										{% render_field signupform.password type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="*****" %}
+									<div class="mb-5 flex-grow">
+											<label for="message" class="block mb-2 text-2xl font-medium paragraph">{% trans "Password" %}</label>
+											{% render_field signupform.password1 type="password" class="shadow-sm text-right bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="*****" %}
+									</div>
+									<div class="mb-5 flex-grow">
+											<label for="subject" class="block mb-2 text-2xl font-medium paragraph">{% trans "Username" %}</label>
+											{% render_field signupform.username type="text" class="shadow-sm text-right bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="عبدالله عاطف" %}
+									</div>
+							</div>
+								<div class="flex flex-wrap gap-5">
+										<div class="mb-5 flex-grow">
+												<label for="subject" class="block mb-2 text-2xl font-medium paragraph">{% trans "Email" %}</label>
+												{% render_field signupform.email type="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="abc@example.com" %}
+										</div>
+										<div class="mb-5 flex-grow">
+												<label for="message" class="block mb-2 text-2xl font-medium paragraph">{% trans "Phone Number" %}</label>
+												{% render_field patientform.phone_number type="tel" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="+12 3456 789" %}
+										</div>
+										<div class="mb-5 flex-grow">
+											<label for="message" class="block mb-2 text-2xl font-medium paragraph">{% trans "Profile Picture" %}</label>
+											{% render_field patientform.picture class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1" %}
+										</div>
 								</div>
-								<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-2xl px-5 py-2.5 text-center">تسجيل الدخول</button>
+								<button type="submit" class="text-white hover:-translate-y-2 w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-2xl px-5 py-2.5 text-center">{% trans "Signup" %}</button>
 						</form>
 
 					</div>
-			</div>
-			<div class="flex flex-col lg:justify-end max-w-3xl lg:max-w-xl xl:max-w-3xl xl:pt-32 text-right">
-					<p class="text-lg md:text-2xl lg:text-3xl text-gray-200 font-semibold px-5">{% trans "Your Oral Health Matters to Us" %}</p>
-					<hr class="border-white max-w-xl mx-auto">
-					<h3 class="text-3xl md:text-5xl lg:text-4xl xl:text-5xl text-white p-5 leading-tight">{% trans "Get Brighter Smile from Your City's Best Dentists" %}</h3>
 			</div>
 		</div>
 	</div>
 
 	<!-- below lg -->
 
-	<div id="book-an-appointment-ar-blw-lg" class="book-an-appointment-ar scroll-mt-24 min-h-full w-full my-24 py-10 blogk lg:hidden">
+	<div id="book-an-appointment-ar-blw-lg" class="book-an-appointment-ar scroll-mt-24 min-h-full w-full mt-24 mb-9 py-10 blogk lg:hidden">
 		<div class="max-w-7xl mx-auto flex flex-wrap gap-2">
-			<div class="flex flex-col lg:justify-end max-w-3xl lg:max-w-xl xl:max-w-3xl xl:pt-32 text-right">
-					<p class="text-3xl md:text-4xl text-gray-200 font-semibold px-5">{% trans "Your Oral Health Matters to Us" %}</p>
-					<hr class="border-white max-w-xl mx-auto">
-					<h3 class="text-4xl md:text-6xl text-white p-5 leading-tight">{% trans "Get Brighter Smile from Your City's Best Dentists" %}</h3>
-			</div>
 			<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
 				<div class="cntnr rounded-2xl p-6" id="form-container">
 					
 
-					<form class="w-full" method="post">
+					<form class="w-full text-right" method="post">
 						{% csrf_token %}
 							<div>
-								<h4 class="text-2xl text-center paragraph p-5">الرجاء تسجيل الدخول لحجز موعد</h4>
+								<h4 class="text-4xl text-center paragraph p-5">{% trans "Signup" %}</h4>
 							</div>
 							{% if signupform.errors %}
 									<div class="text-red-700 text-lg">
@@ -86,15 +95,35 @@
 											{% endfor %}
 									</div>
 							{% endif %}
-							<div class="mb-5">
-									<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">اسم المستخدم</label>
-									{% render_field signupform.username type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="عبدالله عاطف" %}
+							<div class="flex flex-wrap gap-5">
+								<div class="mb-5 flex-grow">
+										<label for="subject" class="block mb-2 text-2xl font-medium paragraph">{% trans "Username" %}</label>
+										{% render_field signupform.username type="text" class="shadow-sm text-right bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="عبدالله عاطف" %}
+								</div>
+									<div class="mb-5 flex-grow">
+											<label for="message" class="block mb-2 text-2xl font-medium paragraph">{% trans "Password" %}</label>
+											{% render_field signupform.password1 type="password" class="shadow-sm text-right bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="*****" %}
+									</div>
+									<div class="mb-5 flex-grow">
+											<label for="message" class="block mb-2 text-2xl font-medium paragraph">{% trans "Confirm Password" %}</label>
+											{% render_field signupform.password2 type="password" class="shadow-sm text-right bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="*****" %}
+									</div>
 							</div>
-							<div class="mb-5">
-									<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">كلمة المرور</label>
-									{% render_field signupform.password type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="*****" %}
+							<div class="flex flex-wrap gap-5">
+									<div class="mb-5 flex-grow">
+											<label for="subject" class="block mb-2 text-2xl font-medium paragraph">{% trans "Email" %}</label>
+											{% render_field signupform.email type="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="abc@example.com" %}
+									</div>
+									<div class="mb-5 flex-grow">
+											<label for="message" class="block mb-2 text-2xl font-medium paragraph">{% trans "Phone Number" %}</label>
+											{% render_field patientform.phone_number type="tel" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="+12 3456 789" %}
+									</div>
+									<div class="mb-5 flex-grow">
+										<label for="message" class="block mb-2 text-2xl font-medium paragraph">{% trans "Profile Picture" %}</label>
+										{% render_field patientform.picture class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1" %}
+									</div>
 							</div>
-							<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-xl px-5 py-2.5 text-center">تسجيل الدخول</button>
+							<button type="submit" class="text-white hover:-translate-y-2 w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-2xl px-5 py-2.5 text-center">{% trans "Signup" %}</button>
 					</form>
 			</div>
 			</div>
@@ -103,14 +132,14 @@
 
 	{% elif CURRENT_LANGUAGE == 'en' %}
 
-	<div class="min-h-full scroll-mt-24 w-full my-24 py-10">
+	<div id="book-an-appointment"  class="min-h-full scroll-mt-24 w-full mt-24 mb-9 py-10">
     <div class="max-w-7xl mx-auto">
         <div class="mx-4">
             <div class="cntnr rounded-2xl p-6" id="form-container">
                 <form class="w-full" method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     <div>
-                        <h4 class="text-2xl text-center paragraph p-5">Signup</h4>
+											<h4 class="text-2xl text-center paragraph p-5">{% trans "Signup" %}</h4>
                     </div>
                     {% if signupform.errors %}
                         <div class="text-red-700 text-lg">
@@ -126,33 +155,33 @@
                     {% endif %}
                     <div class="flex flex-wrap gap-5">
                         <div class="mb-5 flex-grow">
-                            <label for="subject" class="block mb-2 text-2xl font-medium paragraph">Username</label>
+                            <label for="subject" class="block mb-2 text-xl font-medium paragraph">{% trans "Username" %}</label>
                             {% render_field signupform.username type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Abdullah Atif" %}
                         </div>
                         <div class="mb-5 flex-grow">
-                            <label for="message" class="block mb-2 text-2xl font-medium paragraph">Password</label>
+                            <label for="message" class="block mb-2 text-xl font-medium paragraph">{% trans "Password" %}</label>
                             {% render_field signupform.password1 type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="*****" %}
                         </div>
                         <div class="mb-5 flex-grow">
-                            <label for="message" class="block mb-2 text-2xl font-medium paragraph">Confirm Password</label>
+                            <label for="message" class="block mb-2 text-xl font-medium paragraph">{% trans "Confirm Password" %}</label>
                             {% render_field signupform.password2 type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="*****" %}
                         </div>
                     </div>
                     <div class="flex flex-wrap gap-5">
                         <div class="mb-5 flex-grow">
-                            <label for="subject" class="block mb-2 text-2xl font-medium paragraph">Email</label>
+                            <label for="subject" class="block mb-2 text-xl font-medium paragraph">{% trans "Email" %}</label>
                             {% render_field signupform.email type="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="abc@example.com" %}
                         </div>
                         <div class="mb-5 flex-grow">
-                            <label for="message" class="block mb-2 text-2xl font-medium paragraph">Phone Number</label>
+                            <label for="message" class="block mb-2 text-xl font-medium paragraph">{% trans "Phone Number" %}</label>
                             {% render_field patientform.phone_number type="tel" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="+12 3456 789" %}
                         </div>
                         <div class="mb-5 flex-grow">
-													<label for="message" class="block mb-2 text-2xl font-medium paragraph">Avatar</label>
+													<label for="message" class="block mb-2 text-xl font-medium paragraph">{% trans "Profile Picture" %}</label>
 													{% render_field patientform.picture class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-1" %}
 												</div>
                     </div>
-                    <button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-2xl px-5 py-2.5 text-center">Signup</button>
+                    <button type="submit" class="text-white hover:-translate-y-2 w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-2xl px-5 py-2.5 text-center">{% trans "Signup" %}</button>
                 </form>
             </div>
         </div>

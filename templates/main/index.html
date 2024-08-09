@@ -566,11 +566,11 @@
 							{% endif %}
 
 							<div class="mb-5">
-									<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">اسم المستخدم</label>
+									<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Username" %}</label>
 									{% render_field lform.username type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="عبدالله عاطف" %}
 							</div>
 							<div class="mb-5">
-									<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">كلمة المرور</label>
+									<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Password" %}</label>
 									{% render_field lform.password type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="*****" %}
 							</div>
 							<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-2xl px-5 py-2.5 text-center">تسجيل الدخول</button>
@@ -644,11 +644,11 @@
 								</div>
 						{% endif %}
 						<div class="mb-5">
-								<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">اسم المستخدم</label>
+								<label for="subject" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Username" %}</label>
 								{% render_field lform.username type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="عبدالله عاطف" %}
 						</div>
 						<div class="mb-5">
-								<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">كلمة المرور</label>
+								<label for="message" class="block mb-2 text-2xl font-medium paragraph text-right">{% trans "Password" %}</label>
 								{% render_field lform.password type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="*****" %}
 						</div>
 						<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-xl px-5 py-2.5 text-center">تسجيل الدخول</button>
@@ -716,11 +716,11 @@
 									</div>
 							{% endif %}
 							<div class="mb-5">
-									<label for="subject" class="block mb-2 text-2xl font-medium paragraph">Username</label>
+									<label for="subject" class="block mb-2 text-2xl font-medium paragraph">{% trans "Username" %}</label>
 									{% render_field lform.username type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Abdullah Atif" %}
 							</div>
 							<div class="mb-5">
-									<label for="message" class="block mb-2 text-2xl font-medium paragraph">Password</label>
+									<label for="message" class="block mb-2 text-2xl font-medium paragraph">{% trans "Password" %}</label>
 									{% render_field lform.password type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="*****" %}
 							</div>
 							<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-2xl px-5 py-2.5 text-center">Login</button>
