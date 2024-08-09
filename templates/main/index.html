@@ -574,6 +574,13 @@
 									{% render_field lform.password type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="*****" %}
 							</div>
 							<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-2xl px-5 py-2.5 text-center">تسجيل الدخول</button>
+							<hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded dark:bg-gray-700">
+							<div class="flex justify-center items-center gap-2">
+								<a href="{% url 'main:signup' %}" class="rounded-xl heading hover:underline font-bold text-lg py-2.5">
+										{% trans "Signup" %}
+								</a>
+								<p class="paragraph text-lg">{% trans "Don't have an account?" %}</p>
+							</div>
 					</form>
 
 					{% endif %}
@@ -645,6 +652,13 @@
 								{% render_field lform.password type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 text-right" placeholder="*****" %}
 						</div>
 						<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-xl px-5 py-2.5 text-center">تسجيل الدخول</button>
+						<hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded dark:bg-gray-700">
+						<div class="flex items-center gap-2 justify-center text-right">
+							<a href="{% url 'main:signup' %}" class="border rounded-xl heading hover:underline font-bold text-lg py-2.5 text-center">
+									{% trans "Signup" %}
+							</a>
+							<p class="paragraph text-lg">{% trans "Don't have an account?" %}</p>
+						</div>
 				</form>
 
 				{% endif %}
@@ -710,6 +724,14 @@
 									{% render_field lform.password type="password" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="*****" %}
 							</div>
 							<button type="submit" class="text-white w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-2xl px-5 py-2.5 text-center">Login</button>
+							<hr class="w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded dark:bg-gray-700">
+							<div class="flex items-center justify-center gap-2">
+								<p class="paragraph text-lg">{% trans "Don't have an account?" %}</p>
+								<a href="{% url 'main:signup' %}" class="border rounded-xl heading hover:underline font-bold text-lg py-2.5 text-center">
+										{% trans "Signup" %}
+								</a>
+							</div>
+						
 					</form>
 
 					{% endif %}
