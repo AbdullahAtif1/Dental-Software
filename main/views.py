@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
+from django.contrib.auth import views as auth_views
 from .forms import AppointmentForm, LoginForm
 from django.http import JsonResponse
 from dentadmin.models import Patient
@@ -84,3 +85,11 @@ def sigunp(request):
 		context = {'signupform': s_form, 'patientform': p_form}
 		return render(request, 'main/signup.html', context)
 
+
+class CustomPasswordResetView(auth_views.PasswordResetView):
+    def get_success_url(self):
+        return reverse_lazy('main:password_reset_done')
+
+class CustomPasswordResetConfirmView(auth_views.PasswordResetConfirmView):
+		def get_success_url(self):
+			return reverse_lazy('main:password_reset_complete')
