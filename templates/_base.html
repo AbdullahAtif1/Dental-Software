@@ -42,6 +42,22 @@
 			overflow-x: hidden;
 		}
 
+		/* Add transition for opacity */
+    #up-btn {
+        transition: opacity 0.3s ease-in-out; /* Adjust the timing as needed */
+    }
+
+    /* When hidden, set opacity to 0 */
+    #up-btn.hidden {
+        opacity: 0;
+        pointer-events: none; /* Prevent interaction when hidden */
+    }
+
+    /* When visible, set opacity to 1 */
+    #up-btn:not(.hidden) {
+        opacity: 1;
+    }
+
 		/* Default Theme: Teal & Green */
 		:root {
 			/* Gradient */
@@ -458,23 +474,27 @@
 
 	{% if CURRENT_LANGUAGE == 'ar' %}
 
-	<a href="#"
-   class="fixed bottom-4 left-4 w-12 h-12 rounded-full blog-page-art-btn flex items-center justify-center text-white shadow-lg z-10">
-   <!-- Arrow SVG icon -->
-		<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"/>
-		</svg>
-	</a>
+	<div id="up-btn" class="hidden">
+		<a href="#"
+			class="fixed bottom-4 left-4 w-12 h-12 rounded-full blog-page-art-btn flex items-center justify-center text-white shadow-lg z-10">
+			<!-- Arrow SVG icon -->
+			<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"/>
+			</svg>
+		</a>
+	</div>
 
 	{% elif CURRENT_LANGUAGE == 'en' %}
 
-	<a href="#"
-   class="fixed bottom-4 right-4 w-12 h-12 rounded-full blog-page-art-btn flex items-center justify-center text-white shadow-lg z-10">
-   <!-- Arrow SVG icon -->
-		<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"/>
-		</svg>
-	</a>
+	<div id="up-btn" class="hidden">
+		<a href="#"
+			class="fixed bottom-4 right-4 w-12 h-12 rounded-full blog-page-art-btn flex items-center justify-center text-white shadow-lg z-10">
+			<!-- Arrow SVG icon -->
+			<svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"/>
+			</svg>
+		</a>
+	</div>	
 
 	{% endif %}
 
@@ -496,6 +516,29 @@
 			}
 		});
 	</script>
+
+	<script>
+		// When the page is fully loaded
+		document.addEventListener('DOMContentLoaded', function () {
+				const button = document.getElementById('up-btn');
+
+				// Function to check scroll position
+				function toggleButtonVisibility() {
+						if (window.scrollY >= window.innerHeight) {
+								button.classList.remove('hidden');
+						} else {
+								button.classList.add('hidden');
+						}
+				}
+
+				// Initial check
+				toggleButtonVisibility();
+
+				// Listen to the scroll event
+				window.addEventListener('scroll', toggleButtonVisibility);
+		});
+	</script>
+
 	
 	{% block 'script' %}{% endblock %}
 
