@@ -135,7 +135,7 @@ msgstr "They Could be Subscribed to Your Newsletter"
 
 #: .\templates\blog\index.html:143 .\templates\blog\index.html:168
 msgid "Subscribe to our newsletter for the latest"
-msgstr "They Could be Subscribed to Your Newsletter"
+msgstr "Subscribe to our newsletter for the latest"
 
 #: .\templates\blog\index.html:144 .\templates\blog\index.html:169
 msgid " tips, tricks, and trends — "
