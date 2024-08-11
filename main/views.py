@@ -1,13 +1,15 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse, reverse_lazy
 from django.contrib.auth import views as auth_views
-from .forms import AppointmentForm, LoginForm
+from .forms import AppointmentForm, LoginForm, ContactForm
 from django.http import JsonResponse
 from dentadmin.models import Patient
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from dentadmin.forms import *
 from django.contrib import messages
+from django.core.mail import EmailMessage, send_mail
+import threading
 
 def index(request):
     form = AppointmentForm()
@@ -84,6 +86,43 @@ def sigunp(request):
 
 		context = {'signupform': s_form, 'patientform': p_form}
 		return render(request, 'main/signup.html', context)
+
+def contact_us_page(request):
+
+	form = ContactForm()
+	if request.method == "POST":
+		form = ContactForm(request.POST)
+		if form.is_valid():
+			cd = form.cleaned_data
+
+			subject = cd["subject"]
+			from_email = "socialcodepk@gmail.com"
+			to = ["manager@socialcodepk.com"] # admin@socialcode.com
+			body = f"Query request by contact from at Your Website from -- {cd['first_name']} {cd['second_name']} \n\n{cd['query']}"
+			reply_to = [cd["email"]]
+                        
+			def _send_email(subject, body, from_email, to, reply_to):
+				EmailMessage(
+							subject,
+							body,
+							from_email, # Send from (your website)
+							to, # Send to (your admin email). Replace afterwards with something like admin@socialcodepk.com
+							[], # bcc left empty
+							reply_to = reply_to # Email from the form to get back to
+						).send(fail_silently=False)
+				print("Email sernt to")
+				print(to)
+                        
+			thread = threading.Thread(target=_send_email, args=(subject, body, from_email, to, reply_to))
+			thread.start()
+
+			return redirect("main:index")
+	else:
+		form = ContactForm()
+	context = {
+		'form': form
+	}
+	return render(request, "main/contact_us_page.html", context)
 
 
 class CustomPasswordResetView(auth_views.PasswordResetView):

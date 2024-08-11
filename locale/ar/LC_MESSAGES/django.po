@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-10 20:46+0500\n"
+"POT-Creation-Date: 2024-08-11 20:36+0500\n"
 "PO-Revision-Date: 2024-08-03 16:08+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -83,7 +83,9 @@ msgstr "عربي"
 msgid "English"
 msgstr "إنجليزي"
 
-#: .\main\forms.py:18 .\templates\main\index.html:538
+#: .\main\forms.py:18 .\templates\main\contact_us_page.html:54
+#: .\templates\main\contact_us_page.html:112
+#: .\templates\main\contact_us_page.html:169 .\templates\main\index.html:538
 #: .\templates\main\index.html:623 .\templates\main\index.html:701
 msgid "Subject"
 msgstr "الموضوع"
@@ -149,9 +151,8 @@ msgstr "تم تسليمها مباشرة إلى بريدك الوارد."
 #: .\templates\blog\index.html:154 .\templates\blog\index.html:179
 #: .\templates\main\index.html:586 .\templates\main\index.html:670
 #: .\templates\main\index.html:749 .\templates\main\signup.html:7
-#: .\templates\main\signup.html:23 .\templates\main\signup.html:65
-#: .\templates\main\signup.html:84 .\templates\main\signup.html:126
-#: .\templates\main\signup.html:142 .\templates\main\signup.html:184
+#: .\templates\main\signup.html:23 .\templates\main\signup.html:84
+#: .\templates\main\signup.html:142
 msgid "Signup"
 msgstr "اشترك"
 
@@ -191,10 +192,62 @@ msgstr "456 شارع الابتسامة، مدينة طب الأسنان، كا�
 msgid "All Rights Reserved."
 msgstr "جميع الحقوق محفوظة."
 
-#: .\templates\main\index.html:6 .\templates\main\signup.html:7
-#: .\templates\nav.html:8
+#: .\templates\main\contact_us_page.html:7 .\templates\main\index.html:6
+#: .\templates\main\signup.html:7 .\templates\nav.html:8
 msgid "This Could Be Yours"
 msgstr "قد يكون هذا لك"
+
+#: .\templates\main\contact_us_page.html:7 .\templates\nav.html:81
+msgid "Contact Us"
+msgstr "اتصل بنا"
+
+#: .\templates\main\contact_us_page.html:23
+#: .\templates\main\contact_us_page.html:81
+#: .\templates\main\contact_us_page.html:139
+msgid "We're here to help"
+msgstr "نحن هنا للمساعدة"
+
+#: .\templates\main\contact_us_page.html:40
+#: .\templates\main\contact_us_page.html:102
+#: .\templates\main\contact_us_page.html:159
+msgid "Last Name"
+msgstr "اسم العائلة"
+
+#: .\templates\main\contact_us_page.html:44
+#: .\templates\main\contact_us_page.html:98
+#: .\templates\main\contact_us_page.html:155
+msgid "First Name"
+msgstr "الاسم الأول"
+
+#: .\templates\main\contact_us_page.html:50
+#: .\templates\main\contact_us_page.html:108
+#: .\templates\main\contact_us_page.html:165 .\templates\main\signup.html:53
+#: .\templates\main\signup.html:114 .\templates\main\signup.html:172
+#: .\templates\registration\password_reset_form.html:37
+#: .\templates\registration\password_reset_form.html:69
+#: .\templates\registration\password_reset_form.html:104
+msgid "Email"
+msgstr "بريد إلكتروني"
+
+#: .\templates\main\contact_us_page.html:59
+#: .\templates\main\contact_us_page.html:117
+#: .\templates\main\contact_us_page.html:175 .\templates\main\index.html:542
+#: .\templates\main\index.html:627 .\templates\main\index.html:705
+msgid "Your message"
+msgstr "رسالتك"
+
+#: .\templates\main\contact_us_page.html:63
+#: .\templates\main\contact_us_page.html:121
+#: .\templates\main\contact_us_page.html:179 .\templates\main\signup.html:65
+#: .\templates\main\signup.html:126 .\templates\main\signup.html:184
+#: .\templates\registration\password_reset_confirm.html:45
+#: .\templates\registration\password_reset_confirm.html:87
+#: .\templates\registration\password_reset_confirm.html:127
+#: .\templates\registration\password_reset_form.html:39
+#: .\templates\registration\password_reset_form.html:74
+#: .\templates\registration\password_reset_form.html:109
+msgid "Submit"
+msgstr "يُقدِّم"
 
 #: .\templates\main\index.html:18 .\templates\main\index.html:31
 msgid "A Better Life Starts with a Beautiful Smile"
@@ -594,8 +647,8 @@ msgstr "تعزيز مظهر ابتسامتك من خلال العلاجات ال
 
 #: .\templates\main\index.html:366 .\templates\main\index.html:443
 #: .\templates\main\index.html:504 .\templates\main\index.html:791
-#: .\templates\main\index.html:838 .\templates\nav.html:85
-#: .\templates\nav.html:90 .\templates\nav.html:98
+#: .\templates\main\index.html:838 .\templates\nav.html:89
+#: .\templates\nav.html:94 .\templates\nav.html:102
 #: .\templates\registration\password_reset_complete.html:19
 #: .\templates\registration\password_reset_complete.html:35
 #: .\templates\registration\password_reset_complete.html:52
@@ -637,11 +690,6 @@ msgstr "حلول تبييض احترافية لتفتيح وتحسين ابتس�
 #: .\templates\main\index.html:698
 msgid "Book An Appointment"
 msgstr "احجز موعدًا"
-
-#: .\templates\main\index.html:542 .\templates\main\index.html:627
-#: .\templates\main\index.html:705
-msgid "Your message"
-msgstr "رسالتك"
 
 #: .\templates\main\index.html:545 .\templates\main\index.html:630
 #: .\templates\main\index.html:708
@@ -770,14 +818,6 @@ msgstr "طبيب أسنان عام"
 msgid "Confirm Password"
 msgstr "تأكيد كلمة المرور"
 
-#: .\templates\main\signup.html:53 .\templates\main\signup.html:114
-#: .\templates\main\signup.html:172
-#: .\templates\registration\password_reset_form.html:37
-#: .\templates\registration\password_reset_form.html:69
-#: .\templates\registration\password_reset_form.html:104
-msgid "Email"
-msgstr "بريد إلكتروني"
-
 #: .\templates\nav.html:19
 msgid "Blog"
 msgstr "مدونة"
@@ -830,15 +870,6 @@ msgstr "من فضلك إذهب للأمام "
 msgid "This Could Be Yours - Password Reset Confirmation"
 msgstr "قد تكون هذه مدونتك - المدونة"
 
-#: .\templates\registration\password_reset_confirm.html:45
-#: .\templates\registration\password_reset_confirm.html:87
-#: .\templates\registration\password_reset_confirm.html:127
-#: .\templates\registration\password_reset_form.html:39
-#: .\templates\registration\password_reset_form.html:74
-#: .\templates\registration\password_reset_form.html:109
-msgid "Submit"
-msgstr "يُقدِّم"
-
 #: .\templates\registration\password_reset_done.html:6
 msgid "This Could Be Yours - Password Reset Done"
 msgstr "قد تكون هذه مدونتك - المدونة"
@@ -864,14 +895,12 @@ msgid " to reset your password."
 msgstr "لإعادة تعيين كلمة المرور الخاصة بك "
 
 #: .\templates\registration\password_reset_email.html:2
-#, python-format
 msgid ""
 "You're receiving this email because you requested a password reset for your "
-"user account at "
+"user account at %(site_name)s."
 msgstr ""
-"لقد تلقيت هذا البريد الإلكتروني لأنك طلبت إعادة تعيين كلمة المرور لحسابك"
-"حساب المستخدم في "
-
+"لقد تلقيت هذا البريد الإلكتروني لأنك طلبت إعادة تعيين كلمة المرور لحسابكحساب "
+"المستخدم في "
 
 #: .\templates\registration\password_reset_email.html:4
 msgid "Please go to the following page and choose a new password:"

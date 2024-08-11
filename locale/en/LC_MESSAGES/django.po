@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-10 20:46+0500\n"
+"POT-Creation-Date: 2024-08-11 20:36+0500\n"
 "PO-Revision-Date: 2024-08-03 16:08+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -82,7 +82,9 @@ msgstr "Arabic"
 msgid "English"
 msgstr "English"
 
-#: .\main\forms.py:18 .\templates\main\index.html:538
+#: .\main\forms.py:18 .\templates\main\contact_us_page.html:54
+#: .\templates\main\contact_us_page.html:112
+#: .\templates\main\contact_us_page.html:169 .\templates\main\index.html:538
 #: .\templates\main\index.html:623 .\templates\main\index.html:701
 msgid "Subject"
 msgstr "Subject"
@@ -148,9 +150,8 @@ msgstr "delivered right to your inbox."
 #: .\templates\blog\index.html:154 .\templates\blog\index.html:179
 #: .\templates\main\index.html:586 .\templates\main\index.html:670
 #: .\templates\main\index.html:749 .\templates\main\signup.html:7
-#: .\templates\main\signup.html:23 .\templates\main\signup.html:65
-#: .\templates\main\signup.html:84 .\templates\main\signup.html:126
-#: .\templates\main\signup.html:142 .\templates\main\signup.html:184
+#: .\templates\main\signup.html:23 .\templates\main\signup.html:84
+#: .\templates\main\signup.html:142
 msgid "Signup"
 msgstr "Signup"
 
@@ -190,10 +191,62 @@ msgstr "456 Smile Avenue, Dental City, CA 90210"
 msgid "All Rights Reserved."
 msgstr "All Rights Reserved."
 
-#: .\templates\main\index.html:6 .\templates\main\signup.html:7
-#: .\templates\nav.html:8
+#: .\templates\main\contact_us_page.html:7 .\templates\main\index.html:6
+#: .\templates\main\signup.html:7 .\templates\nav.html:8
 msgid "This Could Be Yours"
 msgstr "This Could Be Yours"
+
+#: .\templates\main\contact_us_page.html:7 .\templates\nav.html:81
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: .\templates\main\contact_us_page.html:23
+#: .\templates\main\contact_us_page.html:81
+#: .\templates\main\contact_us_page.html:139
+msgid "We're here to help"
+msgstr "We're here to help"
+
+#: .\templates\main\contact_us_page.html:40
+#: .\templates\main\contact_us_page.html:102
+#: .\templates\main\contact_us_page.html:159
+msgid "Last Name"
+msgstr "Last Name"
+
+#: .\templates\main\contact_us_page.html:44
+#: .\templates\main\contact_us_page.html:98
+#: .\templates\main\contact_us_page.html:155
+msgid "First Name"
+msgstr "First Name"
+
+#: .\templates\main\contact_us_page.html:50
+#: .\templates\main\contact_us_page.html:108
+#: .\templates\main\contact_us_page.html:165 .\templates\main\signup.html:53
+#: .\templates\main\signup.html:114 .\templates\main\signup.html:172
+#: .\templates\registration\password_reset_form.html:37
+#: .\templates\registration\password_reset_form.html:69
+#: .\templates\registration\password_reset_form.html:104
+msgid "Email"
+msgstr "Email"
+
+#: .\templates\main\contact_us_page.html:59
+#: .\templates\main\contact_us_page.html:117
+#: .\templates\main\contact_us_page.html:175 .\templates\main\index.html:542
+#: .\templates\main\index.html:627 .\templates\main\index.html:705
+msgid "Your message"
+msgstr "Your message"
+
+#: .\templates\main\contact_us_page.html:63
+#: .\templates\main\contact_us_page.html:121
+#: .\templates\main\contact_us_page.html:179 .\templates\main\signup.html:65
+#: .\templates\main\signup.html:126 .\templates\main\signup.html:184
+#: .\templates\registration\password_reset_confirm.html:45
+#: .\templates\registration\password_reset_confirm.html:87
+#: .\templates\registration\password_reset_confirm.html:127
+#: .\templates\registration\password_reset_form.html:39
+#: .\templates\registration\password_reset_form.html:74
+#: .\templates\registration\password_reset_form.html:109
+msgid "Submit"
+msgstr "Submit"
 
 #: .\templates\main\index.html:18 .\templates\main\index.html:31
 msgid "A Better Life Starts with a Beautiful Smile"
@@ -595,8 +648,8 @@ msgstr "Enhancing the appearance of your smile with aesthetic treatments"
 
 #: .\templates\main\index.html:366 .\templates\main\index.html:443
 #: .\templates\main\index.html:504 .\templates\main\index.html:791
-#: .\templates\main\index.html:838 .\templates\nav.html:85
-#: .\templates\nav.html:90 .\templates\nav.html:98
+#: .\templates\main\index.html:838 .\templates\nav.html:89
+#: .\templates\nav.html:94 .\templates\nav.html:102
 #: .\templates\registration\password_reset_complete.html:19
 #: .\templates\registration\password_reset_complete.html:35
 #: .\templates\registration\password_reset_complete.html:52
@@ -640,11 +693,6 @@ msgstr "Professional whitening solutions to brighten and enhance your smile."
 msgid "Book An Appointment"
 msgstr "Book An Appointment"
 
-#: .\templates\main\index.html:542 .\templates\main\index.html:627
-#: .\templates\main\index.html:705
-msgid "Your message"
-msgstr "Your message"
-
 #: .\templates\main\index.html:545 .\templates\main\index.html:630
 #: .\templates\main\index.html:708
 msgid "Request Appointment"
@@ -673,8 +721,6 @@ msgstr "Password"
 #: .\templates\registration\password_reset_form.html:19
 #: .\templates\registration\password_reset_form.html:54
 #: .\templates\registration\password_reset_form.html:89
-#, fuzzy
-#| msgid "Password"
 msgid "Reset Password"
 msgstr "Password"
 
@@ -774,14 +820,6 @@ msgstr "General Dentist"
 msgid "Confirm Password"
 msgstr "Confirm Password"
 
-#: .\templates\main\signup.html:53 .\templates\main\signup.html:114
-#: .\templates\main\signup.html:172
-#: .\templates\registration\password_reset_form.html:37
-#: .\templates\registration\password_reset_form.html:69
-#: .\templates\registration\password_reset_form.html:104
-msgid "Email"
-msgstr "Email"
-
 #: .\templates\nav.html:19
 msgid "Blog"
 msgstr "Blog"
@@ -833,15 +871,6 @@ msgstr " Please go ahead and"
 #: .\templates\registration\password_reset_confirm.html:6
 msgid "This Could Be Yours - Password Reset Confirmation"
 msgstr "This Could be Yours - Password Reset Confirmation"
-
-#: .\templates\registration\password_reset_confirm.html:45
-#: .\templates\registration\password_reset_confirm.html:87
-#: .\templates\registration\password_reset_confirm.html:127
-#: .\templates\registration\password_reset_form.html:39
-#: .\templates\registration\password_reset_form.html:74
-#: .\templates\registration\password_reset_form.html:109
-msgid "Submit"
-msgstr "Submit"
 
 #: .\templates\registration\password_reset_done.html:6
 msgid "This Could Be Yours - Password Reset Done"

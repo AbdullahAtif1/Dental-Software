@@ -1,0 +1,192 @@
+{% extends "_base.html" %}
+{% load i18n %}
+{% load widget_tweaks %}
+
+
+{% load static %}
+{% block 'title' %}{% trans "This Could Be Yours" %} - {% trans "Contact Us" %}{% endblock %}
+
+{% block 'content' %}
+
+{% get_current_language as CURRENT_LANGUAGE %}
+
+	{% if CURRENT_LANGUAGE == 'ar' %}
+
+	<div id="book-an-appointment-ar" class="book-an-appointment-ar min-h-full w-full mt-24 mb-9 py-10 hidden lg:block">
+		<div class="max-w-7xl mx-auto flex flex-wrap gap-2">
+			<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
+					<div class="cntnr rounded-2xl p-6">
+
+						<form class="w-full text-right" method="post">
+							{% csrf_token %}
+								<div>
+									<h4 class="text-4xl text-center paragraph p-5">{% trans "We're here to help" %}</h4>
+								</div>
+								{% if form.errors %}
+										<div class="text-red-700 text-lg">
+												{% for field in form %}
+														{% for error in field.errors %}
+																<p>{{ error }}</p>
+														{% endfor %}
+												{% endfor %}
+												{% for error in form.non_field_errors %}
+														<p>{{ error }}</p>
+												{% endfor %}
+										</div>
+								{% endif %}
+								<div class="flex flex-wrap gap-5">
+									<div class="mb-5 flex flex-grow items-center gap-2">
+											{% render_field form.second_name type="text" class="shadow-sm text-right bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full" placeholder="عاطف" %}
+											<label for="message" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "Last Name" %}</label>
+									</div>
+									<div class="mb-5 flex flex-grow items-center gap-2">
+											{% render_field form.first_name type="text" class="shadow-sm text-right bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full" placeholder="عبدالله" %}
+											<label for="message" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "First Name" %}</label>
+									</div>
+								</div>
+								<div class="flex flex-wrap gap-5">
+										<div class="mb-5 flex flex-grow items-center gap-2">
+												{% render_field form.email type="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5" placeholder="abc@example.com" %}
+												<label for="subject" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "Email" %}</label>
+										</div>
+										<div class="mb-5 flex flex-grow items-center gap-2">
+												{% render_field form.subject type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 text-right" placeholder="ماذا تريد أن تتحدث عنه؟" %}
+												<label for="subject" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "Subject" %}</label>
+										</div>
+								</div>
+								<div class="flex flex-wrap gap-5">
+										<div class="mb-5 flex-grow">
+											<label for="message" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph text-right">{% trans "Your message" %}</label>
+											{% render_field form.query rows="5" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 text-right" placeholder="كيف يمكننا مساعدتك؟" %}
+										</div>
+								</div>
+								<button type="submit" class="text-white hover:-translate-y-2 w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-4xl px-5 py-2.5 text-center">{% trans "Submit" %}</button>
+						</form>
+
+					</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- below lg -->
+
+	<div id="book-an-appointment-ar-blw-lg" class="book-an-appointment-ar min-h-full w-full mt-24 mb-9 py-10 blogk lg:hidden">
+		<div class="max-w-7xl mx-auto flex flex-wrap gap-2">
+			<div class="flex-1 mx-4"> <!-- Added mx-4 for horizontal margin -->
+				<div class="cntnr rounded-2xl p-6" id="form-container">
+					
+					<form class="w-full text-right" method="post">
+						{% csrf_token %}
+							<div>
+								<h4 class="text-4xl text-center paragraph p-5">{% trans "We're here to help" %}</h4>
+							</div>
+							{% if form.errors %}
+									<div class="text-red-700 text-lg">
+											{% for field in form %}
+													{% for error in field.errors %}
+															<p>{{ error }}</p>
+													{% endfor %}
+											{% endfor %}
+											{% for error in form.non_field_errors %}
+													<p>{{ error }}</p>
+											{% endfor %}
+									</div>
+							{% endif %}
+							<div class="flex flex-wrap gap-5">
+								<div class="mb-5 flex flex-grow items-center gap-2">
+										{% render_field form.first_name type="text" class="shadow-sm text-right bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full" placeholder="عبدالله" %}
+										<label for="message" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "First Name" %}</label>
+								</div>
+									<div class="mb-5 flex flex-grow items-center gap-2">
+											{% render_field form.second_name type="text" class="shadow-sm text-right bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full" placeholder="عاطف" %}
+											<label for="message" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "Last Name" %}</label>
+									</div>
+							</div>
+							<div class="flex flex-wrap gap-5">
+									<div class="mb-5 flex flex-grow items-center gap-2">
+											{% render_field form.email type="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5" placeholder="abc@example.com" %}
+											<label for="subject" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "Email" %}</label>
+									</div>
+									<div class="mb-5 flex flex-grow items-center gap-2">
+											{% render_field form.subject type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5" placeholder="ماذا تريد أن تتحدث عنه؟" %}
+											<label for="subject" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "Subject" %}</label>
+									</div>
+							</div>
+							<div class="flex flex-wrap gap-5">
+									<div class="mb-5 flex-grow">
+										<label for="message" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph text-right">{% trans "Your message" %}</label>
+										{% render_field form.query rows="5" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5 text-right" placeholder="كيف يمكننا مساعدتك؟" %}
+									</div>
+							</div>
+							<button type="submit" class="text-white hover:-translate-y-2 w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-4xl px-5 py-2.5 text-center">{% trans "Submit" %}</button>
+					</form>
+
+			</div>
+			</div>
+		</div>
+	</div>
+
+	{% elif CURRENT_LANGUAGE == 'en' %}
+
+	<div id="book-an-appointment"  class="min-h-full w-full mt-24 mb-9 py-10">
+    <div class="max-w-7xl mx-auto">
+        <div class="mx-4">
+            <div class="cntnr rounded-2xl p-6" id="form-container">
+
+							<form class="w-full" method="post">
+								{% csrf_token %}
+									<div>
+										<h4 class="text-4xl text-center paragraph p-5">{% trans "We're here to help" %}</h4>
+									</div>
+									{% if form.errors %}
+											<div class="text-red-700 text-lg">
+													{% for field in form %}
+															{% for error in field.errors %}
+																	<p>{{ error }}</p>
+															{% endfor %}
+													{% endfor %}
+													{% for error in form.non_field_errors %}
+															<p>{{ error }}</p>
+													{% endfor %}
+											</div>
+									{% endif %}
+									<div class="flex flex-wrap gap-5">
+										<div class="mb-5 flex flex-grow items-center gap-2">
+												<label for="message" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "First Name" %}</label>
+												{% render_field form.first_name type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5" placeholder="Abdullah" %}
+										</div>
+											<div class="mb-5 flex flex-grow items-center gap-2">
+													<label for="message" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "Last Name" %}</label>
+													{% render_field form.second_name type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5" placeholder="Atif" %}
+											</div>
+									</div>
+									<div class="flex flex-wrap gap-5">
+											<div class="mb-5 flex flex-grow items-center gap-2">
+													<label for="subject" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "Email" %}</label>
+													{% render_field form.email type="email" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5" placeholder="abc@example.com" %}
+											</div>
+											<div class="mb-5 flex flex-grow items-center gap-2">
+													<label for="subject" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "Subject" %}</label>
+													{% render_field form.subject type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5" placeholder="What did you want to talk about?" %}
+											</div>
+									</div>
+									<div class="flex flex-wrap gap-5">
+											<div class="mb-5 flex-grow">
+												<label for="message" class="whitespace-nowrap  block mb-2 text-2xl font-medium paragraph">{% trans "Your message" %}</label>
+												{% render_field form.query rows="5" type="text" class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-xl rounded-lg focus:ring-blue-500 focus:border-blue-500 w-full p-2.5" placeholder="How can we help you?" %}
+											</div>
+									</div>
+									<button type="submit" class="text-white hover:-translate-y-2 w-full bg-main-gradient focus:outline-none font-medium rounded-lg text-4xl px-5 py-2.5 text-center">{% trans "Submit" %}</button>
+							</form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+	{% endif %}
+
+
+
+{% endblock %}

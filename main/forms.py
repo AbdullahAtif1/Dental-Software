@@ -32,3 +32,12 @@ class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
 
+
+class ContactForm(forms.Form):
+    
+		first_name = forms.CharField(max_length=50)
+		second_name = forms.CharField(max_length=50)
+		subject = forms.CharField(max_length=150)
+		email = forms.EmailField()
+		query = forms.CharField(widget=forms.Textarea)
+

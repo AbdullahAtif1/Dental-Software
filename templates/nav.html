@@ -76,6 +76,10 @@
             </div>
           </div>
         </li>
+
+        <li class="py-2 rounded-2xl">
+          <a href="{% url 'main:contact_us_page' %}" class="text-xl font-bold block py-2 px-3 rounded nav-txt md:hover:underline md:hover:bg-transparent hover:bg-gray-100 md:border-0 md:p-0 md:hover:text-white text-white">{% trans "Contact Us" %}</a>
+        </li>
     
 				{% get_current_language as CURRENT_LANGUAGE %}
 				{% if CURRENT_LANGUAGE == 'ar' %}
