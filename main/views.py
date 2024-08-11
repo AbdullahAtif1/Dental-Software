@@ -4,6 +4,7 @@ from django.contrib.auth import views as auth_views
 from .forms import AppointmentForm, LoginForm, ContactForm
 from django.http import JsonResponse
 from dentadmin.models import Patient
+from .models import Subscriber
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
 from dentadmin.forms import *
@@ -66,6 +67,9 @@ def sigunp(request):
 						instance.email = new_user.email
 						instance.user = new_user
 						instance.save()
+
+						# Add the new_user email to the Subscriber model
+						Subscriber.objects.create(email=new_user.email)
             
 						#  Log the user in after signing up for a new account
 						username = s_form.cleaned_data['username']
@@ -86,6 +90,7 @@ def sigunp(request):
 
 		context = {'signupform': s_form, 'patientform': p_form}
 		return render(request, 'main/signup.html', context)
+
 
 def contact_us_page(request):
 
@@ -123,7 +128,6 @@ def contact_us_page(request):
 		'form': form
 	}
 	return render(request, "main/contact_us_page.html", context)
-
 
 class CustomPasswordResetView(auth_views.PasswordResetView):
     def get_success_url(self):
