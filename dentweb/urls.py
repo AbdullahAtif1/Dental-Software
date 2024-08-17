@@ -10,7 +10,7 @@ from django.conf.urls.i18n import i18n_patterns
 urlpatterns = i18n_patterns(
     path('bckend-admin/', admin.site.urls),
 		path('', include('main.urls')),
-		path('blog/', include('blog.urls')),
+		path('<str:name>/blog/', include('blog.urls')),
 		path('cstm-admin-panel/', include('dentadmin.urls')),
 
 		path('tinymce/', include('tinymce.urls')),

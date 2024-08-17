@@ -45,7 +45,7 @@
 				<p class="mb-2 text-lg font-normal text-gray-900">
 					{{ article.description|truncatewords:10 }}
 				</p>
-				<a href="{% url 'blog:detail' article_id=article.id slug=article.slug %}" class="flex justify-center">
+				<a href="{% url 'blog:detail' name=name article_id=article.id slug=article.slug %}" class="flex justify-center">
 					<button type="button"
 						class="hover:-translate-y-0.5 w-full text-gray-100 blog-page-art-btn focus:ring-opacity-50 transform transition  inline-flex items-center justify-center font-medium rounded-2xl text-lg p-2 mt-1 text-center me-2 mb-2">
 						{% trans "Read More" %}

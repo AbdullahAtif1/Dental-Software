@@ -8,7 +8,7 @@ from django.db.models.functions import Lower
 import random
 from django.contrib.postgres.search import TrigramSimilarity
 
-def index(request):
+def index(request, name):
 
 	ran_4 = list(Article.objects.filter(status='Published'))
 	random.shuffle(ran_4)
@@ -69,12 +69,13 @@ def index(request):
 			'next_artcls': next_artcls,
 			'form': form,
 			'word': word,
-			'page_obj': page_obj
+			'page_obj': page_obj,
+			'name': name
 	}
 	return render(request, 'blog/index.html', context)
 
 
-def detail(request, article_id, slug):
+def detail(request, article_id, slug, name):
 
 	article = Article.objects.get(id=article_id, slug=slug)
 
@@ -85,6 +86,7 @@ def detail(request, article_id, slug):
 
 	context = {
 			'article': article,
-			'others': ran_4
+			'others': ran_4,
+			'name': name
 	}
 	return render(request, 'blog/detail.html', context)
