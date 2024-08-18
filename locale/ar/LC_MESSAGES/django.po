@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-08-11 20:36+0500\n"
+"POT-Creation-Date: 2024-08-18 12:34+0500\n"
 "PO-Revision-Date: 2024-08-03 16:08+0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -193,11 +193,11 @@ msgid "All Rights Reserved."
 msgstr "جميع الحقوق محفوظة."
 
 #: .\templates\main\contact_us_page.html:7 .\templates\main\index.html:6
-#: .\templates\main\signup.html:7 .\templates\nav.html:8
+#: .\templates\main\signup.html:7
 msgid "This Could Be Yours"
 msgstr "قد يكون هذا لك"
 
-#: .\templates\main\contact_us_page.html:7 .\templates\nav.html:81
+#: .\templates\main\contact_us_page.html:7 .\templates\nav.html:103
 msgid "Contact Us"
 msgstr "اتصل بنا"
 
@@ -393,153 +393,153 @@ msgstr "والثقة في الرعاية"
 msgid "you receive."
 msgstr "التي تتلقاها."
 
-#: .\templates\main\index.html:144 .\templates\main\index.html:972
-#: .\templates\main\index.html:1059 .\templates\main\index.html:1164
-#: .\templates\main\index.html:1233
+#: .\templates\main\index.html:144 .\templates\main\index.html:981
+#: .\templates\main\index.html:1068 .\templates\main\index.html:1173
+#: .\templates\main\index.html:1242
 msgid "Committed To Dental Excellence"
 msgstr "ملتزمون بالتميز في طب الأسنان"
 
-#: .\templates\main\index.html:146 .\templates\main\index.html:974
-#: .\templates\main\index.html:1061 .\templates\main\index.html:1166
-#: .\templates\main\index.html:1235
+#: .\templates\main\index.html:146 .\templates\main\index.html:983
+#: .\templates\main\index.html:1070 .\templates\main\index.html:1175
+#: .\templates\main\index.html:1244
 msgid "At our clinic, we blend"
 msgstr "في عيادتنا، نحن نمزج"
 
-#: .\templates\main\index.html:147 .\templates\main\index.html:975
-#: .\templates\main\index.html:1062 .\templates\main\index.html:1167
-#: .\templates\main\index.html:1236
+#: .\templates\main\index.html:147 .\templates\main\index.html:984
+#: .\templates\main\index.html:1071 .\templates\main\index.html:1176
+#: .\templates\main\index.html:1245
 msgid "state-of-the-art technology with"
 msgstr "التكنولوجيا المتقدمة مع"
 
-#: .\templates\main\index.html:148 .\templates\main\index.html:976
-#: .\templates\main\index.html:1063 .\templates\main\index.html:1168
-#: .\templates\main\index.html:1237
+#: .\templates\main\index.html:148 .\templates\main\index.html:985
+#: .\templates\main\index.html:1072 .\templates\main\index.html:1177
+#: .\templates\main\index.html:1246
 msgid "unparalleled expertise to deliver"
 msgstr "الخبرة الفريدة لتقديم"
 
-#: .\templates\main\index.html:149 .\templates\main\index.html:977
-#: .\templates\main\index.html:1064 .\templates\main\index.html:1169
-#: .\templates\main\index.html:1238
+#: .\templates\main\index.html:149 .\templates\main\index.html:986
+#: .\templates\main\index.html:1073 .\templates\main\index.html:1178
+#: .\templates\main\index.html:1247
 msgid "top-tier dental care. Our team"
 msgstr "أفضل رعاية أسنان. فريقنا"
 
-#: .\templates\main\index.html:150 .\templates\main\index.html:978
-#: .\templates\main\index.html:1065 .\templates\main\index.html:1170
-#: .\templates\main\index.html:1239
+#: .\templates\main\index.html:150 .\templates\main\index.html:987
+#: .\templates\main\index.html:1074 .\templates\main\index.html:1179
+#: .\templates\main\index.html:1248
 msgid "of dedicated professionals is committed"
 msgstr "من المحترفين المخلصين ملتزم"
 
-#: .\templates\main\index.html:151 .\templates\main\index.html:979
-#: .\templates\main\index.html:1066 .\templates\main\index.html:1171
-#: .\templates\main\index.html:1240
+#: .\templates\main\index.html:151 .\templates\main\index.html:988
+#: .\templates\main\index.html:1075 .\templates\main\index.html:1180
+#: .\templates\main\index.html:1249
 msgid "to excellence, ensuring every visit"
 msgstr "بالتميز، لضمان أن كل زيارة"
 
-#: .\templates\main\index.html:152 .\templates\main\index.html:980
-#: .\templates\main\index.html:1067 .\templates\main\index.html:1172
-#: .\templates\main\index.html:1241
+#: .\templates\main\index.html:152 .\templates\main\index.html:989
+#: .\templates\main\index.html:1076 .\templates\main\index.html:1181
+#: .\templates\main\index.html:1250
 msgid "is comfortable, effective, and tailored"
 msgstr "مريحة وفعالة ومناسبة"
 
-#: .\templates\main\index.html:153 .\templates\main\index.html:981
-#: .\templates\main\index.html:1068 .\templates\main\index.html:1173
-#: .\templates\main\index.html:1242
+#: .\templates\main\index.html:153 .\templates\main\index.html:990
+#: .\templates\main\index.html:1077 .\templates\main\index.html:1182
+#: .\templates\main\index.html:1251
 msgid "to your unique needs. With"
 msgstr "لأحتياجاتك الفريدة. مع"
 
-#: .\templates\main\index.html:154 .\templates\main\index.html:982
-#: .\templates\main\index.html:1069 .\templates\main\index.html:1174
-#: .\templates\main\index.html:1243
+#: .\templates\main\index.html:154 .\templates\main\index.html:991
+#: .\templates\main\index.html:1078 .\templates\main\index.html:1183
+#: .\templates\main\index.html:1252
 msgid "a patient-centric approach, we prioritize"
 msgstr "نهج يركز على المريض، نحن نولي"
 
-#: .\templates\main\index.html:155 .\templates\main\index.html:983
-#: .\templates\main\index.html:1070 .\templates\main\index.html:1175
-#: .\templates\main\index.html:1244
+#: .\templates\main\index.html:155 .\templates\main\index.html:992
+#: .\templates\main\index.html:1079 .\templates\main\index.html:1184
+#: .\templates\main\index.html:1253
 msgid "your well-being and satisfaction,"
 msgstr "أولويات راحتك ورضاك،"
 
-#: .\templates\main\index.html:156 .\templates\main\index.html:984
-#: .\templates\main\index.html:1071 .\templates\main\index.html:1176
-#: .\templates\main\index.html:1245
+#: .\templates\main\index.html:156 .\templates\main\index.html:993
+#: .\templates\main\index.html:1080 .\templates\main\index.html:1185
+#: .\templates\main\index.html:1254
 msgid "offering a welcoming environment where"
 msgstr "مقدمين بيئة مرحبة حيث"
 
-#: .\templates\main\index.html:157 .\templates\main\index.html:985
-#: .\templates\main\index.html:1072 .\templates\main\index.html:1177
-#: .\templates\main\index.html:1246
+#: .\templates\main\index.html:157 .\templates\main\index.html:994
+#: .\templates\main\index.html:1081 .\templates\main\index.html:1186
+#: .\templates\main\index.html:1255
 msgid "you can feel at ease."
 msgstr "يمكنك أن تشعر بالراحة."
 
-#: .\templates\main\index.html:162 .\templates\main\index.html:990
-#: .\templates\main\index.html:1077 .\templates\main\index.html:1188
-#: .\templates\main\index.html:1257
+#: .\templates\main\index.html:162 .\templates\main\index.html:999
+#: .\templates\main\index.html:1086 .\templates\main\index.html:1197
+#: .\templates\main\index.html:1266
 msgid "Personalized Care"
 msgstr "رعاية شخصية"
 
-#: .\templates\main\index.html:164 .\templates\main\index.html:992
-#: .\templates\main\index.html:1079 .\templates\main\index.html:1190
-#: .\templates\main\index.html:1259
+#: .\templates\main\index.html:164 .\templates\main\index.html:1001
+#: .\templates\main\index.html:1088 .\templates\main\index.html:1199
+#: .\templates\main\index.html:1268
 msgid "Our approach to dental care"
 msgstr "نهجنا في رعاية الأسنان"
 
-#: .\templates\main\index.html:165 .\templates\main\index.html:993
-#: .\templates\main\index.html:1080 .\templates\main\index.html:1191
-#: .\templates\main\index.html:1260
+#: .\templates\main\index.html:165 .\templates\main\index.html:1002
+#: .\templates\main\index.html:1089 .\templates\main\index.html:1200
+#: .\templates\main\index.html:1269
 msgid "is uniquely tailored to each"
 msgstr "مصمم خصيصًا لكل"
 
-#: .\templates\main\index.html:166 .\templates\main\index.html:994
-#: .\templates\main\index.html:1081 .\templates\main\index.html:1192
-#: .\templates\main\index.html:1261
+#: .\templates\main\index.html:166 .\templates\main\index.html:1003
+#: .\templates\main\index.html:1090 .\templates\main\index.html:1201
+#: .\templates\main\index.html:1270
 msgid "patient, ensuring treatment plans"
 msgstr "مريض، مع ضمان خطط العلاج"
 
-#: .\templates\main\index.html:167 .\templates\main\index.html:995
-#: .\templates\main\index.html:1082 .\templates\main\index.html:1193
-#: .\templates\main\index.html:1262
+#: .\templates\main\index.html:167 .\templates\main\index.html:1004
+#: .\templates\main\index.html:1091 .\templates\main\index.html:1202
+#: .\templates\main\index.html:1271
 msgid "that address your specific needs"
 msgstr "التي تلبي احتياجاتك الخاصة"
 
-#: .\templates\main\index.html:168 .\templates\main\index.html:996
-#: .\templates\main\index.html:1083 .\templates\main\index.html:1194
-#: .\templates\main\index.html:1263
+#: .\templates\main\index.html:168 .\templates\main\index.html:1005
+#: .\templates\main\index.html:1092 .\templates\main\index.html:1203
+#: .\templates\main\index.html:1272
 msgid "and concerns."
 msgstr "ومخاوفك."
 
-#: .\templates\main\index.html:182 .\templates\main\index.html:1010
-#: .\templates\main\index.html:1097 .\templates\main\index.html:1208
-#: .\templates\main\index.html:1277
+#: .\templates\main\index.html:182 .\templates\main\index.html:1019
+#: .\templates\main\index.html:1106 .\templates\main\index.html:1217
+#: .\templates\main\index.html:1286
 msgid "Advanced Treatments"
 msgstr "علاجات متقدمة"
 
-#: .\templates\main\index.html:184 .\templates\main\index.html:1012
-#: .\templates\main\index.html:1099 .\templates\main\index.html:1210
-#: .\templates\main\index.html:1279
+#: .\templates\main\index.html:184 .\templates\main\index.html:1021
+#: .\templates\main\index.html:1108 .\templates\main\index.html:1219
+#: .\templates\main\index.html:1288
 msgid "We stay at the forefront"
-msgstr "نحن نstay في طليعة"
+msgstr "نحن نبقى في المقدمة"
 
-#: .\templates\main\index.html:185 .\templates\main\index.html:1013
-#: .\templates\main\index.html:1100 .\templates\main\index.html:1211
-#: .\templates\main\index.html:1280
+#: .\templates\main\index.html:185 .\templates\main\index.html:1022
+#: .\templates\main\index.html:1109 .\templates\main\index.html:1220
+#: .\templates\main\index.html:1289
 msgid "of dental innovation, offering"
 msgstr "الابتكار في طب الأسنان، مقدمين"
 
-#: .\templates\main\index.html:186 .\templates\main\index.html:1014
-#: .\templates\main\index.html:1101 .\templates\main\index.html:1212
-#: .\templates\main\index.html:1281
+#: .\templates\main\index.html:186 .\templates\main\index.html:1023
+#: .\templates\main\index.html:1110 .\templates\main\index.html:1221
+#: .\templates\main\index.html:1290
 msgid "advanced treatments that utilize"
 msgstr "علاجات متقدمة تستخدم"
 
-#: .\templates\main\index.html:187 .\templates\main\index.html:1015
-#: .\templates\main\index.html:1102 .\templates\main\index.html:1213
-#: .\templates\main\index.html:1282
+#: .\templates\main\index.html:187 .\templates\main\index.html:1024
+#: .\templates\main\index.html:1111 .\templates\main\index.html:1222
+#: .\templates\main\index.html:1291
 msgid "the latest techniques and technologies"
 msgstr "أحدث التقنيات والتكنولوجيا"
 
-#: .\templates\main\index.html:188 .\templates\main\index.html:1016
-#: .\templates\main\index.html:1103 .\templates\main\index.html:1214
-#: .\templates\main\index.html:1283
+#: .\templates\main\index.html:188 .\templates\main\index.html:1025
+#: .\templates\main\index.html:1112 .\templates\main\index.html:1223
+#: .\templates\main\index.html:1292
 msgid "for optimal results."
 msgstr "للحصول على أفضل النتائج."
 
@@ -647,8 +647,8 @@ msgstr "تعزيز مظهر ابتسامتك من خلال العلاجات ال
 
 #: .\templates\main\index.html:366 .\templates\main\index.html:443
 #: .\templates\main\index.html:504 .\templates\main\index.html:791
-#: .\templates\main\index.html:838 .\templates\nav.html:89
-#: .\templates\nav.html:94 .\templates\nav.html:102
+#: .\templates\main\index.html:799 .\templates\main\index.html:847
+#: .\templates\nav.html:111 .\templates\nav.html:116 .\templates\nav.html:124
 #: .\templates\registration\password_reset_complete.html:19
 #: .\templates\registration\password_reset_complete.html:35
 #: .\templates\registration\password_reset_complete.html:52
@@ -742,71 +742,71 @@ msgstr "صحتك الفموية تهمنا"
 msgid "Get Brighter Smile from Your City's Best Dentists"
 msgstr "احصل على ابتسامة أكثر إشراقًا من أفضل أطباء الأسنان في مدينتك"
 
-#: .\templates\main\index.html:772 .\templates\main\index.html:819
+#: .\templates\main\index.html:772 .\templates\main\index.html:828
 msgid "Meet the Doctor"
 msgstr "قابل الطبيب"
 
-#: .\templates\main\index.html:773 .\templates\main\index.html:820
+#: .\templates\main\index.html:773 .\templates\main\index.html:829
 msgid "Your Name could be here!"
 msgstr "يمكن أن يكون اسمك هنا!"
 
 #: .\templates\main\index.html:775 .\templates\main\index.html:781
-#: .\templates\main\index.html:822 .\templates\main\index.html:828
+#: .\templates\main\index.html:831 .\templates\main\index.html:837
 msgid "Lorem ipsum dolor sit amet,"
 msgstr "لوريم إيبسوم دولور سيت أمينت،"
 
 #: .\templates\main\index.html:776 .\templates\main\index.html:782
-#: .\templates\main\index.html:823 .\templates\main\index.html:829
+#: .\templates\main\index.html:832 .\templates\main\index.html:838
 msgid "consectetur adipiscing elit. Ut elit"
 msgstr "كونسكتتور أديبيسينغ إليت. أوت إليت"
 
 #: .\templates\main\index.html:777 .\templates\main\index.html:783
-#: .\templates\main\index.html:824 .\templates\main\index.html:830
+#: .\templates\main\index.html:833 .\templates\main\index.html:839
 msgid "tellus, luctus nec ullamcorper mattis,"
 msgstr "تيلوس، لوكتوس نيك أولامكوربر ماتيس،"
 
 #: .\templates\main\index.html:778 .\templates\main\index.html:784
-#: .\templates\main\index.html:825 .\templates\main\index.html:831
+#: .\templates\main\index.html:834 .\templates\main\index.html:840
 msgid "pulvinar dapibus leo."
 msgstr "بولفينار دابيبوس ليو."
 
-#: .\templates\main\index.html:856 .\templates\main\index.html:910
+#: .\templates\main\index.html:865 .\templates\main\index.html:919
 msgid "Our Team, Our Strengths"
 msgstr "فريقنا، قوتنا"
 
-#: .\templates\main\index.html:857 .\templates\main\index.html:911
+#: .\templates\main\index.html:866 .\templates\main\index.html:920
 msgid "This could be Your Team"
 msgstr "يمكن أن يكون هذا فريقك"
 
-#: .\templates\main\index.html:865 .\templates\main\index.html:919
+#: .\templates\main\index.html:874 .\templates\main\index.html:928
 msgid "Dr. Hala Karim"
 msgstr "الدكتورة هالة كريم"
 
-#: .\templates\main\index.html:867 .\templates\main\index.html:921
+#: .\templates\main\index.html:876 .\templates\main\index.html:930
 msgid "Orthodontist"
 msgstr "أخصائية تقويم الأسنان"
 
-#: .\templates\main\index.html:875 .\templates\main\index.html:929
+#: .\templates\main\index.html:884 .\templates\main\index.html:938
 msgid "Dr. Youssef Hassan"
 msgstr "الدكتور يوسف حسن"
 
-#: .\templates\main\index.html:877 .\templates\main\index.html:931
+#: .\templates\main\index.html:886 .\templates\main\index.html:940
 msgid "Prosthodontist"
 msgstr "أخصائي تركيبات الأسنان"
 
-#: .\templates\main\index.html:885 .\templates\main\index.html:939
+#: .\templates\main\index.html:894 .\templates\main\index.html:948
 msgid "Dr. Nadia Ali"
 msgstr "الدكتورة نادية علي"
 
-#: .\templates\main\index.html:887 .\templates\main\index.html:941
+#: .\templates\main\index.html:896 .\templates\main\index.html:950
 msgid "Cosmetic Dentist"
 msgstr "طبيبة تجميل الأسنان"
 
-#: .\templates\main\index.html:895 .\templates\main\index.html:949
+#: .\templates\main\index.html:904 .\templates\main\index.html:958
 msgid "Dr. Ahmed Al-Farsi"
 msgstr "الدكتور أحمد الفارسي"
 
-#: .\templates\main\index.html:897 .\templates\main\index.html:951
+#: .\templates\main\index.html:906 .\templates\main\index.html:960
 msgid "General Dentist"
 msgstr "طبيب أسنان عام"
 
@@ -818,35 +818,27 @@ msgstr "طبيب أسنان عام"
 msgid "Confirm Password"
 msgstr "تأكيد كلمة المرور"
 
-#: .\templates\nav.html:19
-msgid "Blog"
-msgstr "مدونة"
-
-#: .\templates\nav.html:23 .\templates\nav.html:26
+#: .\templates\nav.html:32 .\templates\nav.html:35 .\templates\nav.html:41
 msgid "Services"
 msgstr "خدمات"
 
-#: .\templates\nav.html:31
+#: .\templates\nav.html:48
 msgid "Logout"
 msgstr "تسجيل خروج"
 
-#: .\templates\nav.html:38
-msgid "Language"
-msgstr "اللغة"
-
-#: .\templates\nav.html:59
+#: .\templates\nav.html:81
 msgid "Themes"
 msgstr "الثيمات"
 
-#: .\templates\nav.html:67
+#: .\templates\nav.html:89
 msgid "Teal & Green"
 msgstr "أخضر مزرق وأخضر"
 
-#: .\templates\nav.html:70
+#: .\templates\nav.html:92
 msgid "Indigo & Purple"
 msgstr "نيلي وأرجواني"
 
-#: .\templates\nav.html:73
+#: .\templates\nav.html:95
 msgid "Red & Amber"
 msgstr "أحمر وكهرماني"
 
@@ -895,6 +887,10 @@ msgid " to reset your password."
 msgstr "لإعادة تعيين كلمة المرور الخاصة بك "
 
 #: .\templates\registration\password_reset_email.html:2
+#, fuzzy, python-format
+#| msgid ""
+#| "You're receiving this email because you requested a password reset for "
+#| "your user account at %(site_name)s."
 msgid ""
 "You're receiving this email because you requested a password reset for your "
 "user account at %(site_name)s."
@@ -922,6 +918,12 @@ msgstr "فريق %(site_name)s ال"
 #: .\templates\registration\password_reset_form.html:6
 msgid "This Could Be Yours - Password Reset"
 msgstr "قد تكون هذه مدونتك - المدونة"
+
+#~ msgid "Blog"
+#~ msgstr "مدونة"
+
+#~ msgid "Language"
+#~ msgstr "اللغة"
 
 #~ msgid "Subject of your appointment"
 #~ msgstr "موضوع موعدك"
