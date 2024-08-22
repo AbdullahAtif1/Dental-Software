@@ -18,4 +18,7 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
 		
 		path('<str:name>/contact-us/', views.contact_us_page, name="contact_us_page"),
+
+		# Without name
+		path('contact/', views.contact_us_page, name="contact_page"),
 ]

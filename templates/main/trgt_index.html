@@ -360,7 +360,7 @@
 		</div>
 
 		
-		<a href="{% url 'main:index' %}#book-an-appointment-ar"
+		<a href="{% url 'main:trgt_index' name=name  %}#book-an-appointment-ar"
 			class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-bl-full p-4 flex flex-col justify-center items-center shadow-xl no-underline">
 			<div class="text-5xl text-gray-100 font-semibold px-2">
 				{% trans "Book an Appointment" %}
@@ -437,7 +437,7 @@
 	</div>
 
 	<!-- Box 10: Spans 1 row and 2 columns in lg and above, full width in md and below -->
-	<a href="{% url 'main:index' %}#book-an-appointment-ar-blw-lg"
+	<a href="{% url 'main:trgt_index'  name=name %}#book-an-appointment-ar-blw-lg"
 		class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-bl-full p-4 flex flex-col justify-center items-center shadow-xl no-underline">
 		<div class="text-5xl text-gray-100 font-semibold px-2">
 			{% trans "Book an Appointment" %}
@@ -498,7 +498,7 @@
 	</div>
 
 	<!-- Box 10: Spans 1 row and 2 columns in lg and above, full width in md and below -->
-		<a href="{% url 'main:index' %}#book-an-appointment"
+		<a href="{% url 'main:trgt_index'  name=name %}#book-an-appointment"
 			class="md:col-span-2 lg:col-span-2 lg:row-span-1 bg-main-gradient rounded-br-full p-4 flex flex-col justify-center items-center shadow-xl no-underline">
 			<div class="text-3xl md:text-4xl text-gray-100 font-semibold px-2">
 				{% trans "Book an Appointment" %}
@@ -519,7 +519,7 @@
 
 					{% if request.user.is_authenticated %}
 
-					<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:index' %}">
+					<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:trgt_index'  name=name %}">
 						{% csrf_token %}
 						{% if messages %}
 								<div>
@@ -614,7 +614,7 @@
 			<div class="cntnr rounded-2xl p-6" id="form-container">
 				{% if request.user.is_authenticated %}
 
-				<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:index' %}">
+				<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:trgt_index' name=name  %}">
 					{% csrf_token %}
 						<div>
 							<h4 class="text-4xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
@@ -692,7 +692,7 @@
 				<div class="cntnr rounded-2xl p-6" id="form-container">
 					{% if request.user.is_authenticated %}
 
-					<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:index' %}">
+					<form class="w-full" id="apntmnt-form" method="post" action="{% url 'main:trgt_index' name=name  %}">
 						{% csrf_token %}
 							<div>
 								<h4 class="text-4xl text-center paragraph p-5">{% trans "Book An Appointment" %}</h4>
@@ -785,7 +785,7 @@
 			</p>
 
 			<div class="hidden lg:block">
-				<a href="{% url 'main:index' %}#book-an-appointment-ar" class="flex justify-center py-3">
+				<a href="{% url 'main:trgt_index' name=name  %}#book-an-appointment-ar" class="flex justify-center py-3">
 					<button type="button"
 						class="text-gray-100 w-full bg-main-gradient focus:ring-0 focus:outline-none focus:ring-opacity-50 transform transition inline-flex items-center justify-center font-medium rounded-lg text-3xl p-1 mt-1 text-center me-2 mb-2">
 						{% trans "Book an Appointment" %}
@@ -793,7 +793,7 @@
 				</a>
 			</div>
 			<div class="lg:hidden">
-				<a href="{% url 'main:index' %}#book-an-appointment-ar-blw-lg" class="flex justify-center py-3">
+				<a href="{% url 'main:trgt_index' name=name  %}#book-an-appointment-ar-blw-lg" class="flex justify-center py-3">
 					<button type="button"
 						class="text-gray-100 w-full bg-main-gradient focus:ring-0 focus:outline-none focus:ring-opacity-50 transform transition inline-flex items-center justify-center font-medium rounded-lg text-3xl p-1 mt-1 text-center me-2 mb-2">
 						{% trans "Book an Appointment" %}
@@ -841,7 +841,7 @@
 			</p>
 
 
-			<a href="{% url 'main:index' %}#book-an-appointment" class="flex justify-center py-3">
+			<a href="{% url 'main:trgt_index' name=name  %}#book-an-appointment" class="flex justify-center py-3">
 				<button type="button"
 					class="text-gray-100 w-full bg-main-gradient focus:ring-0 focus:outline-none focus:ring-opacity-50 transform transition inline-flex items-center justify-center font-medium rounded-lg text-2xl p-1 mt-1 text-center me-2 mb-2">
 					{% trans "Book an Appointment" %}

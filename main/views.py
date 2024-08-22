@@ -80,7 +80,7 @@ def trgt_index(request, name):
                     loginform.add_error(None, "Invalid username or password.")
                 
     context = {'form': form, 'lform': loginform, 'name': name}
-    return render(request, 'main/index.html', context)
+    return render(request, 'main/trgt_index.html', context)
 
 
 
